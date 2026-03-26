@@ -1,4 +1,5 @@
 import type { Request, Response } from 'express';
+import { Category } from '@prisma/client';
 import { z } from 'zod';
 
 import { compareProduct, listOffers, listRegions, listSupermarkets } from '../services/offerService.js';
@@ -6,7 +7,7 @@ import { rankBestOffers } from '../services/rankingService.js';
 
 const offerQuerySchema = z.object({
   city: z.string().optional(),
-  category: z.string().optional(),
+  category: z.nativeEnum(Category).optional(),
   search: z.string().optional(),
   supermarket: z.string().optional()
 });

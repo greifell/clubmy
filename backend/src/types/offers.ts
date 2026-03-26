@@ -1,6 +1,8 @@
+import type { Category } from '@prisma/client';
+
 export type OfferFilters = {
   city?: string;
-  category?: string;
+  category?: Category;
   search?: string;
   supermarket?: string;
 };

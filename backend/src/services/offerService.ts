@@ -40,31 +40,22 @@ export async function listOffers(filters: OfferFilters) {
     if (cached) return JSON.parse(cached);
   }
 
+  const productWhere: Prisma.ProductWhereInput = {
+    category: filters.category,
+    normalized: filters.search
+      ? {
+          contains: normalizeName(filters.search)
+        }
+      : undefined
+  };
+
   const where: Prisma.OfferWhereInput = {
     expiresAt: {
       gte: new Date()
     },
     supermarket: filters.city ? { city: filters.city } : undefined,
-    product: {
-      category: filters.category as never,
-      normalized: filters.search
-        ? {
-            contains: normalizeName(filters.search)
-          }
-        : undefined
-    }
+    product: productWhere
   };
-
-  if (!filters.category) {
-    delete where.product;
-    where.product = {
-      normalized: filters.search
-        ? {
-            contains: normalizeName(filters.search)
-          }
-        : undefined
-    };
-  }
 
   if (filters.supermarket) {
     where.supermarket = { ...where.supermarket, name: filters.supermarket };

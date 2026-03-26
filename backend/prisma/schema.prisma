@@ -1,0 +1,56 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Category {
+  ALIMENTOS
+  BEBIDAS
+  LIMPEZA
+  HIGIENE
+  OUTROS
+}
+
+model Supermarket {
+  id        Int      @id @default(autoincrement())
+  name      String
+  city      String
+  state     String
+  offers    Offer[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([city, state])
+}
+
+model Product {
+  id         Int      @id @default(autoincrement())
+  name       String
+  normalized String
+  category   Category @default(OUTROS)
+  offers     Offer[]
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  @@index([normalized])
+}
+
+model Offer {
+  id            Int         @id @default(autoincrement())
+  productId     Int
+  supermarketId Int
+  price         Decimal     @db.Decimal(10, 2)
+  imageUrl      String?
+  createdAt     DateTime    @default(now())
+  expiresAt     DateTime?
+  source        String?
+  product       Product     @relation(fields: [productId], references: [id])
+  supermarket   Supermarket @relation(fields: [supermarketId], references: [id])
+
+  @@index([createdAt])
+  @@index([expiresAt])
+}

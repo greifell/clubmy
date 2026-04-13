@@ -23,7 +23,7 @@ jobs:
       - name: Instalar Ferramentas do Robô
         run: |
           pip install opencv-python-headless
-          pip install easyocr requests supabase beautifulsoup4
+          pip install easyocr requests supabase beautifulsoup4 pymupdf
 
       - name: Mandar o robô trabalhar
         run: python meu_robo.py

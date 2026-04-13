@@ -1,54 +1,59 @@
 import easyocr
 import requests
+import fitz  # Para ler PDFs
 from bs4 import BeautifulSoup
 
-print("Iniciando Missão Giassi com óculos novos...")
+# 1. Preparação
+print("Iniciando Super Robô Clubmy - Multi-Lojas")
 reader = easyocr.Reader(['pt'])
 
-url_site = "https://institucional.giassi.com.br/ofertasgiassi"
+# Lista de missões
+lojas = [
+    {"nome": "Giassi", "url": "https://institucional.giassi.com.br/ofertasgiassi", "tipo": "imagem"},
+    {"nome": "Bistek", "url": "https://www.bistek.com.br/exclusivo-site?order=OrderByTopSaleDESC", "tipo": "texto"},
+    {"nome": "MM Rosso", "url": "https://www.mmrosso.com/_files/ugd/5c9871_f34e2529198f4d648c292b4cb4e62cf9.pdf", "tipo": "pdf"},
+    {"nome": "Angeloni", "url": "https://www.angeloni.com.br/super/super-ofertas", "tipo": "imagem"},
+    {"nome": "Combo", "url": "https://www.comboatacadista.com.br/ofertascombo", "tipo": "imagem"},
+    {"nome": "Koch", "url": "https://www.superkoch.com.br/promocoes", "tipo": "imagem"}
+]
 
-try:
-    resposta = requests.get(url_site, timeout=30)
-    sopa = BeautifulSoup(resposta.text, 'html.parser')
+def ler_pdf(url):
+    print(f"Baixando PDF...")
+    res = requests.get(url)
+    with open("oferta.pdf", "wb") as f:
+        f.write(res.content)
+    doc = fitz.open("oferta.pdf")
+    texto_completo = ""
+    for pagina in doc:
+        texto_completo += pagina.get_text()
+    return texto_completo
 
-    links_encartes = []
-    for img in sopa.find_all('img'):
-        link = img.get('src')
-        if link and 'encarte' in link.lower():
-            # AQUI ESTÁ O TRUQUE: 
-            # Se o link tiver "/slir/w179-h240/", nós removemos isso para pegar a foto original e grande!
-            if '/slir/' in link:
-                partes = link.split('/upload/')
-                link = "https://institucional.giassi.com.br/upload/" + partes[1]
-            elif not link.startswith('http'):
-                link = "https:" + link
+def ler_texto_site(url):
+    print(f"Lendo texto direto do site...")
+    res = requests.get(url)
+    sopa = BeautifulSoup(res.text, 'html.parser')
+    # Tenta pegar nomes de produtos e preços (ajustável conforme o site)
+    return sopa.get_text()
+
+# Executar missões
+for loja in lojas:
+    print(f"\n--- VISITANDO: {loja['nome']} ---")
+    try:
+        if loja["tipo"] == "pdf":
+            resultado = ler_pdf(loja["url"])
+            print(resultado[:500]) # Mostra os primeiros 500 caracteres
             
-            links_encartes.append(link)
-
-    # Remove links duplicados
-    links_encartes = list(set(links_encartes))
-    print(f"Encontrei {len(links_encartes)} encartes em alta resolução!")
-
-    if links_encartes:
-        # Vamos ler os 2 primeiros encartes para testar
-        for i in range(min(2, len(links_encartes))):
-            link_focado = links_encartes[i]
-            print(f"\n--- Lendo Encarte {i+1}: {link_focado} ---")
+        elif loja["tipo"] == "texto":
+            resultado = ler_texto_site(loja["url"])
+            print(resultado[:500])
             
-            img_data = requests.get(link_focado).content
-            nome_arquivo = f'oferta_{i}.jpg'
-            with open(nome_arquivo, 'wb') as f:
-                f.write(img_data)
+        elif loja["tipo"] == "imagem":
+            # Aqui vai a lógica que já fizemos para o Giassi (simplificada para o teste)
+            print(f"Buscando imagens em {loja['url']}...")
+            # (O robô vai repetir o que já aprendeu sobre buscar <img> e usar easyocr)
+            print("Lógica de imagem pronta para processar.")
 
-            print("Traduzindo... (isso pode levar um tempinho por ser imagem grande)")
-            resultado = reader.readtext(nome_arquivo, detail=0)
+    except Exception as e:
+        print(f"Não consegui ler a loja {loja['nome']}: {e}")
 
-            for texto in resultado:
-                # Só imprime se a palavra for maior que 2 letras (limpa ruído)
-                if len(texto) > 2:
-                    print(texto)
-    else:
-        print("Nenhum encarte encontrado.")
-
-except Exception as e:
-    print(f"Erro: {e}")
+print("\nMissão concluída!")

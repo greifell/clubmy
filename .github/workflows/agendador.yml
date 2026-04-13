@@ -1,0 +1,25 @@
+name: Rodar Robo Clubmy
+
+on:
+  workflow_dispatch: # Permite que você aperte um botão para rodar na hora
+  schedule:
+    - cron: '0 08 * * *' # Isso manda o robô rodar todo dia às 08:00 da manhã
+
+jobs:
+  construir-e-rodar:
+    runs-on: ubuntu-latest # O GitHub vai ligar um computador com Linux para nós
+    steps:
+      - name: Pegar o código do repositório
+        uses: actions/checkout@v3
+
+      - name: Instalar o Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Instalar as ferramentas (Lupa e Tradutor)
+        run: |
+          pip install -r requirements.txt
+
+      - name: Mandar o robô trabalhar
+        run: python meu_robo.py

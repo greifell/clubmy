@@ -2,6 +2,11 @@ import easyocr
 import requests
 import fitz  # Para ler PDFs
 from bs4 import BeautifulSoup
+from supabase import create_client
+# --- COLOQUE SUAS CHAVES AQUI ---
+# Substitua o que está entre aspas pelo que você copiou do Supabase
+SUPABASE_URL = "https://ucivqrusibgpryglruva.supabase.co"  # <--- COLA A URL AQUI
+SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVjaXZxcnVzaWJncHJ5Z2xydXZhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzUxNTc0MzIsImV4cCI6MjA5MDczMzQzMn0.76FadfwIFVuqDYMuf8N7wmM5MW2ahToyRg4cxCxCyh0"     # <--- COLA A ANON KEY AQUI
 
 # 1. Preparação
 print("Iniciando Super Robô Clubmy - Multi-Lojas")

@@ -1,3 +1,4 @@
 easyocr
 requests
 supabase
+beautifulsoup4

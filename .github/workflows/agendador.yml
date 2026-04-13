@@ -2,30 +2,28 @@ name: Rodar Robo Clubmy
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '0 08 * * *'
 
 jobs:
   construir-e-rodar:
     runs-on: ubuntu-latest
     steps:
-      - name: Pegar o código do repositório
-        uses: actions/checkout@v4 # Atualizei para a versão mais nova
+      - name: Pegar o código
+        uses: actions/checkout@v4
 
       - name: Instalar o Python
-        uses: actions/setup-python@v5 # Atualizei para a versão mais nova
+        uses: actions/setup-python@v5
         with:
           python-version: '3.10'
 
-      - name: Instalar dependências do Sistema (O segredo do erro!)
+      - name: Instalar Peças do Sistema
         run: |
           sudo apt-get update
-          sudo apt-get install -y libgl1-mesa-glx
+          sudo apt-get install -y libgl1 libglib2.0-0
 
-      - name: Instalar as ferramentas do Robô
+      - name: Instalar Ferramentas do Robô
         run: |
-          pip install --upgrade pip
-          pip install -r requirements.txt
+          pip install opencv-python-headless
+          pip install easyocr requests supabase
 
       - name: Mandar o robô trabalhar
         run: python meu_robo.py

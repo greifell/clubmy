@@ -1,35 +1,49 @@
 import easyocr
 import requests
-import os
+from bs4 import BeautifulSoup # Nova ferramenta para "ler" o site
 
-# 1. O Robô pega a Lupa
-print("Preparando a lupa (EasyOCR)...")
+# 1. O Robô se prepara
+print("Iniciando Missão Giassi...")
 reader = easyocr.Reader(['pt'])
 
-# 2. O Robô escolhe uma imagem de teste mais estável (uma placa de rua ou aviso)
-# Vamos usar uma imagem do próprio Wikipédia que nunca cai
-url_imagem = "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Tag_Price_1299.jpg/320px-Tag_Price_1299.jpg"
+# 2. O Robô vai até a página de ofertas
+url_site = "https://institucional.giassi.com.br/ofertasgiassi"
+print(f"Visitando o site: {url_site}")
 
 try:
-    print(f"Tentando buscar a imagem em: {url_imagem}")
-    resposta = requests.get(url_imagem, timeout=30)
-    resposta.raise_for_status() # Verifica se o site respondeu OK
-    
-    with open('foto_teste.jpg', 'wb') as f:
-        f.write(resposta.content)
-    print("Imagem baixada com sucesso!")
+    resposta = requests.get(url_site, timeout=30)
+    sopa = BeautifulSoup(resposta.text, 'html.parser')
 
-    # 3. O Robô lê a imagem
-    print("Traduzindo a imagem... (isso pode levar 1 minuto)")
-    resultado = reader.readtext('foto_teste.jpg', detail=0)
+    # 3. O Robô procura os links das imagens dos encartes
+    # Procuramos por todas as imagens que pareçam ser de ofertas
+    links_encartes = []
+    for img in sopa.find_all('img'):
+        link = img.get('src')
+        if link and 'encarte' in link.lower(): # Só pega se tiver "encarte" no nome
+            if not link.startswith('http'):
+                link = "https:" + link
+            links_encartes.append(link)
 
-    # 4. O Robô mostra o que aprendeu
-    print("\n--- RESULTADO DA LEITURA ---")
-    if resultado:
+    print(f"Encontrei {len(links_encartes)} encartes para ler!")
+
+    # 4. O Robô lê apenas o PRIMEIRO encarte (para testar)
+    if links_encartes:
+        primeiro_link = links_encartes[0]
+        print(f"Lendo o encarte: {primeiro_link}")
+        
+        img_data = requests.get(primeiro_link).content
+        with open('oferta_giassi.jpg', 'wb') as f:
+            f.write(img_data)
+
+        print("Traduzindo os preços... (aguarde)")
+        resultado = reader.readtext('oferta_giassi.jpg', detail=0)
+
+        print("\n--- O QUE O ROBÔ LEU NO GIASSI ---")
         for texto in resultado:
-            print(f"Encontrei: {texto}")
+            # Aqui vamos filtrar só o que parece preço ou nome de produto depois
+            print(texto)
     else:
-        print("Não encontrei nenhum texto na imagem.")
+        print("Não encontrei nenhum link de encarte. Talvez o site mudou o desenho?")
 
 except Exception as e:
-    print(f"Ops! Tive um problema ao buscar a foto: {e}")
+    print(f"Erro na missão: {e}")

@@ -10,6 +10,17 @@ SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJ
 supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
 reader = easyocr.Reader(['pt'])
 
+def limpar_banco_total():
+    """Remove absolutamente todas as ofertas antes de iniciar a nova busca"""
+    print("\n--- 🧹 INICIANDO FAXINA TOTAL ---")
+    try:
+        # No Supabase, para deletar tudo, usamos um filtro que sempre seja verdadeiro.
+        # Aqui dizemos: delete onde o ID não for nulo.
+        resultado = supabase.table("promotions").delete().neq("status", "0").execute()
+        print("✅ O banco de dados foi esvaziado. Pronto para novos dados!")
+    except Exception as e:
+        print(f"⚠️ Nota: O banco já devia estar vazio ou houve um erro: {e}")
+
 def salvar_no_site(produto, preco, loja, municipio="Criciúma"):
     try:
         dados = {

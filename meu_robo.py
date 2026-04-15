@@ -11,21 +11,16 @@ supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
 reader = easyocr.Reader(['pt'])
 
 def limpar_banco_total():
-    """Remove todas as ofertas para garantir atualização total"""
-    print("\n--- 🧹 INICIANDO FAXINA TOTAL ---")
+    print("\n--- 🧹 FAXINA TOTAL ---")
     try:
-        # Usar .gt("id", 0) é a forma mais segura de deletar tudo no Supabase
         supabase.table("promotions").delete().gt("id", 0).execute()
-        print("✅ Banco de dados limpo com sucesso!")
-    except Exception as e:
-        print(f"⚠️ Nota ao limpar: {e}")
+        print("✅ Banco limpo!")
+    except Exception as e: print(f"Erro limpeza: {e}")
 
 def salvar_no_site(produto, preco, loja, municipio="Criciúma"):
-    # Filtro de segurança: ignora nomes inúteis capturados pelo OCR
-    proibidos = ["VÁLIDAS", "OFERTAS", "ESTOQUE", "ENCARTE", "IMAGEM ILUSTRATIVA"]
-    if len(str(produto)) < 4 or any(x in str(produto).upper() for x in proibidos):
+    # Filtro mais permissivo: nomes com pelo menos 3 letras
+    if len(str(produto)) < 3 or "VÁLIDAS" in str(produto).upper():
         return
-
     try:
         dados = {
             "product_name": str(produto).strip()[:100],
@@ -38,30 +33,31 @@ def salvar_no_site(produto, preco, loja, municipio="Criciúma"):
         }
         supabase.table("promotions").insert(dados).execute()
         print(f"✅ {loja}: {produto}")
-    except Exception as e:
-        print(f"❌ ERRO NO SUPABASE ({loja}): {e}")
+    except Exception as e: print(f"❌ Erro Supabase: {e}")
 
-# --- 1. BISTEK ---
+# --- 1. BISTEK (API com Headers de Navegador) ---
 def ler_bistek():
-    print("\n--- 🛒 LENDO BISTEK (API MODO TURBO) ---")
+    print("\n--- 🛒 LENDO BISTEK ---")
     try:
-        # Pedimos 50 produtos de uma vez via API
-        url = "https://www.bistek.com.br/api/catalog_system/pub/products/search?fq=H:143" # 143 é a categoria de ofertas
-        res = requests.get(url)
-        dados_bistek = res.json()
-        for p in dados_bistek:
-            nome = p['productName']
-            # Pega o preço de venda na estrutura da API
-            preco = p['items'][0]['sellers'][0]['commertialOffer']['Price']
-            salvar_no_site(nome, f"R$ {preco:.2f}".replace('.', ','), "Bistek")
-    except Exception as e: print(f"Erro Bistek API: {e}")
+        headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'}
+        url = "https://www.bistek.com.br/api/catalog_system/pub/products/search?fq=H:143"
+        res = requests.get(url, headers=headers, timeout=30)
+        produtos = res.json()
+        for p in produtos:
+            try:
+                nome = p['productName']
+                preco = p['items'][0]['sellers'][0]['commertialOffer']['Price']
+                if preco > 0:
+                    salvar_no_site(nome, f"R$ {preco:.2f}".replace('.', ','), "Bistek")
+            except: continue
+    except Exception as e: print(f"Erro Bistek: {e}")
 
 # --- 2. MM ROSSO (PDF) ---
 def ler_mmrosso():
     print("\n--- 🛒 LENDO MM ROSSO ---")
     try:
         url = "https://www.mmrosso.com/_files/ugd/5c9871_f34e2529198f4d648c292b4cb4e62cf9.pdf"
-        res = requests.get(url)
+        res = requests.get(url, timeout=30)
         with open("rosso.pdf", "wb") as f: f.write(res.content)
         doc = fitz.open("rosso.pdf")
         for pagina in doc:
@@ -72,40 +68,40 @@ def ler_mmrosso():
                     salvar_no_site(produto, linha, "MM Rosso")
     except Exception as e: print(f"Erro MM Rosso: {e}")
 
-# --- 3. COMBO & KOCH ---
+# --- 3. COMBO & KOCH (Busca de Imagem Flexível) ---
 def ler_encartes_grupo_koch(url, nome_loja):
     print(f"\n--- 🛒 LENDO {nome_loja.upper()} ---")
     try:
         headers = {'User-Agent': 'Mozilla/5.0'}
-        res = requests.get(url, headers=headers)
+        res = requests.get(url, headers=headers, timeout=30)
         sopa = BeautifulSoup(res.text, 'html.parser')
         
+        imagens_achadas = 0
         for img in sopa.find_all('img'):
-            src = img.get('src')
-            if src and any(x in src.lower() for x in ['encarte', 'oferta', 'promo']):
-                # Correção de URL relativa para absoluta
-                if src.startswith('//'):
-                    src = "https:" + src
-                elif src.startswith('/') and not src.startswith('//'):
-                    base_url = "/".join(url.split("/")[:3])
-                    src = base_url + src
-                elif not src.startswith('http'):
-                    src = "https://" + src
+            src = img.get('src') or img.get('data-src')
+            if not src: continue
+            
+            # Se a imagem for do encarte ou tiver "offer" no nome
+            if any(x in src.lower() for x in ['encarte', 'oferta', 'promo', 'offer', 'prod']):
+                if src.startswith('//'): src = "https:" + src
+                elif src.startswith('/') : src = "/".join(url.split("/")[:3]) + src
+                elif not src.startswith('http'): src = "https://" + src
 
-                print(f"📸 Baixando: {src}")
-                img_data = requests.get(src).content
+                print(f"📸 Lendo: {src}")
+                img_data = requests.get(src, timeout=20).content
                 with open('temp.jpg', 'wb') as f: f.write(img_data)
                 
-                resultado = reader.readtext('temp.jpg', detail=0, paragraph=True)
+                resultado = reader.readtext('temp.jpg', detail=0)
                 for i, texto in enumerate(resultado):
-                    # Identifica preços (ex: 19,90)
                     if "," in texto and any(c.isdigit() for c in texto):
                         prod = resultado[i-1] if i > 0 else "Produto"
-                        salvar_no_site(prod, texto, nome_loja)           
-    except Exception as e: print(f"❌ Erro em {nome_loja}: {e}")
+                        salvar_no_site(prod, texto, nome_loja)
+                imagens_achadas += 1
+                if imagens_achadas > 5: break # Limite para não demorar demais
+    except Exception as e: print(f"Erro {nome_loja}: {e}")
 
-# --- EXECUÇÃO FINAL ---
-limpar_banco_total() 
+# --- EXECUÇÃO ---
+limpar_banco_total()
 ler_bistek()
 ler_mmrosso()
 ler_encartes_grupo_koch("https://www.comboatacadista.com.br/ofertascombo", "Combo Atacadista")

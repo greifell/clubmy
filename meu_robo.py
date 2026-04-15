@@ -32,10 +32,12 @@ def salvar_no_site(produto, preco, loja, municipio="Criciúma"):
             "valid_until": "Ver encarte",
             "status": "approved"
         }
-        supabase.table("promotions").insert(dados).execute()
+        # Tentamos inserir e capturamos a resposta
+        res = supabase.table("promotions").insert(dados).execute()
         print(f"✅ {loja}: {produto}")
     except Exception as e:
-        print(f"❌ Erro ao salvar: {e}")
+        # Se der erro, ele vai imprimir exatamente o motivo aqui
+        print(f"❌ ERRO NO SUPABASE ({loja}): {e}")
 
 # --- 1. BISTEK (Extração via HTML - Super Preciso) ---
 def ler_bistek():

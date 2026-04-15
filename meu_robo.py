@@ -43,20 +43,18 @@ def salvar_no_site(produto, preco, loja, municipio="Criciúma"):
 
 # --- 1. BISTEK ---
 def ler_bistek():
-    print("\n--- 🛒 LENDO BISTEK ---")
+    print("\n--- 🛒 LENDO BISTEK (API MODO TURBO) ---")
     try:
-        headers = {'User-Agent': 'Mozilla/5.0'}
-        res = requests.get("https://www.bistek.com.br/exclusivo-site?order=OrderByTopSaleDESC", headers=headers)
-        sopa = BeautifulSoup(res.text, 'html.parser')
-        produtos = sopa.find_all('section', class_='vtex-product-summary-2-x-container')
-        for p in produtos:
-            try:
-                nome = p.find('span', class_='vtex-product-summary-2-x-productBrand').text
-                preco = p.find('span', class_='vtex-product-price-1-x-currencyInteger').text
-                centavos = p.find('span', class_='vtex-product-price-1-x-currencyFraction').text
-                salvar_no_site(nome, f"R$ {preco},{centavos}", "Bistek")
-            except: continue
-    except Exception as e: print(f"Erro Bistek: {e}")
+        # Pedimos 50 produtos de uma vez via API
+        url = "https://www.bistek.com.br/api/catalog_system/pub/products/search?fq=H:143" # 143 é a categoria de ofertas
+        res = requests.get(url)
+        dados_bistek = res.json()
+        for p in dados_bistek:
+            nome = p['productName']
+            # Pega o preço de venda na estrutura da API
+            preco = p['items'][0]['sellers'][0]['commertialOffer']['Price']
+            salvar_no_site(nome, f"R$ {preco:.2f}".replace('.', ','), "Bistek")
+    except Exception as e: print(f"Erro Bistek API: {e}")
 
 # --- 2. MM ROSSO (PDF) ---
 def ler_mmrosso():
@@ -98,13 +96,12 @@ def ler_encartes_grupo_koch(url, nome_loja):
                 img_data = requests.get(src).content
                 with open('temp.jpg', 'wb') as f: f.write(img_data)
                 
-                resultado = reader.readtext('temp.jpg', detail=0)
+                resultado = reader.readtext('temp.jpg', detail=0, paragraph=True)
                 for i, texto in enumerate(resultado):
                     # Identifica preços (ex: 19,90)
                     if "," in texto and any(c.isdigit() for c in texto):
                         prod = resultado[i-1] if i > 0 else "Produto"
-                        salvar_no_site(prod, texto, nome_loja)
-                break 
+                        salvar_no_site(prod, texto, nome_loja)           
     except Exception as e: print(f"❌ Erro em {nome_loja}: {e}")
 
 # --- EXECUÇÃO FINAL ---

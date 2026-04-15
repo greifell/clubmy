@@ -11,17 +11,21 @@ supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
 reader = easyocr.Reader(['pt'])
 
 def limpar_banco_total():
-    """Remove absolutamente todas as ofertas antes de iniciar a nova busca"""
+    """Remove todas as ofertas para garantir atualização total"""
     print("\n--- 🧹 INICIANDO FAXINA TOTAL ---")
     try:
-        # No Supabase, para deletar tudo, usamos um filtro que sempre seja verdadeiro.
-        # Aqui dizemos: delete onde o ID não for nulo.
-        resultado = supabase.table("promotions").delete().neq("status", "0").execute()
-        print("✅ O banco de dados foi esvaziado. Pronto para novos dados!")
+        # Usar .gt("id", 0) é a forma mais segura de deletar tudo no Supabase
+        supabase.table("promotions").delete().gt("id", 0).execute()
+        print("✅ Banco de dados limpo com sucesso!")
     except Exception as e:
-        print(f"⚠️ Nota: O banco já devia estar vazio ou houve um erro: {e}")
+        print(f"⚠️ Nota ao limpar: {e}")
 
 def salvar_no_site(produto, preco, loja, municipio="Criciúma"):
+    # Filtro de segurança: ignora nomes inúteis capturados pelo OCR
+    proibidos = ["VÁLIDAS", "OFERTAS", "ESTOQUE", "ENCARTE", "IMAGEM ILUSTRATIVA"]
+    if len(str(produto)) < 4 or any(x in str(produto).upper() for x in proibidos):
+        return
+
     try:
         dados = {
             "product_name": str(produto).strip()[:100],
@@ -32,32 +36,31 @@ def salvar_no_site(produto, preco, loja, municipio="Criciúma"):
             "valid_until": "Ver encarte",
             "status": "approved"
         }
-        # Tentamos inserir e capturamos a resposta
-        res = supabase.table("promotions").insert(dados).execute()
+        supabase.table("promotions").insert(dados).execute()
         print(f"✅ {loja}: {produto}")
     except Exception as e:
-        # Se der erro, ele vai imprimir exatamente o motivo aqui
         print(f"❌ ERRO NO SUPABASE ({loja}): {e}")
 
-# --- 1. BISTEK (Extração via HTML - Super Preciso) ---
+# --- 1. BISTEK ---
 def ler_bistek():
-    print("\n--- LENDO BISTEK ---")
+    print("\n--- 🛒 LENDO BISTEK ---")
     try:
         headers = {'User-Agent': 'Mozilla/5.0'}
         res = requests.get("https://www.bistek.com.br/exclusivo-site?order=OrderByTopSaleDESC", headers=headers)
         sopa = BeautifulSoup(res.text, 'html.parser')
-        # Procura os produtos na estrutura da VTEX
         produtos = sopa.find_all('section', class_='vtex-product-summary-2-x-container')
         for p in produtos:
-            nome = p.find('span', class_='vtex-product-summary-2-x-productBrand').text
-            preco = p.find('span', class_='vtex-product-price-1-x-currencyInteger').text
-            centavos = p.find('span', class_='vtex-product-price-1-x-currencyFraction').text
-            salvar_no_site(nome, f"R$ {preco},{centavos}", "Bistek")
+            try:
+                nome = p.find('span', class_='vtex-product-summary-2-x-productBrand').text
+                preco = p.find('span', class_='vtex-product-price-1-x-currencyInteger').text
+                centavos = p.find('span', class_='vtex-product-price-1-x-currencyFraction').text
+                salvar_no_site(nome, f"R$ {preco},{centavos}", "Bistek")
+            except: continue
     except Exception as e: print(f"Erro Bistek: {e}")
 
 # --- 2. MM ROSSO (PDF) ---
 def ler_mmrosso():
-    print("\n--- LENDO MM ROSSO ---")
+    print("\n--- 🛒 LENDO MM ROSSO ---")
     try:
         url = "https://www.mmrosso.com/_files/ugd/5c9871_f34e2529198f4d648c292b4cb4e62cf9.pdf"
         res = requests.get(url)
@@ -71,31 +74,42 @@ def ler_mmrosso():
                     salvar_no_site(produto, linha, "MM Rosso")
     except Exception as e: print(f"Erro MM Rosso: {e}")
 
-# --- 3. COMBO & KOCH (Encartes de Imagem/OCR) ---
+# --- 3. COMBO & KOCH ---
 def ler_encartes_grupo_koch(url, nome_loja):
-    print(f"\n--- LENDO {nome_loja.upper()} ---")
+    print(f"\n--- 🛒 LENDO {nome_loja.upper()} ---")
     try:
-        res = requests.get(url)
+        headers = {'User-Agent': 'Mozilla/5.0'}
+        res = requests.get(url, headers=headers)
         sopa = BeautifulSoup(res.text, 'html.parser')
-        # Procura as imagens dos encartes
+        
         for img in sopa.find_all('img'):
             src = img.get('src')
-            if src and ('encarte' in src.lower() or 'oferta' in src.lower()):
-                if not src.startswith('http'): src = "https:" + src
+            if src and any(x in src.lower() for x in ['encarte', 'oferta', 'promo']):
+                # Correção de URL relativa para absoluta
+                if src.startswith('//'):
+                    src = "https:" + src
+                elif src.startswith('/') and not src.startswith('//'):
+                    base_url = "/".join(url.split("/")[:3])
+                    src = base_url + src
+                elif not src.startswith('http'):
+                    src = "https://" + src
+
+                print(f"📸 Baixando: {src}")
                 img_data = requests.get(src).content
                 with open('temp.jpg', 'wb') as f: f.write(img_data)
+                
                 resultado = reader.readtext('temp.jpg', detail=0)
                 for i, texto in enumerate(resultado):
+                    # Identifica preços (ex: 19,90)
                     if "," in texto and any(c.isdigit() for c in texto):
                         prod = resultado[i-1] if i > 0 else "Produto"
                         salvar_no_site(prod, texto, nome_loja)
-                break # Lê a primeira página para teste
-    except Exception as e: print(f"Erro {nome_loja}: {e}")
+                break 
+    except Exception as e: print(f"❌ Erro em {nome_loja}: {e}")
 
-# --- EXECUÇÃO ---
+# --- EXECUÇÃO FINAL ---
+limpar_banco_total() 
 ler_bistek()
 ler_mmrosso()
 ler_encartes_grupo_koch("https://www.comboatacadista.com.br/ofertascombo", "Combo Atacadista")
 ler_encartes_grupo_koch("https://www.superkoch.com.br/promocoes", "Super Koch")
-
-print("\n--- TODOS OS SITES PROCESSADOS ---")

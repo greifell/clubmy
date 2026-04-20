@@ -1,7 +1,11 @@
 name: Rodar Robo Clubmy
 
 on:
-  workflow_dispatch:
+  workflow_dispatch: # Permite rodar manualmente
+  schedule:
+    # O exemplo abaixo roda todos os dias às 06:00 AM (Horário de Brasília)
+    # Como o GitHub usa UTC, precisamos configurar para as 09:00 UTC
+    - cron: '0 9 * * *'
 
 jobs:
   construir-e-rodar:

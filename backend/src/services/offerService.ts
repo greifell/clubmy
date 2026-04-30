@@ -11,6 +11,16 @@ function cacheKey(filters: OfferFilters) {
   return `offers:${JSON.stringify(filters)}`;
 }
 
+async function clearOffersCache() {
+  if (redis?.isOpen) {
+    const keys = await redis.keys('offers:*');
+
+    if (keys.length > 0) {
+      await redis.del(keys);
+    }
+  }
+}
+
 export async function listRegions() {
   const rows = await prisma.supermarket.findMany({
     distinct: ['state', 'city'],
@@ -58,7 +68,10 @@ export async function listOffers(filters: OfferFilters) {
   };
 
   if (filters.supermarket) {
-    where.supermarket = { ...where.supermarket, name: filters.supermarket };
+    where.supermarket = {
+      ...where.supermarket,
+      name: filters.supermarket
+    };
   }
 
   const offers = await prisma.offer.findMany({
@@ -80,6 +93,7 @@ export async function listOffers(filters: OfferFilters) {
 
 export async function compareProduct(name: string) {
   const normalized = normalizeName(name);
+
   return prisma.offer.findMany({
     where: {
       product: {
@@ -87,7 +101,9 @@ export async function compareProduct(name: string) {
           contains: normalized
         }
       },
-      expiresAt: { gte: new Date() }
+      expiresAt: {
+        gte: new Date()
+      }
     },
     include: {
       product: true,
@@ -103,75 +119,91 @@ export async function upsertOffers(inputs: NormalizedOfferInput[]) {
     const normalized = normalizeName(input.productName);
     const category = input.category ?? inferCategory(input.productName);
 
-    const supermarket = await prisma.supermarket.upsert({
-      where: {
-        id: -1
-      },
-      update: {},
-      create: {
-        name: input.supermarket.name,
-        city: input.supermarket.city,
-        state: input.supermarket.state
-      }
-    }).catch(async () => {
-      const existing = await prisma.supermarket.findFirst({
+    const supermarket =
+      (await prisma.supermarket.findFirst({
         where: {
           name: input.supermarket.name,
           city: input.supermarket.city,
           state: input.supermarket.state
         }
-      });
-
-      if (existing) return existing;
-
-      return prisma.supermarket.create({
+      })) ??
+      (await prisma.supermarket.create({
         data: {
           name: input.supermarket.name,
           city: input.supermarket.city,
           state: input.supermarket.state
         }
-      });
+      }));
+
+    const existingProduct = await prisma.product.findFirst({
+      where: {
+        normalized
+      }
     });
 
-    const product = await prisma.product.upsert({
-      where: { id: -1 },
-      update: {},
-      create: {
-        name: input.productName,
-        normalized,
-        category
-      }
-    }).catch(async () => {
-      const existing = await prisma.product.findFirst({ where: { normalized } });
-      if (existing) {
-        return prisma.product.update({
-          where: { id: existing.id },
-          data: { name: input.productName, category }
+    const product = existingProduct
+      ? await prisma.product.update({
+          where: {
+            id: existingProduct.id
+          },
+          data: {
+            name: input.productName,
+            category
+          }
+        })
+      : await prisma.product.create({
+          data: {
+            name: input.productName,
+            normalized,
+            category
+          }
         });
-      }
 
-      return prisma.product.create({
-        data: {
-          name: input.productName,
-          normalized,
-          category
-        }
-      });
-    });
-
-    await prisma.offer.create({
-      data: {
+    const existingOffer = await prisma.offer.findFirst({
+      where: {
         productId: product.id,
         supermarketId: supermarket.id,
-        price: input.price,
-        imageUrl: input.imageUrl,
-        source: input.source,
-        expiresAt: input.expiresAt
+        source: input.source
       }
     });
+
+    if (existingOffer) {
+      await prisma.offer.update({
+        where: {
+          id: existingOffer.id
+        },
+        data: {
+          price: input.price,
+          imageUrl: input.imageUrl,
+          expiresAt: input.expiresAt,
+          updatedAt: new Date()
+        }
+      });
+    } else {
+      await prisma.offer.create({
+        data: {
+          productId: product.id,
+          supermarketId: supermarket.id,
+          price: input.price,
+          imageUrl: input.imageUrl,
+          source: input.source,
+          expiresAt: input.expiresAt
+        }
+      });
+    }
   }
+
+  await clearOffersCache();
 }
 
 export async function removeExpiredOffers() {
-  await prisma.offer.deleteMany({ where: { expiresAt: { lt: new Date() } } });
+  await prisma.offer.deleteMany({
+    where: {
+      expiresAt: {
+        lt: new Date()
+      }
+    }
+  });
+
+  await clearOffersCache();
 }

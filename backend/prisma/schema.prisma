@@ -24,6 +24,7 @@ model Supermarket {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
+  @@unique([name, city, state])
   @@index([city, state])
 }
 
@@ -36,6 +37,7 @@ model Product {
   createdAt  DateTime @default(now())
   updatedAt  DateTime @updatedAt
 
+  @@unique([normalized])
   @@index([normalized])
 }
 
@@ -45,12 +47,16 @@ model Offer {
   supermarketId Int
   price         Decimal     @db.Decimal(10, 2)
   imageUrl      String?
-  createdAt     DateTime    @default(now())
-  expiresAt     DateTime?
   source        String?
+  expiresAt     DateTime?
+  createdAt     DateTime    @default(now())
+  updatedAt     DateTime    @updatedAt
+
   product       Product     @relation(fields: [productId], references: [id])
   supermarket   Supermarket @relation(fields: [supermarketId], references: [id])
 
+  @@unique([productId, supermarketId, source])
   @@index([createdAt])
   @@index([expiresAt])
+  @@index([productId, supermarketId])
 }

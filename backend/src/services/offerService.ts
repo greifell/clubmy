@@ -59,20 +59,26 @@ export async function listOffers(filters: OfferFilters) {
       : undefined
   };
 
-  const where: Prisma.OfferWhereInput = {
-    expiresAt: {
-      gte: new Date()
-    },
-    supermarket: filters.city ? { city: filters.city } : undefined,
-    product: productWhere
-  };
+  const supermarketWhere: Prisma.SupermarketWhereInput = {};
 
-  if (filters.supermarket) {
-    where.supermarket = {
-      ...where.supermarket,
-      name: filters.supermarket
-    };
-  }
+if (filters.city) {
+  supermarketWhere.city = filters.city;
+}
+
+if (filters.supermarket) {
+  supermarketWhere.name = filters.supermarket;
+}
+
+const where: Prisma.OfferWhereInput = {
+  expiresAt: {
+    gte: new Date()
+  },
+  supermarket:
+    filters.city || filters.supermarket
+      ? supermarketWhere
+      : undefined,
+  product: productWhere
+};
 
   const offers = await prisma.offer.findMany({
     where,

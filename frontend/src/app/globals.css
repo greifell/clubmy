@@ -2,6 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  @apply bg-gray-50 text-gray-900;
+  @apply bg-gradient-to-b from-slate-50 to-gray-100 text-gray-900;
+  font-family: Inter, sans-serif;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+input,
+select {
+  @apply transition-all duration-200;
+}
+
+input:focus,
+select:focus {
+  @apply ring-2 ring-blue-200 border-blue-400 outline-none;
 }

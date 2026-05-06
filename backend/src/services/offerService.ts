@@ -87,7 +87,7 @@ const where: Prisma.OfferWhereInput = {
       supermarket: true
     },
     orderBy: [{ price: 'asc' }, { createdAt: 'desc' }],
-    take: 200
+    take: 2000
   });
 
   if (redis?.isOpen) {

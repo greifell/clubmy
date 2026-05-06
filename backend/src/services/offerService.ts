@@ -143,7 +143,8 @@ export async function upsertOffers(inputs: NormalizedOfferInput[]) {
 
     const existingProduct = await prisma.product.findFirst({
       where: {
-        normalized
+      normalized,
+      name: input.productName
       }
     });
 
@@ -167,9 +168,10 @@ export async function upsertOffers(inputs: NormalizedOfferInput[]) {
 
     const existingOffer = await prisma.offer.findFirst({
       where: {
-        productId: product.id,
-        supermarketId: supermarket.id,
-        source: input.source
+      productId: product.id,
+      supermarketId: supermarket.id,
+      source: input.source,
+      imageUrl: input.imageUrl
       }
     });
 

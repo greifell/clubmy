@@ -34,6 +34,7 @@ export async function getOffers(req: Request, res: Response) {
   return res.json({ offers: ranked, total: ranked.length });
 }
 
+
 export async function getCompare(req: Request, res: Response) {
   const product = typeof req.query.product === 'string' ? req.query.product : '';
 
@@ -49,4 +50,10 @@ export async function getCompare(req: Request, res: Response) {
     bestOffer: ranked[0] ?? null,
     offers: ranked
   });
+}
+
+export async function getCategories(_req: Request, res: Response) {
+  const categories = Object.values(Category);
+
+  res.json(categories);
 }

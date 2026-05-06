@@ -23,9 +23,23 @@ export default function HomePage() {
 
   // carregar filtros dinâmicos
   useEffect(() => {
+    
     api.get('/regions').then((response) => {
-      setRegions(response.data ?? []);
-    });
+  const data = response.data;
+
+  if (Array.isArray(data)) {
+    setRegions(data);
+    return;
+  }
+
+  const parsedRegions = Object.entries(data ?? {}).flatMap(([state, cities]) =>
+    Array.isArray(cities)
+      ? cities.map((city) => ({ city: String(city), state: String(state) }))
+      : []
+  );
+
+  setRegions(parsedRegions);
+});
 
     api.get('/categories').then((response) => {
       setCategories(response.data ?? []);

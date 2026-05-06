@@ -118,17 +118,82 @@ async function extractOffers(
   }));
 }
 
-async function scrapeBistek(page: any) {
-  console.log('🔎 Buscando ofertas Bistek...');
+async function scrapeBistekApi(): Promise<NormalizedOfferInput[]> {
+  console.log('🔎 Buscando ofertas Bistek via API VTEX...');
 
-  await page.goto('https://www.bistek.com.br/ofertas', {
-    waitUntil: 'domcontentloaded',
-    timeout: 60000
-  });
+  const searchTerms = [
+    'arroz',
+    'feijao',
+    'leite',
+    'cafe',
+    'detergente',
+    'sabao',
+    'amaciante',
+    'papel',
+    'cerveja',
+    'refrigerante',
+    'frango',
+    'carne'
+  ];
 
-  await page.waitForTimeout(4000);
+  const allOffers: NormalizedOfferInput[] = [];
 
-  return extractOffers(page, 'Bistek', 'Criciúma');
+  for (const term of searchTerms) {
+    try {
+      console.log(`🔍 Termo: ${term}`);
+
+      const response = await fetch(
+        `https://www.bistek.com.br/api/catalog_system/pub/products/search?ft=${encodeURIComponent(term)}&_from=0&_to=20`
+      );
+
+      const products = await response.json();
+
+      const offers = products
+        .map((product: any) => {
+          const item = product.items?.[0];
+          const seller = item?.sellers?.[0];
+          const commercial = seller?.commertialOffer;
+
+          if (!commercial?.Price || commercial.Price <= 0) {
+            return null;
+          }
+
+          return {
+            productName: product.productName,
+            category: detectCategory(product.productName),
+            price: commercial.Price,
+            imageUrl: item?.images?.[0]?.imageUrl || null,
+            supermarket: {
+              name: 'Bistek',
+              city: 'Criciúma',
+              state: 'SC'
+            },
+            expiresAt: new Date(Date.now() + 1000 * 60 * 60 * 24),
+            source: 'bistek-vtex-api'
+          };
+        })
+        .filter(Boolean);
+
+      allOffers.push(...offers);
+
+      console.log(`✅ ${offers.length} produtos encontrados para ${term}`);
+
+    } catch (error) {
+      console.error(`❌ Erro no termo ${term}`, error);
+    }
+  }
+
+  const uniqueMap = new Map<string, NormalizedOfferInput>();
+
+  for (const offer of allOffers) {
+    const key = `${offer.productName}-${offer.price}`;
+
+    if (!uniqueMap.has(key)) {
+      uniqueMap.set(key, offer);
+    }
+  }
+
+  return Array.from(uniqueMap.values());
 }
 
 async function scrapeKoch(page: any) {
@@ -181,6 +246,11 @@ export async function scrapeSupermarketOffers(): Promise<NormalizedOfferInput[]>
         console.log(
           `✅ ${scraper.name}: ${offers.length} ofertas encontradas`
         );
+        offers.forEach((offer, index) => {
+        console.log(
+          `${index + 1}. ${offer.productName} | R$ ${offer.price} | ${offer.imageUrl}`
+        );
+        });
 
         results.push({
           supermarket: scraper.name,
@@ -197,9 +267,19 @@ export async function scrapeSupermarketOffers(): Promise<NormalizedOfferInput[]>
       }
     }
 
-    const allOffers = results
-      .flatMap((result) => result.offers)
-      .filter((offer) => offer.price > 0);
+    const uniqueOffers = new Map<string, NormalizedOfferInput>();
+
+    for (const offer of results.flatMap((result) => result.offers)) {
+        if (offer.price <= 0) continue;
+
+        const key = `${offer.supermarket.name}-${offer.productName}-${offer.price}`;
+
+        if (!uniqueOffers.has(key)) {
+            uniqueOffers.set(key, offer);
+        }
+    }
+
+const allOffers = Array.from(uniqueOffers.values());
 
     console.log(`📦 TOTAL FINAL: ${allOffers.length} ofertas`);
 

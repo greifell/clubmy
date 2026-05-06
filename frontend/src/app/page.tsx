@@ -13,11 +13,20 @@ type Region = {
 export default function HomePage() {
   const [city, setCity] = useState('');
   const [category, setCategory] = useState('');
+  const [supermarket, setSupermarket] = useState('');
   const [search, setSearch] = useState('');
 
   const [offers, setOffers] = useState<Offer[]>([]);
   const [regions, setRegions] = useState<Region[]>([]);
   const [categories, setCategories] = useState<string[]>([]);
+  const [supermarkets, setSupermarkets] = useState<
+  {
+    id: number;
+    name: string;
+    city: string;
+    state: string;
+  }[]
+>([]);
 
   const [loading, setLoading] = useState(false);
 
@@ -48,15 +57,32 @@ export default function HomePage() {
     });
   }, []);
 
+    useEffect(() => {
+    if (!city) {
+    setSupermarkets([]);
+    return;
+  }
+
+  api
+    .get('/supermarkets', {
+      params: {
+        city
+      }
+    })
+    .then((response) => {
+      setSupermarkets(response.data ?? []);
+    });
+    }, [city]);
+
   useEffect(() => {
     setLoading(true);
 
-    api
-      .get('/offers', {
+    api.get('/offers', {
         params: {
-          city: city || undefined,
-          category: category || undefined,
-          search: search || undefined
+        city: city || undefined,
+        supermarket: supermarket || undefined,
+        category: category || undefined,
+        search: search || undefined
         }
       })
       .then((response) => {
@@ -78,8 +104,9 @@ export default function HomePage() {
   function clearFilters() {
     setCity('');
     setCategory('');
+    setSupermarket('');
     setSearch('');
-  }
+    }
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-slate-50 to-gray-100">
@@ -128,7 +155,7 @@ export default function HomePage() {
 
         {/* FILTROS */}
         <section className="relative z-20 -mt-8 mb-10 rounded-3xl border border-gray-200 bg-white/95 p-5 shadow-2xl backdrop-blur">
-          <div className="grid gap-4 lg:grid-cols-4">
+          <div className="grid gap-4 lg:grid-cols-5">
             <select
               className="rounded-2xl border border-gray-200 bg-white px-4 py-4 text-sm font-medium transition focus:border-cyan-500"
               value={city}
@@ -143,6 +170,20 @@ export default function HomePage() {
                 >
                   {region.city}/{region.state}
                 </option>
+              ))}
+            </select>
+
+            <select
+              className="rounded-2xl border border-gray-200 bg-white px-4 py-4 text-sm font-medium transition focus:border-cyan-500"
+              value={supermarket}
+              onChange={(e) => setSupermarket(e.target.value)}
+            >
+              <option value="">Todos supermercados</option>
+
+              {supermarkets.map((market) => (
+              <option key={market.id} value={market.name}>
+              {market.name}
+              </option>
               ))}
             </select>
 

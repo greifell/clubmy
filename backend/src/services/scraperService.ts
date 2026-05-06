@@ -226,10 +226,10 @@ export async function scrapeSupermarketOffers(): Promise<NormalizedOfferInput[]>
         'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120 Safari/537.36'
     });
 
-    const scrapers = [
+      const scrapers = [
       {
-        name: 'Bistek',
-        fn: scrapeBistek
+      name: 'Bistek',
+      fn: scrapeBistekApi
       },
       {
         name: 'Koch',

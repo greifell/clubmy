@@ -143,28 +143,27 @@ export async function upsertOffers(inputs: NormalizedOfferInput[]) {
 
     const existingProduct = await prisma.product.findFirst({
       where: {
-      normalized,
-      name: input.productName
-      }
+      normalized
+             }
     });
 
     const product = existingProduct
       ? await prisma.product.update({
-          where: {
-            id: existingProduct.id
-          },
-          data: {
-            name: input.productName,
-            category
-          }
-        })
+        where: {
+        id: existingProduct.id
+        },
+        data: {
+        name: input.productName,
+        category
+        }
+      })
       : await prisma.product.create({
-          data: {
-            name: input.productName,
-            normalized,
-            category
-          }
-        });
+      data: {
+        name: input.productName,
+        normalized,
+        category
+      }
+    });
 
     const existingOffer = await prisma.offer.findFirst({
       where: {

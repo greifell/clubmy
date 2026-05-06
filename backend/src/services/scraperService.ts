@@ -209,6 +209,93 @@ async function scrapeKoch(page: any) {
   return extractOffers(page, 'Koch', 'Criciúma');
 }
 
+async function scrapeVtexMarket(config: {
+  name: string;
+  city: string;
+  state: string;
+  baseUrl: string;
+  source: string;
+}): Promise<NormalizedOfferInput[]> {
+  console.log(`🔎 Buscando ofertas ${config.name} via API VTEX...`);
+
+  const searchTerms = [
+    'arroz',
+    'feijao',
+    'leite',
+    'cafe',
+    'detergente',
+    'sabao',
+    'amaciante',
+    'papel',
+    'cerveja',
+    'refrigerante',
+    'frango',
+    'carne'
+  ];
+
+  const allOffers: NormalizedOfferInput[] = [];
+
+  for (const term of searchTerms) {
+    try {
+      const response = await fetch(
+        `${config.baseUrl}/api/catalog_system/pub/products/search?ft=${encodeURIComponent(term)}&_from=0&_to=20`
+      );
+
+      const products = await response.json();
+
+      const offers = products
+        .map((product: any) => {
+          const item = product.items?.[0];
+          const seller = item?.sellers?.[0];
+          const commercial = seller?.commertialOffer;
+
+          if (!commercial?.Price || commercial.Price <= 0) return null;
+
+          return {
+            productName: product.productName,
+            category: detectCategory(product.productName),
+            price: commercial.Price,
+            imageUrl: item?.images?.[0]?.imageUrl || null,
+            supermarket: {
+              name: config.name,
+              city: config.city,
+              state: config.state
+            },
+            expiresAt: new Date(Date.now() + 1000 * 60 * 60 * 24),
+            source: config.source
+          };
+        })
+        .filter(Boolean);
+
+      allOffers.push(...offers);
+    } catch (error) {
+      console.error(`❌ ${config.name} erro no termo ${term}`, error);
+    }
+  }
+
+  const uniqueMap = new Map<string, NormalizedOfferInput>();
+
+  for (const offer of allOffers) {
+    const key = `${offer.supermarket.name}-${offer.productName}-${offer.price}`;
+
+    if (!uniqueMap.has(key)) {
+      uniqueMap.set(key, offer);
+    }
+  }
+
+  return Array.from(uniqueMap.values());
+}
+
+async function scrapeAngeloniApi(): Promise<NormalizedOfferInput[]> {
+  return scrapeVtexMarket({
+    name: 'Angeloni',
+    city: 'Criciúma',
+    state: 'SC',
+    baseUrl: 'https://www.angeloni.com.br/super',
+    source: 'angeloni-vtex-api'
+  });
+}
+
 export async function scrapeSupermarketOffers(): Promise<NormalizedOfferInput[]> {
   const browser = await chromium.launch({
     headless: true
@@ -228,14 +315,18 @@ export async function scrapeSupermarketOffers(): Promise<NormalizedOfferInput[]>
 
       const scrapers = [
       {
-      name: 'Bistek',
-      fn: scrapeBistekApi
+        name: 'Bistek',
+        fn: scrapeBistekApi
+      },
+      {
+        name: 'Angeloni',
+        fn: scrapeAngeloniApi
       },
       {
         name: 'Koch',
         fn: scrapeKoch
       }
-    ];
+      ];
 
     for (const scraper of scrapers) {
       try {

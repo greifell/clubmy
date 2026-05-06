@@ -58,21 +58,16 @@ export default function HomePage() {
   }, []);
 
     useEffect(() => {
-    if (!city) {
-    setSupermarkets([]);
-    return;
-  }
-
   api
     .get('/supermarkets', {
       params: {
-        city
+        city: city || undefined
       }
     })
     .then((response) => {
       setSupermarkets(response.data ?? []);
     });
-    }, [city]);
+}, [city]);
 
   useEffect(() => {
     setLoading(true);
@@ -238,7 +233,7 @@ export default function HomePage() {
 
         {/* LOADING */}
         {loading ? (
-          <section className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+          <section className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             {Array.from({ length: 6 }).map((_, index) => (
               <div
                 key={index}
@@ -250,7 +245,7 @@ export default function HomePage() {
 
         {/* OFERTAS */}
         {!loading && offers.length > 0 ? (
-          <section className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+          <section className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             {offers.map((offer) => (
               <OfferCard
                 key={offer.id}

@@ -165,39 +165,38 @@ export async function upsertOffers(inputs: NormalizedOfferInput[]) {
       }
     });
 
-    const existingOffer = await prisma.offer.findFirst({
-      where: {
+   const existingOffer = await prisma.offer.findFirst({
+  where: {
+    productId: product.id,
+    supermarketId: supermarket.id,
+    source: input.source
+  }
+});
+
+if (existingOffer) {
+  await prisma.offer.update({
+    where: {
+      id: existingOffer.id
+    },
+    data: {
+      price: input.price,
+      imageUrl: input.imageUrl,
+      expiresAt: input.expiresAt,
+      updatedAt: new Date()
+    }
+  });
+} else {
+  await prisma.offer.create({
+    data: {
       productId: product.id,
       supermarketId: supermarket.id,
+      price: input.price,
+      imageUrl: input.imageUrl,
       source: input.source,
-      imageUrl: input.imageUrl
-      }
-    });
-
-    if (existingOffer) {
-      await prisma.offer.update({
-        where: {
-          id: existingOffer.id
-        },
-        data: {
-          price: input.price,
-          imageUrl: input.imageUrl,
-          expiresAt: input.expiresAt,
-          updatedAt: new Date()
-        }
-      });
-    } else {
-      await prisma.offer.create({
-        data: {
-          productId: product.id,
-          supermarketId: supermarket.id,
-          price: input.price,
-          imageUrl: input.imageUrl,
-          source: input.source,
-          expiresAt: input.expiresAt
-        }
-      });
+      expiresAt: input.expiresAt
     }
+  });
+}
   }
 
   await clearOffersCache();

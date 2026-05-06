@@ -296,6 +296,16 @@ async function scrapeAngeloniApi(): Promise<NormalizedOfferInput[]> {
   });
 }
 
+async function scrapeGiassiApi(): Promise<NormalizedOfferInput[]> {
+  return scrapeVtexMarket({
+    name: 'Giassi',
+    city: 'Criciúma',
+    state: 'SC',
+    baseUrl: 'https://www.giassi.com.br',
+    source: 'giassi-vtex-api'
+  });
+}
+
 export async function scrapeSupermarketOffers(): Promise<NormalizedOfferInput[]> {
   const browser = await chromium.launch({
     headless: true
@@ -315,16 +325,20 @@ export async function scrapeSupermarketOffers(): Promise<NormalizedOfferInput[]>
 
       const scrapers = [
       {
-        name: 'Bistek',
+       name: 'Bistek',
         fn: scrapeBistekApi
-      },
+       },
       {
-        name: 'Angeloni',
+       name: 'Angeloni',
         fn: scrapeAngeloniApi
       },
       {
-        name: 'Koch',
-        fn: scrapeKoch
+      name: 'Giassi',
+      fn: scrapeGiassiApi
+      },
+      {
+      name: 'Koch',
+       fn: scrapeKoch
       }
       ];
 

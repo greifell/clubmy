@@ -10,7 +10,8 @@
     "prisma:generate": "prisma generate",
     "prisma:migrate": "prisma migrate dev",
     "seed": "tsx scripts/seed.ts",
-    "cron:update": "tsx scripts/runDailyUpdate.ts"
+    "cron:update": "tsx scripts/runDailyUpdate.ts",
+    "flyers:update": "tsx scripts/updateFlyers.ts"
   },
   "dependencies": {
     "@prisma/client": "^6.5.0",

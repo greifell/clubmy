@@ -2,11 +2,14 @@ import type { Offer } from '@/lib/api';
 
 export function OfferCard({
   offer,
-  highlight
+  highlight,
+  onCompare
 }: {
   offer: Offer;
   highlight?: boolean;
+  onCompare?: (offer: Offer) => void;
 }) {
+
   const price = Number(offer.price).toLocaleString('pt-BR', {
     style: 'currency',
     currency: 'BRL'
@@ -70,7 +73,9 @@ export function OfferCard({
           Ver oferta
         </button>
 
-        <button className="border-l border-gray-100 py-2 text-xs font-bold text-gray-700 hover:bg-gray-50">
+        <button
+        onClick={() => onCompare?.(offer)}
+        className="border-l border-gray-100 py-2 text-xs font-bold text-gray-700 hover:bg-gray-50">
           Comparar
         </button>
       </div>

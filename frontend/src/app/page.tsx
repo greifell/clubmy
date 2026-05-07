@@ -29,6 +29,9 @@ export default function HomePage() {
 >([]);
 
   const [loading, setLoading] = useState(false);
+  const [compareOffer, setCompareOffer] = useState<Offer | null>(null);
+  const [compareResults, setCompareResults] = useState<Offer[]>([]);
+  const [compareLoading, setCompareLoading] = useState(false);
 
   useEffect(() => {
     api.get('/regions').then((response) => {
@@ -102,6 +105,36 @@ export default function HomePage() {
     setSupermarket('');
     setSearch('');
     }
+
+  async function handleCompare(offer: Offer) {
+  setCompareOffer(offer);
+  setCompareLoading(true);
+
+  try {
+    const response = await api.get('/offers', {
+      params: {
+        search: offer.product.name.split(' ').slice(0, 3).join(' ')
+      }
+    });
+
+    const results = response.data.offers ?? [];
+
+    const filtered = results
+      .filter(
+        (item: Offer) =>
+          item.product.name.toLowerCase().includes(
+            offer.product.name.split(' ')[0].toLowerCase()
+          )
+      )
+      .sort((a: Offer, b: Offer) => Number(a.price) - Number(b.price));
+
+    setCompareResults(filtered);
+  } catch (error) {
+    console.error(error);
+  } finally {
+    setCompareLoading(false);
+  }
+}    
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-slate-50 to-gray-100">
@@ -251,6 +284,7 @@ export default function HomePage() {
                 key={offer.id}
                 offer={offer}
                 highlight={offer.id === bestOfferId}
+                onCompare={handleCompare}
               />
             ))}
           </section>
@@ -281,6 +315,77 @@ export default function HomePage() {
           </div>
         ) : null}
       </div>
+    {compareOffer ? (
+  <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
+    <div className="max-h-[90vh] w-full max-w-2xl overflow-auto rounded-3xl bg-white p-6 shadow-2xl">
+      <div className="flex items-start justify-between">
+        <div>
+          <p className="text-sm font-semibold text-cyan-700">
+            Comparando produto
+          </p>
+
+          <h3 className="mt-1 text-2xl font-black text-gray-900">
+            {compareOffer.product.name}
+          </h3>
+        </div>
+
+        <button
+          onClick={() => {
+            setCompareOffer(null);
+            setCompareResults([]);
+          }}
+          className="rounded-xl border border-gray-200 px-3 py-2 text-sm font-bold hover:bg-gray-50"
+        >
+          Fechar
+        </button>
+      </div>
+
+      {compareLoading ? (
+        <div className="py-10 text-center text-gray-500">
+          Buscando preços...
+        </div>
+      ) : (
+        <div className="mt-6 space-y-3">
+          {compareResults.map((item, index) => (
+            <div
+              key={item.id}
+              className={`
+                flex items-center justify-between rounded-2xl border p-4
+                ${index === 0 ? 'border-green-500 bg-green-50' : 'border-gray-200'}
+              `}
+            >
+              <div>
+                <p className="font-bold text-gray-900">
+                  {item.supermarket.name}
+                </p>
+
+                <p className="text-sm text-gray-500">
+                  {item.supermarket.city}/{item.supermarket.state}
+                </p>
+              </div>
+
+              <div className="text-right">
+                <p className="text-2xl font-black text-clubmy-blue">
+                  {Number(item.price).toLocaleString('pt-BR', {
+                    style: 'currency',
+                    currency: 'BRL'
+                  })}
+                </p>
+
+                {index === 0 ? (
+                  <p className="text-xs font-bold text-green-600">
+                    Melhor preço
+                  </p>
+                ) : null}
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  </div>
+) : null}
+    
     </main>
   );
 }

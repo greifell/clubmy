@@ -28,6 +28,9 @@ jobs:
 
       - name: Generate Prisma Client
         run: npx prisma generate
+        
+      - name: Install Playwright Chromium
+        run: npx playwright install chromium --with-deps
 
       - name: Run scraper
         run: npm run cron:update

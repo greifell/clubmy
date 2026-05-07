@@ -1,4 +1,5 @@
 import { Router } from 'express';
+import { getFlyers } from '../controllers/flyersController.js';
 
 import {
   getCategories,
@@ -15,3 +16,5 @@ apiRouter.get('/supermarkets', getSupermarkets);
 apiRouter.get('/categories', getCategories);
 apiRouter.get('/offers', getOffers);
 apiRouter.get('/compare', getCompare);
+
+apiRouter.get('/flyers', getFlyers);

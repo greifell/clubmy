@@ -277,47 +277,39 @@ export default function HomePage() {
       </div>
     </div>
 
-    <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+    <div className="flex flex-wrap gap-3">
       {flyers.map((flyer) => (
-        <a
-          key={flyer.id}
-          href={flyer.url}
-          target="_blank"
-          rel="noreferrer"
-          className="group rounded-3xl border border-gray-200 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
-        >
-          <div className="flex items-start justify-between">
-            <div>
-              <p className="text-sm font-bold text-cyan-700">
-                {flyer.supermarketName}
-              </p>
+  <a
+    key={flyer.id}
+    href={flyer.url}
+    target="_blank"
+    rel="noreferrer"
+    className="group flex min-w-[280px] items-center justify-between rounded-2xl border border-gray-200 bg-white px-4 py-3 shadow-sm transition hover:border-cyan-300 hover:shadow-md"
+  >
+    <div>
+      <p className="text-sm font-black text-gray-900">
+        {flyer.supermarketName}
+      </p>
 
-              <h3 className="mt-2 text-lg font-black text-gray-900">
-                {flyer.title}
-              </h3>
+      <p className="text-xs text-gray-500">
+        {flyer.city}/{flyer.state}
+      </p>
+    </div>
 
-              <p className="mt-2 text-sm text-gray-500">
-                {flyer.city}/{flyer.state}
-              </p>
-            </div>
+    <div className="flex items-center gap-3">
+      {flyer.validUntil && flyer.validUntil !== null ? (
+        <p className="text-xs text-gray-400">
+          até{' '}
+          {new Date(flyer.validUntil).toLocaleDateString('pt-BR')}
+        </p>
+      ) : null}
 
-            <div className="rounded-2xl bg-cyan-50 px-3 py-2 text-xs font-bold text-cyan-700">
-              ENCARTE
-            </div>
-          </div>
-
-          <div className="mt-5 flex items-center justify-between">
-            <p className="text-xs text-gray-400">
-              válido até{' '}
-              {new Date(flyer.validUntil).toLocaleDateString('pt-BR')}
-            </p>
-
-            <div className="rounded-xl bg-clubmy-blue px-4 py-2 text-sm font-bold text-white transition group-hover:bg-blue-900">
-              Ver encarte
-            </div>
-          </div>
-        </a>
-      ))}
+      <div className="rounded-xl bg-cyan-50 px-3 py-2 text-xs font-bold text-cyan-700 transition group-hover:bg-cyan-100">
+        Ver encarte
+      </div>
+    </div>
+  </a>
+))}
     </div>
   </section>
 ) : null}

@@ -17,6 +17,18 @@ export default function HomePage() {
   const [search, setSearch] = useState('');
 
   const [offers, setOffers] = useState<Offer[]>([]);
+
+  const [flyers, setFlyers] = useState<
+  {
+    id: string;
+    supermarketName: string;
+    city: string;
+    state: string;
+    title: string;
+    url: string;
+    validUntil: string;
+  }[]
+  >([]);
   const [regions, setRegions] = useState<Region[]>([]);
   const [categories, setCategories] = useState<string[]>([]);
   const [supermarkets, setSupermarkets] = useState<
@@ -58,6 +70,11 @@ export default function HomePage() {
     api.get('/categories').then((response) => {
       setCategories(response.data ?? []);
     });
+
+    api.get('/flyers').then((response) => {
+  setFlyers(response.data ?? []);
+});
+
   }, []);
 
     useEffect(() => {
@@ -244,6 +261,66 @@ export default function HomePage() {
             </button>
           </div>
         </section>
+
+        {/* ENCARTES */}
+        {flyers.length > 0 ? (
+        <section className="mb-10">
+          <div className="mb-5 flex items-center justify-between">
+            <div>
+        <h2 className="text-2xl font-black text-gray-900">
+          📢 Encartes da semana
+        </h2>
+
+        <p className="mt-1 text-sm text-gray-500">
+          Promoções e tabloides atualizados automaticamente.
+        </p>
+      </div>
+    </div>
+
+    <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      {flyers.map((flyer) => (
+        <a
+          key={flyer.id}
+          href={flyer.url}
+          target="_blank"
+          rel="noreferrer"
+          className="group rounded-3xl border border-gray-200 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
+        >
+          <div className="flex items-start justify-between">
+            <div>
+              <p className="text-sm font-bold text-cyan-700">
+                {flyer.supermarketName}
+              </p>
+
+              <h3 className="mt-2 text-lg font-black text-gray-900">
+                {flyer.title}
+              </h3>
+
+              <p className="mt-2 text-sm text-gray-500">
+                {flyer.city}/{flyer.state}
+              </p>
+            </div>
+
+            <div className="rounded-2xl bg-cyan-50 px-3 py-2 text-xs font-bold text-cyan-700">
+              ENCARTE
+            </div>
+          </div>
+
+          <div className="mt-5 flex items-center justify-between">
+            <p className="text-xs text-gray-400">
+              válido até{' '}
+              {new Date(flyer.validUntil).toLocaleDateString('pt-BR')}
+            </p>
+
+            <div className="rounded-xl bg-clubmy-blue px-4 py-2 text-sm font-bold text-white transition group-hover:bg-blue-900">
+              Ver encarte
+            </div>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+) : null}
 
         {/* STATUS */}
         <div className="mb-6 flex items-center justify-between">

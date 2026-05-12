@@ -69,9 +69,14 @@ export function OfferCard({
       </div>
 
       <div className="grid grid-cols-2 border-t border-gray-100">
-        <button className="py-2 text-xs font-bold text-clubmy-blue hover:bg-gray-50">
+        <a
+          href={offer.productUrl || '#'}
+          target="_blank"
+          rel="noreferrer"
+          className="py-2 text-center text-xs font-bold text-clubmy-blue hover:bg-gray-50"
+        >
           Ver oferta
-        </button>
+        </a>
 
         <button
         onClick={() => onCompare?.(offer)}

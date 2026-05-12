@@ -8,6 +8,7 @@ export type Offer = {
   id: number;
   price: string;
   imageUrl?: string;
+  productUrl?: string;
   createdAt: string;
   expiresAt?: string;
   product: {

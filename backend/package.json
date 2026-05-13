@@ -11,27 +11,36 @@
     "prisma:migrate": "prisma migrate dev",
     "seed": "tsx scripts/seed.ts",
     "cron:update": "tsx scripts/runDailyUpdate.ts",
-    "flyers:update": "tsx scripts/updateFlyers.ts"
+    "flyers:update": "tsx scripts/updateFlyers.ts",
+    "collect:offers": "tsx scripts/collectOffers.ts",
+    "validate:offers": "tsx scripts/validateOffers.ts",
+    "check:regional": "tsx scripts/checkRegionalPrices.ts",
+    "test:angeloni-region": "tsx scripts/testAngeloniRegion.ts",
+    "test:angeloni-orderform": "tsx scripts/testAngeloniOrderForm.ts"
   },
   "dependencies": {
     "@prisma/client": "^6.5.0",
     "axios": "^1.8.4",
+    "cheerio": "^1.2.0",
     "cors": "^2.8.5",
+    "date-fns": "^4.1.0",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
+    "fs-extra": "^11.3.5",
     "node-cron": "^3.0.3",
+    "pdf-parse": "^2.4.5",
     "playwright": "^1.52.0",
     "redis": "^4.7.0",
     "tesseract.js": "^5.1.1",
     "zod": "^3.24.2"
   },
   "devDependencies": {
-  "@types/cors": "^2.8.17",
-  "@types/express": "^4.17.21",
-  "@types/node": "^22.13.13",
-  "@types/node-cron": "^3.0.11",
-  "prisma": "^6.5.0",
-  "tsx": "^4.19.3",
-  "typescript": "^5.8.2"
-}
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.13.13",
+    "@types/node-cron": "^3.0.11",
+    "prisma": "^6.5.0",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2"
+  }
 }

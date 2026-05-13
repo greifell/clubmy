@@ -163,6 +163,7 @@ async function scrapeBistekApi(): Promise<NormalizedOfferInput[]> {
             category: detectCategory(product.productName),
             price: commercial.Price,
             imageUrl: item?.images?.[0]?.imageUrl || null,
+            productUrl: product.link || null,
             supermarket: {
               name: 'Bistek',
               city: 'Criciúma',
@@ -256,6 +257,7 @@ async function scrapeVtexMarket(config: {
             category: detectCategory(product.productName),
             price: commercial.Price,
             imageUrl: item?.images?.[0]?.imageUrl || null,
+            productUrl: product.link || null,
             supermarket: {
               name: config.name,
               city: config.city,

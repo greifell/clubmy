@@ -181,6 +181,7 @@ if (existingOffer) {
     data: {
       price: input.price,
       imageUrl: input.imageUrl,
+      productUrl: input.productUrl,
       expiresAt: input.expiresAt,
       updatedAt: new Date()
     }
@@ -192,6 +193,7 @@ if (existingOffer) {
       supermarketId: supermarket.id,
       price: input.price,
       imageUrl: input.imageUrl,
+      productUrl: input.productUrl,
       source: input.source,
       expiresAt: input.expiresAt
     }

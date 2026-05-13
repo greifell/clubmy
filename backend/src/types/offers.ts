@@ -12,6 +12,7 @@ export type NormalizedOfferInput = {
   category: 'ALIMENTOS' | 'BEBIDAS' | 'LIMPEZA' | 'HIGIENE' | 'OUTROS';
   price: number;
   imageUrl?: string;
+  productUrl?: string;
   supermarket: {
     name: string;
     city: string;

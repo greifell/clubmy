@@ -47,6 +47,7 @@ model Offer {
   supermarketId Int
   price         Decimal     @db.Decimal(10, 2)
   imageUrl      String?
+  productUrl    String?
   source        String?
   expiresAt     DateTime?
   createdAt     DateTime    @default(now())

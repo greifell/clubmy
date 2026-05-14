@@ -264,6 +264,21 @@ export default function HomePage() {
     setCompareLoading(true);
 
     try {
+      const visibleComparable = uniqueComparableOffers(
+        offers.filter((item: Offer) =>
+          isComparableProduct(offer.product.name, item.product.name)
+        )
+      );
+
+      if (visibleComparable.length > 0) {
+        setCompareResults(
+          visibleComparable.sort(
+            (a: Offer, b: Offer) => Number(a.price) - Number(b.price)
+          )
+        );
+        return;
+      }
+
       const response = await fetchOffers({
         search: getCompareSearchTerm(offer.product.name)
       });

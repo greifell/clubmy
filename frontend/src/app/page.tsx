@@ -27,6 +27,112 @@ type Flyer = {
   validUntil: string | null;
 };
 
+const GENERIC_COMPARE_WORDS = new Set([
+  'cerveja',
+  'lager',
+  'puro',
+  'malte',
+  'produto',
+  'bebida',
+  'bebidas'
+]);
+
+const PACKAGE_WORDS = ['lata', 'garrafa', 'long neck', 'descartavel'];
+const ALCOHOL_FREE_WORDS = ['zero', 'alcool'];
+
+function normalizeProductText(value: string) {
+  return value
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/[^\w\s,.]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function extractQuantities(value: string) {
+  const normalized = normalizeProductText(value);
+  const matches = normalized.matchAll(/(\d+(?:[,.]\d+)?)\s*(ml|l|kg|g)\b/g);
+
+  return Array.from(matches, (match) => {
+    const amount = Number(match[1].replace(',', '.'));
+    const unit = match[2];
+
+    if (unit === 'l') return `${amount * 1000}ml`;
+    if (unit === 'kg') return `${amount * 1000}g`;
+
+    return `${amount}${unit}`;
+  });
+}
+
+function extractWords(value: string) {
+  return normalizeProductText(value)
+    .split(' ')
+    .filter((word) => word.length > 2);
+}
+
+function getCompareSearchTerm(productName: string) {
+  return (
+    extractWords(productName).find((word) => !GENERIC_COMPARE_WORDS.has(word)) ??
+    productName
+  );
+}
+
+function isComparableProduct(targetName: string, candidateName: string) {
+  const target = normalizeProductText(targetName);
+  const candidate = normalizeProductText(candidateName);
+  const targetQuantities = extractQuantities(target);
+
+  if (targetQuantities.length > 0) {
+    const candidateQuantities = extractQuantities(candidate);
+    const hasSameQuantity = targetQuantities.every((quantity) =>
+      candidateQuantities.includes(quantity)
+    );
+
+    if (!hasSameQuantity) return false;
+  }
+
+  for (const word of PACKAGE_WORDS) {
+    if (target.includes(word) && !candidate.includes(word)) return false;
+  }
+
+  const targetIsAlcoholFree = ALCOHOL_FREE_WORDS.every((word) =>
+    target.includes(word)
+  );
+  const candidateIsAlcoholFree = ALCOHOL_FREE_WORDS.every((word) =>
+    candidate.includes(word)
+  );
+
+  if (targetIsAlcoholFree !== candidateIsAlcoholFree) return false;
+
+  const importantWords = extractWords(targetName).filter(
+    (word) =>
+      !GENERIC_COMPARE_WORDS.has(word) &&
+      !PACKAGE_WORDS.includes(word) &&
+      !ALCOHOL_FREE_WORDS.includes(word) &&
+      !/^\d/.test(word)
+  );
+
+  return importantWords.every((word) => candidate.includes(word));
+}
+
+function uniqueComparableOffers(offers: Offer[]) {
+  const unique = new Map<string, Offer>();
+
+  for (const offer of offers) {
+    const key = [
+      offer.supermarket.name,
+      offer.supermarket.city,
+      offer.product.name,
+      offer.price
+    ].join('|');
+
+    if (!unique.has(key)) unique.set(key, offer);
+  }
+
+  return Array.from(unique.values());
+}
+
 export default function HomePage() {
   const [city, setCity] = useState('');
   const [category, setCategory] = useState('');
@@ -159,18 +265,19 @@ export default function HomePage() {
 
     try {
       const response = await fetchOffers({
-        search: offer.product.name.split(' ').slice(0, 3).join(' ')
+        search: getCompareSearchTerm(offer.product.name)
       });
 
       const results = response.offers ?? [];
-
-      const filtered = results
-        .filter((item: Offer) =>
-          item.product.name
-            .toLowerCase()
-            .includes(offer.product.name.split(' ')[0].toLowerCase())
+      const comparable = uniqueComparableOffers(
+        results.filter((item: Offer) =>
+          isComparableProduct(offer.product.name, item.product.name)
         )
-        .sort((a: Offer, b: Offer) => Number(a.price) - Number(b.price));
+      );
+
+      const filtered = (comparable.length > 0 ? comparable : [offer]).sort(
+        (a: Offer, b: Offer) => Number(a.price) - Number(b.price)
+      );
 
       setCompareResults(filtered);
     } catch (error) {
@@ -465,6 +572,10 @@ export default function HomePage() {
                     <div>
                       <p className="font-bold text-gray-900">
                         {item.supermarket.name}
+                      </p>
+
+                      <p className="mt-1 max-w-sm text-sm font-semibold text-gray-700">
+                        {item.product.name}
                       </p>
 
                       <p className="text-sm text-gray-500">

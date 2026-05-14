@@ -1,0 +1,10 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">ClubMy logo</title>
+  <desc id="desc">Dark square logo with an amber dollar sign and ClubMy wordmark.</desc>
+  <rect width="512" height="512" rx="112" fill="#101820"/>
+  <rect x="24" y="24" width="464" height="464" rx="92" stroke="#F4B740" stroke-width="14" stroke-opacity="0.9"/>
+  <circle cx="256" cy="218" r="116" fill="#F4B740"/>
+  <path d="M256 106V330" stroke="#101820" stroke-width="28" stroke-linecap="round"/>
+  <path d="M315 154C293 137 259 132 232 143C204 155 196 184 218 202C232 214 252 218 272 224C301 233 322 248 321 278C319 313 286 333 250 332C217 331 190 318 174 298" stroke="#101820" stroke-width="28" stroke-linecap="round"/>
+  <text x="256" y="428" text-anchor="middle" fill="#F7F2E8" font-family="Inter, Arial, sans-serif" font-size="52" font-weight="800" letter-spacing="0">ClubMy</text>
+</svg>

@@ -7,7 +7,7 @@ html {
 }
 
 body {
-  @apply bg-gradient-to-b from-slate-50 to-gray-100 text-gray-900;
+  @apply bg-gradient-to-b from-amber-50 via-stone-50 to-slate-100 text-gray-900;
   font-family: Inter, sans-serif;
 }
 
@@ -23,5 +23,5 @@ select {
 
 input:focus,
 select:focus {
-  @apply ring-2 ring-blue-200 border-blue-400 outline-none;
+  @apply ring-2 ring-amber-200 border-amber-400 outline-none;
 }

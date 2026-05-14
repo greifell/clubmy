@@ -6,10 +6,12 @@ export default {
     extend: {
       colors: {
         clubmy: {
-          orange: '#ff6b00',
-          blue: '#0f4c81',
-          dark: '#0f172a',
-          light: '#f8fafc'
+          amber: '#f4b740',
+          gold: '#d89422',
+          blue: '#101820',
+          dark: '#0b1117',
+          ink: '#18222d',
+          light: '#fffaf0'
         }
       },
       boxShadow: {

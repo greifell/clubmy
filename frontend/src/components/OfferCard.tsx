@@ -20,12 +20,12 @@ export function OfferCard({
   return (
     <article
       className={`
-        overflow-hidden rounded-2xl border bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg
-        ${highlight ? 'border-green-500 ring-1 ring-green-200' : 'border-gray-200'}
+        overflow-hidden rounded-2xl border bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg hover:shadow-amber-900/10
+        ${highlight ? 'border-amber-500 ring-1 ring-amber-200' : 'border-stone-200'}
       `}
     >
       <div className="flex gap-3 p-3">
-        <div className="flex h-24 w-24 shrink-0 items-center justify-center overflow-hidden rounded-xl bg-gray-100">
+        <div className="flex h-24 w-24 shrink-0 items-center justify-center overflow-hidden rounded-xl bg-amber-50">
           {imageUrl ? (
             <img
               src={imageUrl}
@@ -39,12 +39,12 @@ export function OfferCard({
 
         <div className="min-w-0 flex-1">
           <div className="flex items-center justify-between gap-2">
-            <span className="rounded-full bg-gray-100 px-2 py-1 text-[10px] font-bold uppercase text-gray-600">
+            <span className="rounded-full bg-stone-100 px-2 py-1 text-[10px] font-bold uppercase text-gray-600">
               {offer.product.category}
             </span>
 
             {highlight ? (
-              <span className="rounded-full bg-green-500 px-2 py-1 text-[10px] font-black text-white">
+              <span className="rounded-full bg-clubmy-amber px-2 py-1 text-[10px] font-black text-clubmy-dark">
                 Melhor
               </span>
             ) : null}
@@ -68,19 +68,19 @@ export function OfferCard({
         </div>
       </div>
 
-      <div className="grid grid-cols-2 border-t border-gray-100">
+      <div className="grid grid-cols-2 border-t border-stone-100">
         <a
           href={offer.productUrl || '#'}
           target="_blank"
           rel="noreferrer"
-          className="py-2 text-center text-xs font-bold text-clubmy-blue hover:bg-gray-50"
+          className="py-2 text-center text-xs font-bold text-clubmy-blue hover:bg-amber-50"
         >
           Ver oferta
         </a>
 
         <button
         onClick={() => onCompare?.(offer)}
-        className="border-l border-gray-100 py-2 text-xs font-bold text-gray-700 hover:bg-gray-50">
+        className="border-l border-stone-100 py-2 text-xs font-bold text-gray-700 hover:bg-amber-50">
           Comparar
         </button>
       </div>

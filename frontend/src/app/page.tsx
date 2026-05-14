@@ -305,53 +305,65 @@ export default function HomePage() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-amber-50 via-stone-50 to-slate-100">
       <div className="mx-auto max-w-7xl px-4 py-8 md:px-6">
-        <header className="relative overflow-hidden rounded-[32px] bg-[radial-gradient(circle_at_85%_15%,rgba(244,183,64,0.32),transparent_28%),linear-gradient(135deg,#101820_0%,#18222d_56%,#2f2414_100%)] p-8 text-white shadow-2xl shadow-amber-900/20">
-          <div className="absolute right-0 top-0 h-64 w-64 rounded-full bg-amber-300/10 blur-3xl" />
+        <header className="relative overflow-hidden rounded-[36px] bg-[radial-gradient(circle_at_88%_22%,rgba(244,183,64,0.35),transparent_26%),linear-gradient(135deg,#0b1117_0%,#141d26_48%,#3a2e18_100%)] px-7 pb-24 pt-7 text-white shadow-2xl shadow-amber-900/20 md:px-9 md:pb-28 md:pt-9">
+          <div className="absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-amber-200/45 to-transparent" />
+          <div className="absolute bottom-0 right-0 h-72 w-72 rounded-full bg-amber-300/10 blur-3xl" />
+          <div className="absolute left-8 top-8 h-24 w-24 rounded-full border border-amber-100/10" />
 
-          <img
-           src="/clubmy-logo.png"
-            alt="ClubMy"
-            className="relative z-10 mb-8 ml-auto h-24 w-24 rounded-[26px] border border-amber-200/30 bg-clubmy-dark shadow-2xl shadow-black/25 md:absolute md:right-8 md:top-8 md:mb-0 md:h-32 md:w-32"
-          />
+          <div className="relative z-10 flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
+            <div className="max-w-3xl">
 
           <div className="relative z-10 max-w-3xl pr-0 md:pr-36">
             <div className="inline-flex items-center rounded-full border border-amber-200/25 bg-amber-200/10 px-4 py-2 text-sm font-medium text-amber-50 backdrop-blur">
               🛒 Economia inteligente em supermercados
             </div>
 
-            <h1 className="mt-6 text-4xl font-black tracking-tight md:text-6xl">
-              ClubMy Ofertas
+            <h1 className="mt-8 max-w-3xl text-5xl font-black leading-[0.95] md:text-7xl">
+              ClubMy
+              <span className="block text-amber-200">Ofertas</span>
             </h1>
 
-            <p className="mt-5 max-w-2xl text-base leading-7 text-amber-50/90 md:text-xl">
+            <p className="mt-6 max-w-2xl text-lg font-medium leading-8 text-stone-100 md:text-2xl">
               Compare preços reais de supermercados em Santa Catarina e encontre
               as melhores ofertas perto de você.
             </p>
 
-            <div className="mt-6 flex flex-wrap gap-3">
-              <div className="rounded-2xl border border-amber-200/20 bg-white/10 px-4 py-3 backdrop-blur">
-                <p className="text-xs uppercase tracking-wide text-amber-100">
+            <div className="mt-8 flex flex-wrap gap-3">
+              <div className="min-w-40 rounded-2xl border border-amber-200/25 bg-white/10 px-5 py-4 shadow-inner shadow-white/5 backdrop-blur">
+                <p className="text-xs font-bold uppercase text-amber-100">
                   Ofertas encontradas
                 </p>
 
-                <p className="text-2xl font-black">{offers.length}</p>
+                <p className="mt-1 text-3xl font-black">{offers.length}</p>
               </div>
 
-              <div className="rounded-2xl border border-amber-200/20 bg-white/10 px-4 py-3 backdrop-blur">
-                <p className="text-xs uppercase tracking-wide text-amber-100">
+              <div className="min-w-36 rounded-2xl border border-amber-200/25 bg-white/10 px-5 py-4 shadow-inner shadow-white/5 backdrop-blur">
+                <p className="text-xs font-bold uppercase text-amber-100">
                   Região inicial
                 </p>
 
-                <p className="text-2xl font-black">SC</p>
+                <p className="mt-1 text-3xl font-black">SC</p>
+              </div>
+            </div>
+          </div>
+            </div>
+
+            <div className="flex items-center justify-end md:min-w-52">
+              <div className="rounded-[32px] border border-amber-200/35 bg-amber-50 p-3 shadow-2xl shadow-black/30">
+                <img
+                  src="/clubmy-logo.png"
+                  alt="ClubMy"
+                  className="h-24 w-24 rounded-[24px] object-contain md:h-32 md:w-32"
+                />
               </div>
             </div>
           </div>
         </header>
 
-        <section className="relative z-20 -mt-8 mb-10 rounded-3xl border border-amber-200/70 bg-white/95 p-5 shadow-2xl shadow-amber-900/10 backdrop-blur">
-          <div className="grid gap-4 lg:grid-cols-5">
+        <section className="relative z-20 -mt-16 mb-10 rounded-[30px] border border-amber-200/80 bg-white/95 p-4 shadow-2xl shadow-amber-900/10 backdrop-blur md:p-5">
+          <div className="grid gap-3 lg:grid-cols-[1fr_1fr_1fr_1fr_auto]">
             <select
-              className="rounded-2xl border border-stone-200 bg-white px-4 py-4 text-sm font-medium transition focus:border-amber-500"
+              className="h-16 rounded-2xl border border-stone-200 bg-white px-5 text-sm font-semibold text-clubmy-blue shadow-sm transition hover:border-amber-300 focus:border-amber-500"
               value={city}
               onChange={(e) => {
                 setCity(e.target.value);
@@ -371,7 +383,7 @@ export default function HomePage() {
             </select>
 
             <select
-              className="rounded-2xl border border-stone-200 bg-white px-4 py-4 text-sm font-medium transition focus:border-amber-500"
+              className="h-16 rounded-2xl border border-stone-200 bg-white px-5 text-sm font-semibold text-clubmy-blue shadow-sm transition hover:border-amber-300 focus:border-amber-500"
               value={supermarket}
               onChange={(e) => setSupermarket(e.target.value)}
             >
@@ -385,7 +397,7 @@ export default function HomePage() {
             </select>
 
             <select
-              className="rounded-2xl border border-stone-200 bg-white px-4 py-4 text-sm font-medium transition focus:border-amber-500"
+              className="h-16 rounded-2xl border border-stone-200 bg-white px-5 text-sm font-semibold text-clubmy-blue shadow-sm transition hover:border-amber-300 focus:border-amber-500"
               value={category}
               onChange={(e) => setCategory(e.target.value)}
             >
@@ -399,7 +411,7 @@ export default function HomePage() {
             </select>
 
             <input
-              className="rounded-2xl border border-stone-200 px-4 py-4 text-sm transition focus:border-amber-500"
+              className="h-16 rounded-2xl border border-stone-200 px-5 text-sm font-semibold text-clubmy-blue shadow-sm transition placeholder:text-stone-400 hover:border-amber-300 focus:border-amber-500"
               placeholder="Buscar produto..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
@@ -407,7 +419,7 @@ export default function HomePage() {
 
             <button
               onClick={clearFilters}
-              className="rounded-2xl bg-clubmy-blue px-5 py-4 text-sm font-bold text-amber-50 transition hover:scale-[1.02] hover:bg-clubmy-ink"
+              className="h-16 rounded-2xl bg-clubmy-blue px-8 text-sm font-black text-amber-50 shadow-lg shadow-slate-900/15 transition hover:-translate-y-0.5 hover:bg-clubmy-ink"
             >
               Limpar filtros
             </button>

@@ -309,7 +309,7 @@ export default function HomePage() {
           <div className="absolute right-0 top-0 h-64 w-64 rounded-full bg-amber-300/10 blur-3xl" />
 
           <img
-            src="/clubmy-logo.svg"
+           src="/clubmy-logo.png"
             alt="ClubMy"
             className="relative z-10 mb-8 ml-auto h-24 w-24 rounded-[26px] border border-amber-200/30 bg-clubmy-dark shadow-2xl shadow-black/25 md:absolute md:right-8 md:top-8 md:mb-0 md:h-32 md:w-32"
           />

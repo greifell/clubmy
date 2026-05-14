@@ -40,7 +40,7 @@ export default function ComparePage() {
     <main className="relative mx-auto min-h-screen max-w-5xl bg-gradient-to-b from-amber-50 via-stone-50 to-slate-100 p-6">
       <h1 className="text-2xl font-bold">Comparador de preços</h1>
       <img
-        src="/clubmy-logo.svg"
+         src="/clubmy-logo.png"
         alt="ClubMy"
         className="absolute right-6 top-6 h-16 w-16 rounded-2xl bg-clubmy-dark shadow-lg shadow-amber-900/20"
       />

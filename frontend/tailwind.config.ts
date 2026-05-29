@@ -8,10 +8,10 @@ export default {
         clubmy: {
           amber: '#f4b740',
           gold: '#d89422',
-          blue: '#101820',
-          dark: '#0b1117',
-          ink: '#18222d',
-          light: '#fffaf0'
+          blue: '#064e3b',
+          dark: '#022c22',
+          ink: '#0f172a',
+          light: '#f7fbf8'
         }
       },
       boxShadow: {

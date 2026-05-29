@@ -303,67 +303,75 @@ export default function HomePage() {
   }
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-amber-50 via-stone-50 to-slate-100">
-      <div className="mx-auto max-w-7xl px-4 py-8 md:px-6">
-        <header className="relative overflow-hidden rounded-[36px] bg-[radial-gradient(circle_at_88%_22%,rgba(244,183,64,0.35),transparent_26%),linear-gradient(135deg,#0b1117_0%,#141d26_48%,#3a2e18_100%)] px-7 pb-24 pt-7 text-white shadow-2xl shadow-amber-900/20 md:px-9 md:pb-28 md:pt-9">
-          <div className="absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-amber-200/45 to-transparent" />
-          <div className="absolute bottom-0 right-0 h-72 w-72 rounded-full bg-amber-300/10 blur-3xl" />
-          <div className="absolute left-8 top-8 h-24 w-24 rounded-full border border-amber-100/10" />
+    <main className="min-h-screen bg-[linear-gradient(180deg,#f7fbf8_0%,#ffffff_42%,#f5f7f6_100%)] text-slate-950">
+      <div className="mx-auto max-w-7xl px-4 py-6 md:px-6 md:py-8">
+        <header className="relative overflow-hidden rounded-[28px] border border-emerald-100 bg-[radial-gradient(circle_at_78%_28%,rgba(16,185,129,0.16),transparent_30%),linear-gradient(135deg,#ffffff_0%,#f5fbf7_58%,#eef8f2_100%)] px-6 py-7 shadow-xl shadow-emerald-950/5 md:px-10 md:py-10">
+          <div className="absolute inset-x-10 top-0 h-px bg-gradient-to-r from-transparent via-emerald-300/60 to-transparent" />
+          <div className="absolute right-12 top-16 hidden h-44 w-44 rounded-full border border-emerald-200/60 md:block" />
 
-          <div className="relative z-10 flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
+          <div className="relative z-10 flex flex-col gap-9 md:flex-row md:items-center md:justify-between">
             <div className="max-w-3xl">
-
-          <div className="relative z-10 max-w-3xl pr-0 md:pr-36">
-            <div className="inline-flex items-center rounded-full border border-amber-200/25 bg-amber-200/10 px-4 py-2 text-sm font-medium text-amber-50 backdrop-blur">
-              🛒 Economia inteligente em supermercados
-            </div>
-
-            <h1 className="mt-8 max-w-3xl text-5xl font-black leading-[0.95] md:text-7xl">
-              ClubMy
-              <span className="block text-amber-200">Ofertas</span>
-            </h1>
-
-            <p className="mt-6 max-w-2xl text-lg font-medium leading-8 text-stone-100 md:text-2xl">
-              Compare preços reais de supermercados em Santa Catarina e encontre
-              as melhores ofertas perto de você.
-            </p>
-
-            <div className="mt-8 flex flex-wrap gap-3">
-              <div className="min-w-40 rounded-2xl border border-amber-200/25 bg-white/10 px-5 py-4 shadow-inner shadow-white/5 backdrop-blur">
-                <p className="text-xs font-bold uppercase text-amber-100">
-                  Ofertas encontradas
-                </p>
-
-                <p className="mt-1 text-3xl font-black">{offers.length}</p>
+              <div className="inline-flex items-center rounded-full border border-emerald-200 bg-emerald-50 px-4 py-2 text-sm font-bold text-emerald-950 shadow-sm">
+                Economia inteligente em supermercados
               </div>
 
-              <div className="min-w-36 rounded-2xl border border-amber-200/25 bg-white/10 px-5 py-4 shadow-inner shadow-white/5 backdrop-blur">
-                <p className="text-xs font-bold uppercase text-amber-100">
-                  Região inicial
-                </p>
+              <h1 className="mt-7 max-w-4xl text-5xl font-black leading-[0.95] text-emerald-950 md:text-7xl">
+                ClubMy
+                <span className="block text-emerald-600">Ofertas</span>
+              </h1>
 
-                <p className="mt-1 text-3xl font-black">SC</p>
+              <p className="mt-6 max-w-2xl text-lg font-medium leading-8 text-slate-700 md:text-2xl">
+                Compare preços reais em Santa Catarina e encontre as melhores
+                ofertas perto de você.
+              </p>
+
+              <div className="mt-8 flex flex-wrap gap-3">
+                <div className="flex min-w-52 items-center gap-4 rounded-2xl border border-slate-200 bg-white px-5 py-4 shadow-sm">
+                  <div className="flex h-11 w-11 items-center justify-center rounded-full bg-emerald-50 text-lg text-emerald-700">
+                    $
+                  </div>
+                  <div>
+                    <p className="text-xs font-black uppercase text-slate-500">
+                      Ofertas encontradas
+                    </p>
+                    <p className="mt-1 text-3xl font-black text-emerald-950">
+                      {offers.length}
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex min-w-44 items-center gap-4 rounded-2xl border border-slate-200 bg-white px-5 py-4 shadow-sm">
+                  <div className="flex h-11 w-11 items-center justify-center rounded-full bg-emerald-50 text-lg text-emerald-700">
+                    SC
+                  </div>
+                  <div>
+                    <p className="text-xs font-black uppercase text-slate-500">
+                      Região inicial
+                    </p>
+                    <p className="mt-1 text-3xl font-black text-emerald-950">
+                      SC
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-            </div>
 
-            <div className="flex items-center justify-end md:min-w-52">
-              <div className="rounded-[32px] border border-amber-200/35 bg-amber-50 p-3 shadow-2xl shadow-black/30">
+            <div className="flex justify-end md:min-w-64">
+              <div className="rounded-[32px] border border-emerald-100 bg-white p-4 shadow-2xl shadow-emerald-950/10">
                 <img
                   src="/clubmy-logo.png"
                   alt="ClubMy"
-                  className="h-24 w-24 rounded-[24px] object-contain md:h-32 md:w-32"
+                  className="h-28 w-28 rounded-[24px] object-contain md:h-40 md:w-40"
                 />
               </div>
             </div>
           </div>
         </header>
 
-        <section className="relative z-20 -mt-16 mb-10 rounded-[30px] border border-amber-200/80 bg-white/95 p-4 shadow-2xl shadow-amber-900/10 backdrop-blur md:p-5">
+        <section className="relative z-20 -mt-5 mb-10 rounded-[24px] border border-slate-200 bg-white p-4 shadow-2xl shadow-slate-950/8 md:p-5">
           <div className="grid gap-3 lg:grid-cols-[1fr_1fr_1fr_1fr_auto]">
             <select
-              className="h-16 rounded-2xl border border-stone-200 bg-white px-5 text-sm font-semibold text-clubmy-blue shadow-sm transition hover:border-amber-300 focus:border-amber-500"
+              className="h-14 rounded-2xl border border-slate-200 bg-white px-5 text-sm font-bold text-emerald-950 shadow-sm transition hover:border-emerald-300 focus:border-emerald-500"
               value={city}
               onChange={(e) => {
                 setCity(e.target.value);
@@ -383,7 +391,7 @@ export default function HomePage() {
             </select>
 
             <select
-              className="h-16 rounded-2xl border border-stone-200 bg-white px-5 text-sm font-semibold text-clubmy-blue shadow-sm transition hover:border-amber-300 focus:border-amber-500"
+              className="h-14 rounded-2xl border border-slate-200 bg-white px-5 text-sm font-bold text-emerald-950 shadow-sm transition hover:border-emerald-300 focus:border-emerald-500"
               value={supermarket}
               onChange={(e) => setSupermarket(e.target.value)}
             >
@@ -397,7 +405,7 @@ export default function HomePage() {
             </select>
 
             <select
-              className="h-16 rounded-2xl border border-stone-200 bg-white px-5 text-sm font-semibold text-clubmy-blue shadow-sm transition hover:border-amber-300 focus:border-amber-500"
+              className="h-14 rounded-2xl border border-slate-200 bg-white px-5 text-sm font-bold text-emerald-950 shadow-sm transition hover:border-emerald-300 focus:border-emerald-500"
               value={category}
               onChange={(e) => setCategory(e.target.value)}
             >
@@ -411,7 +419,7 @@ export default function HomePage() {
             </select>
 
             <input
-              className="h-16 rounded-2xl border border-stone-200 px-5 text-sm font-semibold text-clubmy-blue shadow-sm transition placeholder:text-stone-400 hover:border-amber-300 focus:border-amber-500"
+              className="h-14 rounded-2xl border border-slate-200 px-5 text-sm font-bold text-emerald-950 shadow-sm transition placeholder:text-slate-400 hover:border-emerald-300 focus:border-emerald-500"
               placeholder="Buscar produto..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
@@ -419,7 +427,7 @@ export default function HomePage() {
 
             <button
               onClick={clearFilters}
-              className="h-16 rounded-2xl bg-clubmy-blue px-8 text-sm font-black text-amber-50 shadow-lg shadow-slate-900/15 transition hover:-translate-y-0.5 hover:bg-clubmy-ink"
+              className="h-14 rounded-2xl bg-emerald-950 px-8 text-sm font-black text-white shadow-lg shadow-emerald-950/15 transition hover:-translate-y-0.5 hover:bg-emerald-800"
             >
               Limpar filtros
             </button>
@@ -429,11 +437,11 @@ export default function HomePage() {
         {flyers.length > 0 ? (
           <section className="mb-10">
             <div className="mb-4">
-              <h2 className="text-xl font-black text-gray-900">
-                📢 Encartes da semana
+              <h2 className="text-2xl font-black text-slate-950">
+                Encartes da semana
               </h2>
 
-              <p className="mt-1 text-sm text-gray-500">
+              <p className="mt-1 text-sm text-slate-500">
                 {city
                   ? `Encartes disponíveis para ${city}.`
                   : 'Selecione uma cidade para ver encartes locais.'}
@@ -447,21 +455,21 @@ export default function HomePage() {
                   href={flyer.url}
                   target="_blank"
                   rel="noreferrer"
-                  className="group flex min-w-[280px] items-center justify-between rounded-2xl border border-stone-200 bg-white px-4 py-3 shadow-sm transition hover:border-amber-300 hover:shadow-md"
+                  className="group flex min-w-[280px] items-center justify-between rounded-2xl border border-slate-200 bg-white px-4 py-3 shadow-sm transition hover:border-emerald-300 hover:shadow-md"
                 >
                   <div>
-                    <p className="text-sm font-black text-gray-900">
+                    <p className="text-sm font-black text-slate-950">
                       {flyer.supermarketName}
                     </p>
 
-                    <p className="text-xs text-gray-500">
+                    <p className="text-xs text-slate-500">
                       {flyer.city}/{flyer.state}
                     </p>
                   </div>
 
                   <div className="flex items-center gap-3">
                     {flyer.validUntil ? (
-                      <p className="text-xs text-gray-400">
+                      <p className="text-xs text-slate-400">
                         até{' '}
                         {new Date(flyer.validUntil).toLocaleDateString(
                           'pt-BR'
@@ -469,7 +477,7 @@ export default function HomePage() {
                       </p>
                     ) : null}
 
-                    <div className="rounded-xl bg-amber-50 px-3 py-2 text-xs font-bold text-clubmy-blue transition group-hover:bg-amber-100">
+                    <div className="rounded-xl bg-emerald-50 px-3 py-2 text-xs font-black text-emerald-800 transition group-hover:bg-emerald-100">
                       Ver encarte
                     </div>
                   </div>
@@ -479,26 +487,26 @@ export default function HomePage() {
           </section>
         ) : null}
 
-        <div className="mb-6 flex items-center justify-between">
+        <div className="mb-6 flex items-center justify-between gap-4">
           <div>
-            <h2 className="text-2xl font-black text-gray-900">
+            <h2 className="text-3xl font-black text-slate-950">
               Melhores ofertas
             </h2>
 
-            <p className="mt-1 text-sm text-gray-500">
+            <p className="mt-1 text-sm text-slate-500">
               Atualizações automáticas dos supermercados monitorados.
             </p>
           </div>
 
           {!loading ? (
-            <div className="rounded-2xl border border-stone-200 bg-white px-4 py-3 text-sm font-semibold text-gray-700 shadow-sm">
+            <div className="rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm font-black text-emerald-950 shadow-sm">
               {offers.length} ofertas encontradas
             </div>
           ) : null}
         </div>
 
         {offerSource === 'static' && staticGeneratedAt ? (
-          <p className="-mt-4 mb-6 text-sm font-medium text-gray-500">
+          <p className="-mt-4 mb-6 text-sm font-medium text-slate-500">
             Dados carregados do arquivo público de ofertas. Atualizado em{' '}
             {new Date(staticGeneratedAt).toLocaleString('pt-BR')}.
           </p>
@@ -529,23 +537,23 @@ export default function HomePage() {
         ) : null}
 
         {!loading && !offers.length ? (
-          <div className="rounded-[32px] border border-dashed border-amber-300 bg-white p-14 text-center shadow-sm">
-            <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-amber-50 text-4xl">
-              🔎
+          <div className="rounded-[28px] border border-dashed border-emerald-200 bg-white p-14 text-center shadow-sm">
+            <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-emerald-50 text-4xl">
+              ?
             </div>
 
-            <h3 className="mt-6 text-2xl font-bold text-gray-900">
+            <h3 className="mt-6 text-2xl font-bold text-slate-950">
               Nenhuma oferta encontrada
             </h3>
 
-            <p className="mx-auto mt-3 max-w-md text-gray-500">
+            <p className="mx-auto mt-3 max-w-md text-slate-500">
               Tente alterar os filtros ou buscar outro produto para encontrar
               novas promoções.
             </p>
 
             <button
               onClick={clearFilters}
-              className="mt-8 rounded-2xl bg-clubmy-blue px-6 py-4 font-bold text-amber-50 transition hover:bg-clubmy-ink"
+              className="mt-8 rounded-2xl bg-emerald-950 px-6 py-4 font-bold text-white transition hover:bg-emerald-800"
             >
               Limpar filtros
             </button>
@@ -554,15 +562,15 @@ export default function HomePage() {
       </div>
 
       {compareOffer ? (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/55 p-4">
           <div className="max-h-[90vh] w-full max-w-2xl overflow-auto rounded-3xl bg-white p-6 shadow-2xl">
             <div className="flex items-start justify-between">
               <div>
-                <p className="text-sm font-semibold text-clubmy-gold">
+                <p className="text-sm font-semibold text-emerald-700">
                   Comparando produto
                 </p>
 
-                <h3 className="mt-1 text-2xl font-black text-gray-900">
+                <h3 className="mt-1 text-2xl font-black text-slate-950">
                   {compareOffer.product.name}
                 </h3>
               </div>
@@ -572,14 +580,14 @@ export default function HomePage() {
                   setCompareOffer(null);
                   setCompareResults([]);
                 }}
-                className="rounded-xl border border-stone-200 px-3 py-2 text-sm font-bold hover:bg-amber-50"
+                className="rounded-xl border border-slate-200 px-3 py-2 text-sm font-bold hover:bg-emerald-50"
               >
                 Fechar
               </button>
             </div>
 
             {compareLoading ? (
-              <div className="py-10 text-center text-gray-500">
+              <div className="py-10 text-center text-slate-500">
                 Buscando preços...
               </div>
             ) : (
@@ -588,30 +596,30 @@ export default function HomePage() {
                   <div
                     key={item.id}
                     className={`
-                      flex items-center justify-between rounded-2xl border p-4
+                      flex items-center justify-between gap-4 rounded-2xl border p-4
                       ${
                         index === 0
-                          ? 'border-amber-500 bg-amber-50'
-                          : 'border-stone-200'
+                          ? 'border-emerald-500 bg-emerald-50'
+                          : 'border-slate-200'
                       }
                     `}
                   >
                     <div>
-                      <p className="font-bold text-gray-900">
+                      <p className="font-bold text-slate-950">
                         {item.supermarket.name}
                       </p>
 
-                      <p className="mt-1 max-w-sm text-sm font-semibold text-gray-700">
+                      <p className="mt-1 max-w-sm text-sm font-semibold text-slate-700">
                         {item.product.name}
                       </p>
 
-                      <p className="text-sm text-gray-500">
+                      <p className="text-sm text-slate-500">
                         {item.supermarket.city}/{item.supermarket.state}
                       </p>
                     </div>
 
                     <div className="text-right">
-                      <p className="text-2xl font-black text-clubmy-blue">
+                      <p className="text-2xl font-black text-emerald-800">
                         {Number(item.price).toLocaleString('pt-BR', {
                           style: 'currency',
                           currency: 'BRL'
@@ -619,7 +627,7 @@ export default function HomePage() {
                       </p>
 
                       {index === 0 ? (
-                        <p className="text-xs font-bold text-clubmy-gold">
+                        <p className="text-xs font-bold text-emerald-700">
                           Melhor preço
                         </p>
                       ) : null}

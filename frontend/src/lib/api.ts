@@ -61,6 +61,18 @@ export type StaticOfferFeed = {
   offers: Offer[];
 };
 
+export type Region = {
+  city: string;
+  state: string;
+};
+
+export type SupermarketOption = {
+  id: number;
+  name: string;
+  city: string;
+  state: string;
+};
+
 function normalizeText(value: string) {
   return value
     .normalize('NFD')
@@ -104,6 +116,31 @@ function applyStaticFilters(offers: Offer[], filters: OfferFilters) {
   });
 }
 
+function offerKey(offer: Offer) {
+  return [
+    offer.supermarket.name,
+    offer.supermarket.city,
+    normalizeText(offer.product.name),
+    Number(offer.price).toFixed(2)
+  ].join('|');
+}
+
+function mergeOffers(apiOffers: Offer[], staticOffers: Offer[]) {
+  const merged = new Map<string, Offer>();
+
+  for (const offer of apiOffers) {
+    merged.set(offerKey(offer), offer);
+  }
+
+  for (const offer of staticOffers) {
+    if (!merged.has(offerKey(offer))) {
+      merged.set(offerKey(offer), offer);
+    }
+  }
+
+  return Array.from(merged.values());
+}
+
 export async function fetchStaticOfferFeed(filters: OfferFilters = {}): Promise<StaticOfferFeed> {
   const response = await fetch('/data/offers-vtex.json', {
     cache: 'no-store'
@@ -128,6 +165,8 @@ export async function fetchStaticOfferFeed(filters: OfferFilters = {}): Promise<
 }
 
 export async function fetchOffers(filters: OfferFilters = {}) {
+  const staticFeed = await fetchStaticOfferFeed(filters);
+
   try {
     const response = await api.get('/offers', {
       params: {
@@ -139,19 +178,16 @@ export async function fetchOffers(filters: OfferFilters = {}) {
     });
 
     const apiOffers = response.data.offers ?? [];
+    const offers = mergeOffers(apiOffers as Offer[], staticFeed.offers);
 
-    if (apiOffers.length > 0) {
-      return {
-        source: 'api' as const,
-        generatedAt: null,
-        offers: apiOffers as Offer[]
-      };
-    }
+    return {
+      source: staticFeed.offers.length > 0 ? ('mixed' as const) : ('api' as const),
+      generatedAt: staticFeed.generatedAt,
+      offers
+    };
   } catch {
     // The static JSON is the public fallback for deploys without the backend API.
   }
-
-  const staticFeed = await fetchStaticOfferFeed(filters);
 
   return {
     source: 'static' as const,
@@ -160,9 +196,9 @@ export async function fetchOffers(filters: OfferFilters = {}) {
   };
 }
 
-export async function fetchStaticRegions() {
+export async function fetchStaticRegions(): Promise<Region[]> {
   const { offers } = await fetchStaticOfferFeed();
-  const regions = new Map<string, { city: string; state: string }>();
+  const regions = new Map<string, Region>();
 
   for (const offer of offers) {
     regions.set(`${offer.supermarket.city}-${offer.supermarket.state}`, {
@@ -174,9 +210,9 @@ export async function fetchStaticRegions() {
   return Array.from(regions.values());
 }
 
-export async function fetchStaticSupermarkets(city?: string) {
+export async function fetchStaticSupermarkets(city?: string): Promise<SupermarketOption[]> {
   const { offers } = await fetchStaticOfferFeed({ city });
-  const markets = new Map<string, { id: number; name: string; city: string; state: string }>();
+  const markets = new Map<string, SupermarketOption>();
 
   for (const offer of offers) {
     markets.set(`${offer.supermarket.name}-${offer.supermarket.city}`, {
@@ -193,4 +229,69 @@ export async function fetchStaticSupermarkets(city?: string) {
 export async function fetchStaticCategories() {
   const { offers } = await fetchStaticOfferFeed();
   return Array.from(new Set(offers.map((offer) => offer.product.category))).sort();
+}
+
+export async function fetchRegions(): Promise<Region[]> {
+  const staticRegions = await fetchStaticRegions();
+
+  try {
+    const response = await api.get('/regions');
+    const data = response.data;
+    const apiRegions: Region[] = Array.isArray(data)
+      ? data
+      : Object.entries(data ?? {}).flatMap(([state, cities]) =>
+          Array.isArray(cities)
+            ? cities.map((city) => ({
+                city: String(city),
+                state: String(state)
+              }))
+            : []
+        );
+
+    return mergeByKey([...apiRegions, ...staticRegions], (region) => `${region.city}-${region.state}`);
+  } catch {
+    return staticRegions;
+  }
+}
+
+export async function fetchSupermarkets(city?: string): Promise<SupermarketOption[]> {
+  const staticMarkets = await fetchStaticSupermarkets(city);
+
+  try {
+    const response = await api.get('/supermarkets', {
+      params: {
+        city: city || undefined
+      }
+    });
+    const apiMarkets = (response.data ?? []) as SupermarketOption[];
+    const merged = mergeByKey([...apiMarkets, ...staticMarkets], (market) => `${market.name}-${market.city}`);
+
+    return merged.map((market, index) => ({
+      ...market,
+      id: market.id ?? index + 1
+    }));
+  } catch {
+    return staticMarkets;
+  }
+}
+
+export async function fetchCategories() {
+  const staticCategories = await fetchStaticCategories();
+
+  try {
+    const response = await api.get('/categories');
+    return Array.from(new Set([...(response.data ?? []), ...staticCategories])).sort();
+  } catch {
+    return staticCategories;
+  }
+}
+
+function mergeByKey<T>(items: T[], getKey: (item: T) => string) {
+  const merged = new Map<string, T>();
+
+  for (const item of items) {
+    merged.set(getKey(item), item);
+  }
+
+  return Array.from(merged.values());
 }

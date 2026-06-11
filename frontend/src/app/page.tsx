@@ -5,10 +5,10 @@ import { useEffect, useMemo, useState } from 'react';
 import { OfferCard } from '@/components/OfferCard';
 import {
   api,
+  fetchCategories,
   fetchOffers,
-  fetchStaticCategories,
-  fetchStaticRegions,
-  fetchStaticSupermarkets,
+  fetchRegions,
+  fetchSupermarkets,
   type Offer
 } from '@/lib/api';
 
@@ -153,7 +153,7 @@ export default function HomePage() {
   >([]);
 
   const [loading, setLoading] = useState(false);
-  const [offerSource, setOfferSource] = useState<'api' | 'static'>('api');
+  const [offerSource, setOfferSource] = useState<'api' | 'static' | 'mixed'>('api');
   const [staticGeneratedAt, setStaticGeneratedAt] = useState<string | null>(
     null
   );
@@ -162,55 +162,12 @@ export default function HomePage() {
   const [compareLoading, setCompareLoading] = useState(false);
 
   useEffect(() => {
-    api
-      .get('/regions')
-      .then((response) => {
-        const data = response.data;
-
-        if (Array.isArray(data)) {
-          setRegions(data);
-          return;
-        }
-
-        const parsedRegions = Object.entries(data ?? {}).flatMap(
-          ([state, cities]) =>
-            Array.isArray(cities)
-              ? cities.map((city) => ({
-                  city: String(city),
-                  state: String(state)
-                }))
-              : []
-        );
-
-        setRegions(parsedRegions);
-      })
-      .catch(async () => {
-        setRegions(await fetchStaticRegions());
-      });
-
-    api
-      .get('/categories')
-      .then((response) => {
-        setCategories(response.data ?? []);
-      })
-      .catch(async () => {
-        setCategories(await fetchStaticCategories());
-      });
+    fetchRegions().then(setRegions);
+    fetchCategories().then(setCategories);
   }, []);
 
   useEffect(() => {
-    api
-      .get('/supermarkets', {
-        params: {
-          city: city || undefined
-        }
-      })
-      .then((response) => {
-        setSupermarkets(response.data ?? []);
-      })
-      .catch(async () => {
-        setSupermarkets(await fetchStaticSupermarkets(city || undefined));
-      });
+    fetchSupermarkets(city || undefined).then(setSupermarkets);
   }, [city]);
 
   useEffect(() => {
@@ -304,51 +261,48 @@ export default function HomePage() {
 
   return (
     <main className="min-h-screen bg-[linear-gradient(180deg,#f7fbf8_0%,#ffffff_42%,#f5f7f6_100%)] text-slate-950">
-      <div className="mx-auto max-w-7xl px-4 py-6 md:px-6 md:py-8">
-        <header className="relative overflow-hidden rounded-[28px] border border-emerald-100 bg-[radial-gradient(circle_at_78%_28%,rgba(16,185,129,0.16),transparent_30%),linear-gradient(135deg,#ffffff_0%,#f5fbf7_58%,#eef8f2_100%)] px-6 py-7 shadow-xl shadow-emerald-950/5 md:px-10 md:py-10">
+      <div className="mx-auto max-w-7xl px-4 py-5 md:px-6 md:py-7">
+        <header className="relative overflow-hidden rounded-[24px] border border-emerald-100 bg-[radial-gradient(circle_at_82%_18%,rgba(16,185,129,0.14),transparent_28%),linear-gradient(135deg,#ffffff_0%,#f7fbf8_62%,#edf8f2_100%)] px-5 py-6 shadow-lg shadow-emerald-950/5 md:px-8 md:py-7">
           <div className="absolute inset-x-10 top-0 h-px bg-gradient-to-r from-transparent via-emerald-300/60 to-transparent" />
-          <div className="absolute right-12 top-16 hidden h-44 w-44 rounded-full border border-emerald-200/60 md:block" />
-
-          <div className="relative z-10 flex flex-col gap-9 md:flex-row md:items-center md:justify-between">
+          <div className="relative z-10 flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
             <div className="max-w-3xl">
-              <div className="inline-flex items-center rounded-full border border-emerald-200 bg-emerald-50 px-4 py-2 text-sm font-bold text-emerald-950 shadow-sm">
+              <div className="inline-flex items-center rounded-full border border-emerald-200 bg-emerald-50 px-3.5 py-1.5 text-xs font-bold text-emerald-950 shadow-sm">
                 Economia inteligente em supermercados
               </div>
 
-              <h1 className="mt-7 max-w-4xl text-5xl font-black leading-[0.95] text-emerald-950 md:text-7xl">
-                ClubMy
-                <span className="block text-emerald-600">Ofertas</span>
+              <h1 className="mt-5 max-w-4xl text-4xl font-black leading-[1.02] text-emerald-950 md:text-6xl">
+                ClubMy <span className="text-emerald-600">Ofertas</span>
               </h1>
 
-              <p className="mt-6 max-w-2xl text-lg font-medium leading-8 text-slate-700 md:text-2xl">
+              <p className="mt-4 max-w-2xl text-base font-medium leading-7 text-slate-700 md:text-xl">
                 Compare preços reais em Santa Catarina e encontre as melhores
                 ofertas perto de você.
               </p>
 
-              <div className="mt-8 flex flex-wrap gap-3">
-                <div className="flex min-w-52 items-center gap-4 rounded-2xl border border-slate-200 bg-white px-5 py-4 shadow-sm">
-                  <div className="flex h-11 w-11 items-center justify-center rounded-full bg-emerald-50 text-lg text-emerald-700">
+              <div className="mt-5 flex flex-wrap gap-3">
+                <div className="flex min-w-44 items-center gap-3 rounded-2xl border border-slate-200 bg-white px-4 py-3 shadow-sm">
+                  <div className="flex h-9 w-9 items-center justify-center rounded-full bg-emerald-50 text-base text-emerald-700">
                     $
                   </div>
                   <div>
-                    <p className="text-xs font-black uppercase text-slate-500">
+                    <p className="text-[11px] font-black uppercase text-slate-500">
                       Ofertas encontradas
                     </p>
-                    <p className="mt-1 text-3xl font-black text-emerald-950">
+                    <p className="mt-0.5 text-2xl font-black text-emerald-950">
                       {offers.length}
                     </p>
                   </div>
                 </div>
 
-                <div className="flex min-w-44 items-center gap-4 rounded-2xl border border-slate-200 bg-white px-5 py-4 shadow-sm">
-                  <div className="flex h-11 w-11 items-center justify-center rounded-full bg-emerald-50 text-lg text-emerald-700">
+                <div className="flex min-w-36 items-center gap-3 rounded-2xl border border-slate-200 bg-white px-4 py-3 shadow-sm">
+                  <div className="flex h-9 w-9 items-center justify-center rounded-full bg-emerald-50 text-sm text-emerald-700">
                     SC
                   </div>
                   <div>
-                    <p className="text-xs font-black uppercase text-slate-500">
+                    <p className="text-[11px] font-black uppercase text-slate-500">
                       Região inicial
                     </p>
-                    <p className="mt-1 text-3xl font-black text-emerald-950">
+                    <p className="mt-0.5 text-2xl font-black text-emerald-950">
                       SC
                     </p>
                   </div>
@@ -356,22 +310,22 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="flex justify-end md:min-w-64">
-              <div className="rounded-[32px] border border-emerald-100 bg-white p-4 shadow-2xl shadow-emerald-950/10">
+            <div className="flex justify-start md:min-w-44 md:justify-end">
+              <div className="rounded-[26px] border border-emerald-100 bg-white p-3 shadow-xl shadow-emerald-950/8">
                 <img
                   src="/clubmy-logo.png"
                   alt="ClubMy"
-                  className="h-28 w-28 rounded-[24px] object-contain md:h-40 md:w-40"
+                  className="h-20 w-20 rounded-[20px] object-contain md:h-28 md:w-28"
                 />
               </div>
             </div>
           </div>
         </header>
 
-        <section className="relative z-20 -mt-5 mb-10 rounded-[24px] border border-slate-200 bg-white p-4 shadow-2xl shadow-slate-950/8 md:p-5">
+        <section className="relative z-20 -mt-3 mb-8 rounded-[22px] border border-slate-200 bg-white p-3 shadow-xl shadow-slate-950/7 md:p-4">
           <div className="grid gap-3 lg:grid-cols-[1fr_1fr_1fr_1fr_auto]">
             <select
-              className="h-14 rounded-2xl border border-slate-200 bg-white px-5 text-sm font-bold text-emerald-950 shadow-sm transition hover:border-emerald-300 focus:border-emerald-500"
+              className="h-12 rounded-2xl border border-slate-200 bg-white px-4 text-sm font-bold text-emerald-950 shadow-sm transition hover:border-emerald-300 focus:border-emerald-500"
               value={city}
               onChange={(e) => {
                 setCity(e.target.value);
@@ -391,7 +345,7 @@ export default function HomePage() {
             </select>
 
             <select
-              className="h-14 rounded-2xl border border-slate-200 bg-white px-5 text-sm font-bold text-emerald-950 shadow-sm transition hover:border-emerald-300 focus:border-emerald-500"
+              className="h-12 rounded-2xl border border-slate-200 bg-white px-4 text-sm font-bold text-emerald-950 shadow-sm transition hover:border-emerald-300 focus:border-emerald-500"
               value={supermarket}
               onChange={(e) => setSupermarket(e.target.value)}
             >
@@ -405,7 +359,7 @@ export default function HomePage() {
             </select>
 
             <select
-              className="h-14 rounded-2xl border border-slate-200 bg-white px-5 text-sm font-bold text-emerald-950 shadow-sm transition hover:border-emerald-300 focus:border-emerald-500"
+              className="h-12 rounded-2xl border border-slate-200 bg-white px-4 text-sm font-bold text-emerald-950 shadow-sm transition hover:border-emerald-300 focus:border-emerald-500"
               value={category}
               onChange={(e) => setCategory(e.target.value)}
             >
@@ -419,7 +373,7 @@ export default function HomePage() {
             </select>
 
             <input
-              className="h-14 rounded-2xl border border-slate-200 px-5 text-sm font-bold text-emerald-950 shadow-sm transition placeholder:text-slate-400 hover:border-emerald-300 focus:border-emerald-500"
+              className="h-12 rounded-2xl border border-slate-200 px-4 text-sm font-bold text-emerald-950 shadow-sm transition placeholder:text-slate-400 hover:border-emerald-300 focus:border-emerald-500"
               placeholder="Buscar produto..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
@@ -427,7 +381,7 @@ export default function HomePage() {
 
             <button
               onClick={clearFilters}
-              className="h-14 rounded-2xl bg-emerald-950 px-8 text-sm font-black text-white shadow-lg shadow-emerald-950/15 transition hover:-translate-y-0.5 hover:bg-emerald-800"
+              className="h-12 rounded-2xl bg-emerald-950 px-7 text-sm font-black text-white shadow-md shadow-emerald-950/15 transition hover:-translate-y-0.5 hover:bg-emerald-800"
             >
               Limpar filtros
             </button>
@@ -505,9 +459,9 @@ export default function HomePage() {
           ) : null}
         </div>
 
-        {offerSource === 'static' && staticGeneratedAt ? (
+        {offerSource !== 'api' && staticGeneratedAt ? (
           <p className="-mt-4 mb-6 text-sm font-medium text-slate-500">
-            Dados carregados do arquivo público de ofertas. Atualizado em{' '}
+            Encartes locais incluídos na lista. Atualizado em{' '}
             {new Date(staticGeneratedAt).toLocaleString('pt-BR')}.
           </p>
         ) : null}

@@ -126,19 +126,20 @@ function offerKey(offer: Offer) {
 }
 
 function mergeOffers(apiOffers: Offer[], staticOffers: Offer[]) {
-  const merged = new Map<string, Offer>();
+  const apiKeys = new Set<string>();
+  const merged = [...apiOffers];
 
   for (const offer of apiOffers) {
-    merged.set(offerKey(offer), offer);
+    apiKeys.add(offerKey(offer));
   }
 
   for (const offer of staticOffers) {
-    if (!merged.has(offerKey(offer))) {
-      merged.set(offerKey(offer), offer);
+    if (!apiKeys.has(offerKey(offer))) {
+      merged.push(offer);
     }
   }
 
-  return Array.from(merged.values());
+  return merged;
 }
 
 export async function fetchStaticOfferFeed(filters: OfferFilters = {}): Promise<StaticOfferFeed> {

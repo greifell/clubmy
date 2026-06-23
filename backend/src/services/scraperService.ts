@@ -1,4 +1,3 @@
-import { chromium } from 'playwright';
 import type { NormalizedOfferInput } from '../types/offers.js';
 
 type ScraperResult = {
@@ -7,22 +6,73 @@ type ScraperResult = {
   error?: unknown;
 };
 
-function normalizePrice(value: string): number {
-  return Number(
-    value
-      .replace(/[^\d,]/g, '')
-      .replace('.', '')
-      .replace(',', '.')
-  );
-}
+type KochStore = {
+  id: string;
+  alias?: string | null;
+  name?: string | null;
+  slug?: string | null;
+  salesEnabled?: boolean;
+  fullAddress?: {
+    city?: string | null;
+    state?: string | null;
+  } | null;
+};
 
-function detectCategory(name: string): string {
+type KochSearchHit = {
+  id: string;
+  name: string;
+  brandName?: string | null;
+  image?: string | null;
+  slug?: string | null;
+  categories?: string[];
+  pricing?: {
+    price?: number | null;
+    promotion?: boolean | null;
+    promotionalPrice?: number | null;
+  } | null;
+  quantity?: {
+    inStock?: number | null;
+  } | null;
+};
+
+const SEARCH_TERMS = [
+  'arroz',
+  'feijao',
+  'leite',
+  'cafe',
+  'detergente',
+  'sabao',
+  'amaciante',
+  'papel',
+  'cerveja',
+  'refrigerante',
+  'frango',
+  'carne'
+];
+
+const ONE_DAY_MS = 1000 * 60 * 60 * 24;
+const KOCH_GRAPHQL_URL = 'https://api.superkoch.com.br:443/storefront/graphql';
+const KOCH_SEARCH_BASE_URL = 'https://sense.osuper.com.br/295';
+const KOCH_SITE_URL = 'https://www.superkoch.com.br';
+
+const browserHeaders = {
+  accept: 'application/json',
+  origin: KOCH_SITE_URL,
+  referer: `${KOCH_SITE_URL}/`,
+  'user-agent':
+    'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120 Safari/537.36'
+};
+
+function detectCategory(name: string): NormalizedOfferInput['category'] {
   const text = name.toLowerCase();
 
   if (
     text.includes('arroz') ||
+    text.includes('feijao') ||
     text.includes('feijão') ||
+    text.includes('macarrao') ||
     text.includes('macarrão') ||
+    text.includes('oleo') ||
     text.includes('óleo')
   ) {
     return 'ALIMENTOS';
@@ -30,6 +80,7 @@ function detectCategory(name: string): string {
 
   if (
     text.includes('detergente') ||
+    text.includes('sabao') ||
     text.includes('sabão') ||
     text.includes('amaciante')
   ) {
@@ -55,99 +106,47 @@ function detectCategory(name: string): string {
   return 'OUTROS';
 }
 
-async function extractOffers(
-  page: any,
-  supermarketName: string,
-  city: string
-): Promise<NormalizedOfferInput[]> {
-  const offers = await page.evaluate(() => {
-    const cards = Array.from(
-      document.querySelectorAll(
-        'article, .product-card, .card, [class*="product"]'
-      )
-    );
+function offerExpiresAt() {
+  return new Date(Date.now() + ONE_DAY_MS);
+}
 
-    return cards
-      .map((card: any) => {
-        const text = card.innerText || '';
+function offerDedupeKey(offer: NormalizedOfferInput) {
+  return [
+    offer.supermarket.name,
+    offer.supermarket.city,
+    offer.productName,
+    offer.price.toFixed(2)
+  ].join('|');
+}
 
-        const priceMatch = text.match(/R\$\s?(\d+[,.]\d{2})/);
+function dedupeOffers(offers: NormalizedOfferInput[]) {
+  const uniqueMap = new Map<string, NormalizedOfferInput>();
 
-        if (!priceMatch) return null;
+  for (const offer of offers) {
+    if (offer.price <= 0) continue;
 
-        const lines = text
-          .split('\n')
-          .map((line: string) => line.trim())
-          .filter(Boolean);
+    const key = offerDedupeKey(offer);
 
-        const productName = lines.find(
-          (line: string) =>
-            !line.includes('R$') &&
-            line.length > 3 &&
-            line.length < 120
-        );
+    if (!uniqueMap.has(key)) {
+      uniqueMap.set(key, offer);
+    }
+  }
 
-        if (!productName) return null;
-
-        const imageUrl =
-          card.querySelector('img')?.src ||
-          card.querySelector('img')?.getAttribute('data-src') ||
-          null;
-
-        return {
-          productName,
-          price: priceMatch[1],
-          imageUrl
-        };
-      })
-      .filter(Boolean);
-  });
-
-  return offers.map((offer: any) => ({
-    productName: offer.productName,
-    category: detectCategory(offer.productName),
-    price: normalizePrice(offer.price),
-    imageUrl: offer.imageUrl,
-    supermarket: {
-      name: supermarketName,
-      city,
-      state: 'SC'
-    },
-    expiresAt: new Date(Date.now() + 1000 * 60 * 60 * 24),
-    source: `${supermarketName.toLowerCase()}-playwright`
-  }));
+  return Array.from(uniqueMap.values());
 }
 
 async function scrapeBistekApi(): Promise<NormalizedOfferInput[]> {
-  console.log('🔎 Buscando ofertas Bistek via API VTEX...');
-
-  const searchTerms = [
-    'arroz',
-    'feijao',
-    'leite',
-    'cafe',
-    'detergente',
-    'sabao',
-    'amaciante',
-    'papel',
-    'cerveja',
-    'refrigerante',
-    'frango',
-    'carne'
-  ];
+  console.log('Buscando ofertas Bistek via API VTEX...');
 
   const allOffers: NormalizedOfferInput[] = [];
 
-  for (const term of searchTerms) {
+  for (const term of SEARCH_TERMS) {
     try {
-      console.log(`🔍 Termo: ${term}`);
-
       const response = await fetch(
         `https://www.bistek.com.br/api/catalog_system/pub/products/search?ft=${encodeURIComponent(term)}&_from=0&_to=20`
       );
 
       const products = await response.json();
-
       const offers = products
         .map((product: any) => {
           const item = product.items?.[0];
@@ -169,45 +168,19 @@ async function scrapeBistekApi(): Promise<NormalizedOfferInput[]> {
               city: 'Criciúma',
               state: 'SC'
             },
-            expiresAt: new Date(Date.now() + 1000 * 60 * 60 * 24),
+            expiresAt: offerExpiresAt(),
             source: 'bistek-vtex-api'
           };
         })
-        .filter(Boolean);
+        .filter(Boolean) as NormalizedOfferInput[];
 
       allOffers.push(...offers);
-
-      console.log(`✅ ${offers.length} produtos encontrados para ${term}`);
-
     } catch (error) {
-      console.error(`❌ Erro no termo ${term}`, error);
+      console.error(`Bistek erro no termo ${term}`, error);
     }
   }
 
-  const uniqueMap = new Map<string, NormalizedOfferInput>();
-
-  for (const offer of allOffers) {
-    const key = `${offer.productName}-${offer.price}`;
-
-    if (!uniqueMap.has(key)) {
-      uniqueMap.set(key, offer);
-    }
-  }
-
-  return Array.from(uniqueMap.values());
-}
-
-async function scrapeKoch(page: any) {
-  console.log('🔎 Buscando ofertas Koch...');
-
-  await page.goto('https://www.koch.com.br/ofertas', {
-    waitUntil: 'domcontentloaded',
-    timeout: 60000
-  });
-
-  await page.waitForTimeout(4000);
-
-  return extractOffers(page, 'Koch', 'Criciúma');
+  return dedupeOffers(allOffers);
 }
 
 async function scrapeVtexMarket(config: {
@@ -217,33 +190,17 @@ async function scrapeVtexMarket(config: {
   baseUrl: string;
   source: string;
 }): Promise<NormalizedOfferInput[]> {
-  console.log(`🔎 Buscando ofertas ${config.name} via API VTEX...`);
-
-  const searchTerms = [
-    'arroz',
-    'feijao',
-    'leite',
-    'cafe',
-    'detergente',
-    'sabao',
-    'amaciante',
-    'papel',
-    'cerveja',
-    'refrigerante',
-    'frango',
-    'carne'
-  ];
+  console.log(`Buscando ofertas ${config.name} via API VTEX...`);
 
   const allOffers: NormalizedOfferInput[] = [];
 
-  for (const term of searchTerms) {
+  for (const term of SEARCH_TERMS) {
     try {
       const response = await fetch(
         `${config.baseUrl}/api/catalog_system/pub/products/search?ft=${encodeURIComponent(term)}&_from=0&_to=20`
       );
 
       const products = await response.json();
-
       const offers = products
         .map((product: any) => {
           const item = product.items?.[0];
@@ -263,29 +220,174 @@ async function scrapeVtexMarket(config: {
               city: config.city,
               state: config.state
             },
-            expiresAt: new Date(Date.now() + 1000 * 60 * 60 * 24),
+            expiresAt: offerExpiresAt(),
             source: config.source
           };
         })
-        .filter(Boolean);
+        .filter(Boolean) as NormalizedOfferInput[];
 
       allOffers.push(...offers);
     } catch (error) {
-      console.error(`❌ ${config.name} erro no termo ${term}`, error);
+      console.error(`${config.name} erro no termo ${term}`, error);
     }
   }
 
-  const uniqueMap = new Map<string, NormalizedOfferInput>();
+  return dedupeOffers(allOffers);
+}
 
-  for (const offer of allOffers) {
-    const key = `${offer.supermarket.name}-${offer.productName}-${offer.price}`;
+async function fetchKochStores(): Promise<KochStore[]> {
+  const query = `
+    query KochStores {
+      publicViewer {
+        id
+        stores {
+          id
+          alias
+          name
+          slug
+          salesEnabled
+          fullAddress {
+            city
+            state
+          }
+        }
+      }
+    }
+  `;
 
-    if (!uniqueMap.has(key)) {
-      uniqueMap.set(key, offer);
+  const response = await fetch(KOCH_GRAPHQL_URL, {
+    method: 'POST',
+    headers: {
+      ...browserHeaders,
+      'content-type': 'application/json'
+    },
+    body: JSON.stringify({ query })
+  });
+
+  if (!response.ok) {
+    throw new Error(`Koch stores request failed: ${response.status}`);
+  }
+
+  const payload = (await response.json()) as {
+    data?: {
+      publicViewer?: {
+        stores?: KochStore[];
+      };
+    };
+  };
+
+  return (payload.data?.publicViewer?.stores ?? []).filter(
+    (store) =>
+      store.salesEnabled !== false &&
+      store.fullAddress?.state === 'SC' &&
+      Boolean(store.fullAddress.city)
+  );
+}
+
+function uniqueKochStoresByCity(stores: KochStore[]) {
+  const byCity = new Map<string, KochStore>();
+
+  for (const store of stores) {
+    const city = store.fullAddress?.city?.trim();
+
+    if (city && !byCity.has(city)) {
+      byCity.set(city, store);
     }
   }
 
-  return Array.from(uniqueMap.values());
+  return Array.from(byCity.values());
+}
+
+function kochHitToOffer(hit: KochSearchHit, city: string, storeId: string): NormalizedOfferInput | null {
+  const regularPrice = hit.pricing?.price ?? null;
+  const promotionalPrice = hit.pricing?.promotionalPrice ?? null;
+  const hasPromotion =
+    hit.pricing?.promotion === true &&
+    typeof promotionalPrice === 'number' &&
+    promotionalPrice > 0 &&
+    (typeof regularPrice !== 'number' || promotionalPrice < regularPrice);
+
+  if (!hasPromotion || hit.quantity?.inStock === 0) {
+    return null;
+  }
+
+  return {
+    productName: hit.name,
+    category: detectCategory(hit.name),
+    price: promotionalPrice,
+    imageUrl: hit.image ?? undefined,
+    productUrl: hit.slug ? `${KOCH_SITE_URL}/produtos/${hit.id}/${hit.slug}` : KOCH_SITE_URL,
+    supermarket: {
+      name: 'Koch',
+      city,
+      state: 'SC'
+    },
+    expiresAt: offerExpiresAt(),
+    source: `koch-osuper-${storeId}`
+  };
+}
+
+async function fetchKochPromotionsForStore(store: KochStore, city: string): Promise<NormalizedOfferInput[]> {
+  const allOffers: NormalizedOfferInput[] = [];
+
+  for (const term of SEARCH_TERMS) {
+    try {
+      const params = new URLSearchParams({
+        search: term,
+        size: '20',
+        from: '0',
+        promotion: 'true',
+        sortField: 'sales_count',
+        sortOrder: 'desc'
+      });
+      const response = await fetch(`${KOCH_SEARCH_BASE_URL}/${store.id}/search?${params.toString()}`, {
+        headers: browserHeaders
+      });
+
+      if (!response.ok) {
+        throw new Error(`Koch search request failed: ${response.status}`);
+      }
+
+      const payload = (await response.json()) as {
+        hits?: KochSearchHit[];
+      };
+      const offers = (payload.hits ?? [])
+        .map((hit) => kochHitToOffer(hit, city, store.id))
+        .filter(Boolean) as NormalizedOfferInput[];
+
+      allOffers.push(...offers);
+    } catch (error) {
+      console.error(`Koch erro no termo ${term} para ${city}`, error);
+    }
+  }
+
+  return allOffers;
+}
+
+async function scrapeKochApi(): Promise<NormalizedOfferInput[]> {
+  console.log('Buscando ofertas Koch via API Osuper...');
+
+  const stores = uniqueKochStoresByCity(await fetchKochStores());
+  const defaultStore = stores.find((store) => store.fullAddress?.city === 'Camboriú') ?? stores[0];
+
+  if (!defaultStore) {
+    return [];
+  }
+
+  const allOffers: NormalizedOfferInput[] = [];
+  allOffers.push(...(await fetchKochPromotionsForStore(defaultStore, 'Santa Catarina')));
+
+  for (const store of stores) {
+    const city = store.fullAddress?.city?.trim();
+
+    if (!city) continue;
+
+    allOffers.push(...(await fetchKochPromotionsForStore(store, city)));
+  }
+
+  console.log(`Koch: ${stores.length} municipios com loja mapeados`);
+
+  return dedupeOffers(allOffers);
 }
 
 async function scrapeAngeloniApi(): Promise<NormalizedOfferInput[]> {
@@ -309,89 +411,52 @@ async function scrapeGiassiApi(): Promise<NormalizedOfferInput[]> {
 }
 
 export async function scrapeSupermarketOffers(): Promise<NormalizedOfferInput[]> {
-  const browser = await chromium.launch({
-    headless: true
-  });
-
   const results: ScraperResult[] = [];
-
-  try {
-    const page = await browser.newPage({
-      viewport: {
-        width: 1440,
-        height: 900
-      },
-      userAgent:
-        'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120 Safari/537.36'
-    });
-
-      const scrapers = [
-      {
-       name: 'Bistek',
-        fn: scrapeBistekApi
-       },
-      {
-       name: 'Angeloni',
-        fn: scrapeAngeloniApi
-      },
-      {
+  const scrapers = [
+    {
+      name: 'Bistek',
+      fn: scrapeBistekApi
+    },
+    {
+      name: 'Angeloni',
+      fn: scrapeAngeloniApi
+    },
+    {
       name: 'Giassi',
       fn: scrapeGiassiApi
-      },
-      {
+    },
+    {
       name: 'Koch',
-       fn: scrapeKoch
-      }
-      ];
-
-    for (const scraper of scrapers) {
-      try {
-        console.log(`🚀 Iniciando scraper ${scraper.name}`);
-
-        const offers = await scraper.fn(page);
-
-        console.log(
-          `✅ ${scraper.name}: ${offers.length} ofertas encontradas`
-        );
-        offers.forEach((offer, index) => {
-        console.log(
-          `${index + 1}. ${offer.productName} | R$ ${offer.price} | ${offer.imageUrl}`
-        );
-        });
-
-        results.push({
-          supermarket: scraper.name,
-          offers
-        });
-      } catch (error) {
-        console.error(`❌ Falha no scraper ${scraper.name}`, error);
-
-        results.push({
-          supermarket: scraper.name,
-          offers: [],
-          error
-        });
-      }
+      fn: scrapeKochApi
     }
+  ];
 
-    const uniqueOffers = new Map<string, NormalizedOfferInput>();
+  for (const scraper of scrapers) {
+    try {
+      console.log(`Iniciando scraper ${scraper.name}`);
 
-    for (const offer of results.flatMap((result) => result.offers)) {
-        if (offer.price <= 0) continue;
+      const offers = await scraper.fn();
 
-        const key = `${offer.supermarket.name}-${offer.productName}-${offer.price}`;
+      console.log(`${scraper.name}: ${offers.length} ofertas encontradas`);
 
-        if (!uniqueOffers.has(key)) {
-            uniqueOffers.set(key, offer);
-        }
+      results.push({
+        supermarket: scraper.name,
+        offers
+      });
+    } catch (error) {
+      console.error(`Falha no scraper ${scraper.name}`, error);
+
+      results.push({
+        supermarket: scraper.name,
+        offers: [],
+        error
+      });
     }
-
-const allOffers = Array.from(uniqueOffers.values());
-
-    console.log(`📦 TOTAL FINAL: ${allOffers.length} ofertas`);
-
-    return allOffers;
-  } finally {
-    await browser.close();
   }
+
+  const allOffers = dedupeOffers(results.flatMap((result) => result.offers));
+
+  console.log(`TOTAL FINAL: ${allOffers.length} ofertas`);
+
+  return allOffers;
 }

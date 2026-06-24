@@ -18,6 +18,7 @@ const rootDir = process.cwd().endsWith('backend')
 async function ensureRuntimeFolders() {
   await Promise.all([
     mkdir(path.join(rootDir, 'input_catalogs'), { recursive: true }),
+    mkdir(path.join(rootDir, 'oferta'), { recursive: true }),
     mkdir(path.join(rootDir, 'archive'), { recursive: true }),
     mkdir(path.join(rootDir, 'logs'), { recursive: true }),
     mkdir(path.join(rootDir, 'public', 'data'), { recursive: true })
@@ -49,12 +50,13 @@ async function extractCatalog(source: CatalogSource): Promise<ExtractedCatalogTe
   return extractWebCatalogText(source);
 }
 
-export async function collectSupermarketOffers() {
+export async function collectSupermarketOffers(options: { includeRemote?: boolean } = {}) {
   await ensureRuntimeFolders();
   await logOfferCollector('offer collection started');
 
+  const includeRemote = options.includeRemote ?? true;
   const [remoteSources, manualSources] = await Promise.all([
-    discoverRemoteCatalogs(),
+    includeRemote ? discoverRemoteCatalogs() : Promise.resolve([]),
     discoverManualCatalogs()
   ]);
 

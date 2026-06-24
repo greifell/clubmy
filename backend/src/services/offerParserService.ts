@@ -107,7 +107,48 @@ function cleanDescription(value: string) {
       .replace(/\b(?:por|cada|oferta|a partir de|somente|apenas)\b/gi, '')
       .replace(/[|•*_]+/g, ' ')
       .replace(/^[^\p{L}\d]+/u, '')
+      .replace(/\b\d{1,2}\b\s*$/g, '')
   );
+}
+
+function hasPrice(value: string) {
+  pricePattern.lastIndex = 0;
+  return pricePattern.test(value);
+}
+
+function isPriceOnlyLine(value: string) {
+  return /^(?:R\$)?\s*\d{1,3}(?:\.\d{3})*,\d{2}\s*(?:un|kg|g|ml|l)?$/i.test(value) || /^R\$$/i.test(value);
+}
+
+function isLikelyDescriptionLine(value: string) {
+  const cleaned = cleanDescription(value);
+  if (cleaned.length < 3) return false;
+  if (isPriceOnlyLine(cleaned)) return false;
+  if (/^\d+$/.test(cleaned)) return false;
+  if (/^(validade|oferta|ofertas|encarte|domingo|segunda|terca|terça|quarta|quinta|sexta|sabado|sábado)\b/i.test(cleaned)) {
+    return false;
+  }
+  return /\p{L}/u.test(cleaned);
+}
+
+function buildDescriptionCandidate(lines: string[], index: number, line: string) {
+  const inlineDescription = cleanDescription(line);
+  if (inlineDescription.length >= 4 && !isPriceOnlyLine(inlineDescription)) {
+    return inlineDescription;
+  }
+
+  const previousDescriptions: string[] = [];
+
+  for (let cursor = index - 1; cursor >= 0 && previousDescriptions.length < 4; cursor -= 1) {
+    const candidate = lines[cursor];
+    if (isPriceOnlyLine(candidate)) continue;
+    if (hasPrice(candidate)) break;
+    if (!isLikelyDescriptionLine(candidate)) continue;
+
+    previousDescriptions.unshift(cleanDescription(candidate));
+  }
+
+  return normalizeSpaces(previousDescriptions.join(' '));
 }
 
 export function parseOffersFromCatalog(catalog: ExtractedCatalogText): ParsedOffer[] {
@@ -131,9 +172,7 @@ export function parseOffersFromCatalog(catalog: ExtractedCatalogText): ParsedOff
       const price = parseBrazilianPrice(match[1]);
       if (!Number.isFinite(price) || price <= 0) continue;
 
-      const previousLine = lines[index - 1] ?? '';
-      const nextLine = lines[index + 1] ?? '';
-      const descriptionCandidate = cleanDescription(line).length >= 4 ? cleanDescription(line) : cleanDescription(previousLine || nextLine);
+      const descriptionCandidate = buildDescriptionCandidate(lines, index, line);
 
       if (descriptionCandidate.length < 3 || /^\d/.test(descriptionCandidate)) continue;
 

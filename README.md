@@ -147,6 +147,67 @@ npm run dev
 npm run cron:update --workspace backend
 ```
 
+## Coleta de encartes e ofertas em JSON
+
+A rotina de encartes cria um arquivo estático consumível pelo site em:
+
+```bash
+public/data/offers-vtex.json
+```
+
+Ela descobre catálogos do MM Rosso e Super Moniari, tenta extrair PDFs, páginas, Flipsnack e imagens, processa arquivos manuais colocados em `input_catalogs/`, remove duplicatas e move ofertas vencidas para `archive/expired-offers.json`.
+
+### Rodar localmente
+
+```bash
+npm install
+npm run collect:offers
+npm run validate:offers
+```
+
+Por padrão a rotina processa até 30 fontes por execução. Para uma rodada curta de teste:
+
+```bash
+COLLECT_OFFERS_MAX_SOURCES=10 npm run collect:offers
+```
+
+Para entrada manual, coloque PDFs ou imagens recebidos por WhatsApp em qualquer uma destas pastas:
+
+```bash
+input_catalogs/
+oferta/
+```
+
+Para rodar somente as pastas locais, sem tentar acessar sites externos:
+
+```bash
+npm run collect:oferta
+```
+
+Arquivos com nomes contendo cidade ou mercado ajudam a inferência, por exemplo:
+
+```bash
+moniari-criciuma-29-04-12-05.pdf
+mm-rosso-bebidas-criciuma.jpg
+```
+
+### Saída
+
+O arquivo segue um formato próximo a VTEX e cada item inclui `productId`, `productName`, `brand`, `price`, `listPrice`, `validFrom`, `validUntil`, `sourceUrl`, `rawText`, `confidenceScore` e `status`.
+
+### Agendamento
+
+Cron em servidor Linux:
+
+```bash
+0 */6 * * * cd /caminho/clubmy && npm run collect:offers >> logs/collect-offers-cron.log 2>&1
+```
+
+GitHub Actions:
+
+- `.github/workflows/collect-offers-json.yml` roda duas vezes ao dia e também manualmente.
+- O workflow atualiza `public/data/offers-vtex.json` e arquiva vencidas quando houver mudanças.
+
 ## Extras planejados
 
 - Login e autenticação

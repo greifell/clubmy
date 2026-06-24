@@ -10,8 +10,10 @@ const rootDir = process.cwd().endsWith('backend')
   : process.cwd();
 
 const dataDir = path.join(rootDir, 'public', 'data');
+const frontendDataDir = path.join(rootDir, 'frontend', 'public', 'data');
 const archiveDir = path.join(rootDir, 'archive');
 const offersPath = path.join(dataDir, 'offers-vtex.json');
+const frontendOffersPath = path.join(frontendDataDir, 'offers-vtex.json');
 const expiredPath = path.join(archiveDir, 'expired-offers.json');
 
 async function readExistingOffers(): Promise<VtexOffer[]> {
@@ -64,13 +66,16 @@ function saoPauloTimestamp(date = new Date()) {
 
 export async function saveOffersFile(newParsedOffers: ParsedOffer[]) {
   await mkdir(dataDir, { recursive: true });
+  await mkdir(frontendDataDir, { recursive: true });
   await mkdir(archiveDir, { recursive: true });
 
   const existingOffers = await readExistingOffers();
   const newOffers = dedupeOffers(newParsedOffers).map(toVtexOffer);
+  const hasManualInput = newOffers.some((offer) => offer.sourceUrl.startsWith('manual://'));
   const merged = new Map<string, VtexOffer>();
 
   for (const offer of existingOffers) {
+    if (hasManualInput && offer.sourceUrl.startsWith('manual://')) continue;
     merged.set(keyFromVtex(offer), offer);
   }
 
@@ -97,6 +102,7 @@ export async function saveOffersFile(newParsedOffers: ParsedOffer[]) {
   const tempPath = `${offersPath}.tmp`;
   await writeFile(tempPath, `${JSON.stringify(output, null, 2)}\n`, 'utf8');
   await rename(tempPath, offersPath);
+  await writeFile(frontendOffersPath, `${JSON.stringify(output, null, 2)}\n`, 'utf8');
 
   if (expiredOutput.items.length > 0) {
     await writeFile(expiredPath, `${JSON.stringify(expiredOutput, null, 2)}\n`, 'utf8');
@@ -104,6 +110,7 @@ export async function saveOffersFile(newParsedOffers: ParsedOffer[]) {
 
   await logOfferCollector('offers file saved', {
     path: offersPath,
+    frontendPath: frontendOffersPath,
     active: output.total,
     expired: expiredOutput.total
   });

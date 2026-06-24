@@ -36,3 +36,6 @@ jobs:
         run: npm run cron:update
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
+
+      - name: Collect catalog offers JSON
+        run: npm run collect:offers

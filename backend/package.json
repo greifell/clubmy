@@ -13,6 +13,7 @@
     "cron:update": "tsx scripts/runDailyUpdate.ts",
     "flyers:update": "tsx scripts/updateFlyers.ts",
     "collect:offers": "tsx scripts/collectOffers.ts",
+    "collect:oferta": "tsx scripts/collectOferta.ts",
     "validate:offers": "tsx scripts/validateOffers.ts",
     "check:regional": "tsx scripts/checkRegionalPrices.ts",
     "test:angeloni-region": "tsx scripts/testAngeloniRegion.ts",

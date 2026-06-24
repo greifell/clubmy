@@ -16,7 +16,10 @@ const rootDir = process.cwd().endsWith('backend')
   ? path.resolve(process.cwd(), '..')
   : process.cwd();
 
-const inputCatalogsDir = path.join(rootDir, 'input_catalogs');
+const manualCatalogDirs = [
+  path.join(rootDir, 'input_catalogs'),
+  path.join(rootDir, 'oferta')
+];
 
 function absoluteUrl(url: string, baseUrl: string) {
   try {
@@ -170,44 +173,52 @@ export async function discoverRemoteCatalogs(): Promise<CatalogSource[]> {
 }
 
 export async function discoverManualCatalogs(): Promise<CatalogSource[]> {
-  try {
-    const files = await readdir(inputCatalogsDir);
-    const sources: CatalogSource[] = [];
+  const sources: CatalogSource[] = [];
 
-    for (const file of files) {
-      const localPath = path.join(inputCatalogsDir, file);
-      const fileStat = await stat(localPath);
-      if (!fileStat.isFile()) continue;
+  for (const manualCatalogDir of manualCatalogDirs) {
+    try {
+      const files = await readdir(manualCatalogDir);
+      const folderName = path.basename(manualCatalogDir);
 
-      const lower = file.toLowerCase();
-      const supported =
-        lower.endsWith('.pdf') ||
-        lower.endsWith('.png') ||
-        lower.endsWith('.jpg') ||
-        lower.endsWith('.jpeg') ||
-        lower.endsWith('.webp');
+      for (const file of files) {
+        const localPath = path.join(manualCatalogDir, file);
+        const fileStat = await stat(localPath);
+        if (!fileStat.isFile()) continue;
 
-      if (!supported) continue;
+        const lower = file.toLowerCase();
+        const supported =
+          lower.endsWith('.pdf') ||
+          lower.endsWith('.png') ||
+          lower.endsWith('.jpg') ||
+          lower.endsWith('.jpeg') ||
+          lower.endsWith('.webp');
 
-      sources.push({
-        supermarketName: inferManualSupermarket(file),
-        sourceName: file,
-        sourceUrl: `manual://${file}`,
-        type: lower.endsWith('.pdf') ? 'pdf' : 'image',
-        city: inferManualCity(file),
-        localPath,
-        discoveredAt: fileStat.mtime.toISOString()
+        if (!supported) continue;
+
+        sources.push({
+          supermarketName: inferManualSupermarket(`${folderName} ${file}`),
+          sourceName: `${folderName}/${file}`,
+          sourceUrl: `manual://${folderName}/${file}`,
+          type: lower.endsWith('.pdf') ? 'pdf' : 'image',
+          city: inferManualCity(`${folderName} ${file}`),
+          localPath,
+          discoveredAt: fileStat.mtime.toISOString()
+        });
+      }
+    } catch (error) {
+      await logOfferCollector('manual catalog directory skipped', {
+        directory: manualCatalogDir,
+        error: error instanceof Error ? error.message : error
       });
     }
-
-    await logOfferCollector('manual catalog discovery completed', { total: sources.length });
-    return sources;
-  } catch (error) {
-    await logOfferCollector('manual catalog discovery failed', {
-      error: error instanceof Error ? error.message : error
-    });
-    return [];
   }
+
+  await logOfferCollector('manual catalog discovery completed', {
+    directories: manualCatalogDirs,
+    total: sources.length
+  });
+
+  return sources;
 }
 
 function inferManualSupermarket(fileName: string) {

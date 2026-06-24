@@ -1,5 +1,7 @@
 import axios from 'axios';
-import { readFile } from 'node:fs/promises';
+import { mkdtemp, readFile, rm, writeFile } from 'node:fs/promises';
+import { tmpdir } from 'node:os';
+import path from 'node:path';
 import { PDFParse } from 'pdf-parse';
 
 import type { CatalogSource, ExtractedCatalogText } from '../types/catalogOffers.js';
@@ -28,14 +30,16 @@ async function loadPdfBuffer(source: CatalogSource) {
 }
 
 export async function extractPdfCatalogText(source: CatalogSource): Promise<ExtractedCatalogText> {
+  let tempDir: string | null = null;
+
   try {
     const buffer = await loadPdfBuffer(source);
     const parser = new PDFParse({ data: buffer });
     const result = await parser.getText();
-    await parser.destroy();
 
     const text = result.text.trim();
     if (text.length >= 80) {
+      await parser.destroy();
       return {
         source,
         text,
@@ -43,15 +47,47 @@ export async function extractPdfCatalogText(source: CatalogSource): Promise<Extr
       };
     }
 
-    await logOfferCollector('pdf text extraction produced little text; OCR fallback skipped for PDF pages', {
+    await logOfferCollector('pdf text extraction produced little text; trying OCR fallback', {
       sourceUrl: source.sourceUrl,
       textLength: text.length
     });
 
+    tempDir = await mkdtemp(path.join(tmpdir(), 'clubmy-pdf-ocr-'));
+    const maxPages = Number(process.env.COLLECT_OFFERS_PDF_OCR_PAGES ?? 6);
+    const screenshot = await parser.getScreenshot({
+      scale: 2,
+      first: maxPages
+    });
+    await parser.destroy();
+
+    const ocrTexts: string[] = [];
+    let confidenceSum = 0;
+
+    for (const [index, page] of screenshot.pages.entries()) {
+      if (!page.data) continue;
+
+      const imagePath = path.join(tempDir, `page-${index + 1}.png`);
+      await writeFile(imagePath, page.data);
+
+      const ocrResult = await extractImageCatalogText({
+        ...source,
+        sourceName: `${source.sourceName} página ${index + 1}`,
+        localPath: imagePath,
+        type: 'image'
+      });
+
+      if (ocrResult.text.trim()) {
+        ocrTexts.push(ocrResult.text.trim());
+        confidenceSum += ocrResult.confidenceScore;
+      }
+    }
+
+    const ocrText = ocrTexts.join('\n\n').trim();
+
     return {
       source,
-      text,
-      confidenceScore: text.length > 0 ? 0.35 : 0.1
+      text: [text, ocrText].filter(Boolean).join('\n\n'),
+      confidenceScore: ocrTexts.length > 0 ? Math.max(0.45, confidenceSum / ocrTexts.length) : text.length > 0 ? 0.35 : 0.1
     };
   } catch (error) {
     await logOfferCollector('pdf extraction failed', {
@@ -68,5 +104,12 @@ export async function extractPdfCatalogText(source: CatalogSource): Promise<Extr
       text: '',
       confidenceScore: 0
     };
+  } finally {
+    if (tempDir) {
+      await rm(tempDir, {
+        recursive: true,
+        force: true
+      });
+    }
   }
 }

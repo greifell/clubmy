@@ -7,6 +7,39 @@ import type { NormalizedOfferInput, OfferFilters } from '../types/offers.js';
 
 const CACHE_TTL_SECONDS = 60 * 5;
 
+const ANGELONI_COVERAGE_CITIES = [
+  'Florianópolis',
+  'Joinville',
+  'Blumenau',
+  'Balneário Camboriú',
+  'Criciúma',
+  'Itajaí',
+  'São José',
+  'Brusque',
+  'Jaraguá do Sul',
+  'Araranguá',
+  'Lages',
+  'Biguaçu',
+  'Porto Belo',
+  'Içara'
+];
+
+function normalizeCity(value: string) {
+  return value
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .trim();
+}
+
+function isAngeloniCoverageCity(city?: string) {
+  if (!city) return false;
+  const normalizedCity = normalizeCity(city);
+  return ANGELONI_COVERAGE_CITIES.some(
+    (coverageCity) => normalizeCity(coverageCity) === normalizedCity
+  );
+}
+
 function cacheKey(filters: OfferFilters) {
   return `offers:${JSON.stringify(filters)}`;
 }
@@ -28,18 +61,39 @@ export async function listRegions() {
     orderBy: [{ state: 'asc' }, { city: 'asc' }]
   });
 
-  return rows.reduce<Record<string, string[]>>((acc, row) => {
+  const regions = rows.reduce<Record<string, string[]>>((acc, row) => {
     if (!acc[row.state]) acc[row.state] = [];
     acc[row.state].push(row.city);
     return acc;
   }, {});
+
+  regions.SC = Array.from(
+    new Set([...(regions.SC ?? []), ...ANGELONI_COVERAGE_CITIES])
+  ).sort((a, b) => a.localeCompare(b, 'pt-BR'));
+
+  return regions;
 }
 
 export async function listSupermarkets(city?: string) {
-  return prisma.supermarket.findMany({
-    where: city ? { city } : undefined,
+  const supermarkets = await prisma.supermarket.findMany({
+    where: city
+      ? isAngeloniCoverageCity(city)
+        ? {
+            OR: [{ city }, { name: 'Angeloni' }]
+          }
+        : { city }
+      : undefined,
     orderBy: [{ state: 'asc' }, { city: 'asc' }, { name: 'asc' }]
   });
+
+  return supermarkets.map((supermarket) =>
+    city && supermarket.name === 'Angeloni'
+      ? {
+          ...supermarket,
+          city
+        }
+      : supermarket
+  );
 }
 
 export async function listOffers(filters: OfferFilters) {
@@ -61,22 +115,29 @@ export async function listOffers(filters: OfferFilters) {
 
   const supermarketWhere: Prisma.SupermarketWhereInput = {};
 
-if (filters.city) {
-  supermarketWhere.city = filters.city;
-}
+  if (filters.supermarket) {
+    supermarketWhere.name = filters.supermarket;
+  }
 
-if (filters.supermarket) {
-  supermarketWhere.name = filters.supermarket;
-}
+  const citySupermarketWhere: Prisma.SupermarketWhereInput | undefined = filters.city
+    ? isAngeloniCoverageCity(filters.city)
+      ? {
+          OR: [{ city: filters.city }, { name: 'Angeloni' }],
+          ...(filters.supermarket ? { name: filters.supermarket } : {})
+        }
+      : {
+          city: filters.city,
+          ...(filters.supermarket ? { name: filters.supermarket } : {})
+        }
+    : filters.supermarket
+      ? supermarketWhere
+      : undefined;
 
-const where: Prisma.OfferWhereInput = {
+  const where: Prisma.OfferWhereInput = {
   expiresAt: {
     gte: new Date()
   },
-  supermarket:
-    filters.city || filters.supermarket
-      ? supermarketWhere
-      : undefined,
+  supermarket: citySupermarketWhere,
   product: productWhere
 };
 
@@ -90,11 +151,23 @@ const where: Prisma.OfferWhereInput = {
     take: 5000
   });
 
+  const localizedOffers = offers.map((offer) =>
+    filters.city && offer.supermarket.name === 'Angeloni'
+      ? {
+          ...offer,
+          supermarket: {
+            ...offer.supermarket,
+            city: filters.city
+          }
+        }
+      : offer
+  );
+
   if (redis?.isOpen) {
-    await redis.setEx(key, CACHE_TTL_SECONDS, JSON.stringify(offers));
+    await redis.setEx(key, CACHE_TTL_SECONDS, JSON.stringify(localizedOffers));
   }
 
-  return offers;
+  return localizedOffers;
 }
 
 export async function compareProduct(name: string) {

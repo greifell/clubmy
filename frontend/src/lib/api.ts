@@ -73,6 +73,29 @@ export type SupermarketOption = {
   state: string;
 };
 
+const ANGELONI_COVERAGE_CITIES = new Set(
+  [
+    'Florianópolis',
+    'Joinville',
+    'Blumenau',
+    'Balneário Camboriú',
+    'Criciúma',
+    'Itajaí',
+    'São José',
+    'Brusque',
+    'Jaraguá do Sul',
+    'Araranguá',
+    'Lages',
+    'Biguaçu',
+    'Porto Belo',
+    'Içara'
+  ].map(normalizeText)
+);
+
+function isAngeloniAvailableInCity(city: string) {
+  return ANGELONI_COVERAGE_CITIES.has(normalizeText(city));
+}
+
 function normalizeText(value: string) {
   return value
     .normalize('NFD')
@@ -108,7 +131,16 @@ function applyStaticFilters(offers: Offer[], filters: OfferFilters) {
   const search = normalizeText(filters.search ?? '');
 
   return offers.filter((offer) => {
-    if (filters.city && offer.supermarket.city !== filters.city) return false;
+    if (
+      filters.city &&
+      offer.supermarket.city !== filters.city &&
+      !(
+        offer.supermarket.name === 'Angeloni' &&
+        isAngeloniAvailableInCity(filters.city)
+      )
+    ) {
+      return false;
+    }
     if (filters.supermarket && offer.supermarket.name !== filters.supermarket) return false;
     if (filters.category && offer.product.category !== filters.category) return false;
     if (search && !normalizeText(offer.product.name).includes(search)) return false;
@@ -159,9 +191,23 @@ export async function fetchStaticOfferFeed(filters: OfferFilters = {}): Promise<
     .filter((item) => item.available && item.status !== 'expired')
     .map(vtexToOffer);
 
+  const filteredOffers = applyStaticFilters(offers, filters).map((offer) =>
+    filters.city &&
+    offer.supermarket.name === 'Angeloni' &&
+    isAngeloniAvailableInCity(filters.city)
+      ? {
+          ...offer,
+          supermarket: {
+            ...offer.supermarket,
+            city: filters.city
+          }
+        }
+      : offer
+  );
+
   return {
     generatedAt: data.generatedAt ?? null,
-    offers: applyStaticFilters(offers, filters)
+    offers: filteredOffers
   };
 }
 

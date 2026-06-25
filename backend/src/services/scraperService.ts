@@ -54,6 +54,16 @@ const ONE_DAY_MS = 1000 * 60 * 60 * 24;
 const KOCH_GRAPHQL_URL = 'https://api.superkoch.com.br:443/storefront/graphql';
 const KOCH_SEARCH_BASE_URL = 'https://sense.osuper.com.br/295';
 const KOCH_SITE_URL = 'https://www.superkoch.com.br';
+const KOCH_FALLBACK_STORES: KochStore[] = [
+  {
+    id: '1415',
+    name: 'Koch Camboriu',
+    fullAddress: {
+      city: 'Camboriu',
+      state: 'SC'
+    }
+  }
+];
 
 const browserHeaders = {
   accept: 'application/json',
@@ -367,7 +377,17 @@ async function fetchKochPromotionsForStore(store: KochStore, city: string): Prom
 async function scrapeKochApi(): Promise<NormalizedOfferInput[]> {
   console.log('Buscando ofertas Koch via API Osuper...');
 
-  const stores = uniqueKochStoresByCity(await fetchKochStores());
+  let stores: KochStore[] = [];
+
+  try {
+    stores = uniqueKochStoresByCity(await fetchKochStores());
+  } catch (error) {
+    console.warn('Koch: falha ao buscar lojas via GraphQL; usando loja padrão.', error);
+  }
+
+  if (stores.length === 0) {
+    stores = KOCH_FALLBACK_STORES;
+  }
   const defaultStore = stores.find((store) => store.fullAddress?.city === 'Camboriú') ?? stores[0];
 
   if (!defaultStore) {

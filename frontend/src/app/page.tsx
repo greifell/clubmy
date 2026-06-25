@@ -157,6 +157,42 @@ function uniqueSupermarketOptions(markets: SupermarketOption[]) {
   );
 }
 
+function offerDisplayKey(offer: Offer) {
+  return [
+    normalizeProductText(offer.product.name),
+    normalizeProductText(offer.supermarket.name)
+  ].join('|');
+}
+
+function pickDisplayOffer(current: Offer, candidate: Offer) {
+  const currentPrice = Number(current.price);
+  const candidatePrice = Number(candidate.price);
+
+  if (candidatePrice !== currentPrice) {
+    return candidatePrice < currentPrice ? candidate : current;
+  }
+
+  return candidate.supermarket.city.localeCompare(current.supermarket.city, 'pt-BR') < 0
+    ? candidate
+    : current;
+}
+
+function summarizeDisplayOffers(offers: Offer[]) {
+  const summarized = new Map<string, Offer>();
+
+  for (const offer of offers) {
+    const key = offerDisplayKey(offer);
+    const existing = summarized.get(key);
+    summarized.set(key, existing ? pickDisplayOffer(existing, offer) : offer);
+  }
+
+  return Array.from(summarized.values()).sort((a, b) => {
+    const price = Number(a.price) - Number(b.price);
+    if (price !== 0) return price;
+    return a.product.name.localeCompare(b.product.name, 'pt-BR');
+  });
+}
+
 export default function HomePage() {
   const [city, setCity] = useState('');
   const [category, setCategory] = useState('');
@@ -230,6 +266,8 @@ export default function HomePage() {
     () => uniqueSupermarketOptions(supermarkets),
     [supermarkets]
   );
+  const displayOffers = useMemo(() => summarizeDisplayOffers(offers), [offers]);
+  const hiddenDuplicateOffers = offers.length - displayOffers.length;
 
   function clearFilters() {
     setCity('');
@@ -476,10 +514,17 @@ export default function HomePage() {
 
           {!loading ? (
             <div className="rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm font-black text-emerald-950 shadow-sm">
-              {offers.length} ofertas encontradas
+              {displayOffers.length} ofertas encontradas
             </div>
           ) : null}
         </div>
+
+        {!loading && hiddenDuplicateOffers > 0 ? (
+          <p className="-mt-4 mb-6 text-sm font-medium text-slate-500">
+            {hiddenDuplicateOffers} ofertas iguais foram agrupadas. Use
+            Comparar para ver todas as cidades e lojas.
+          </p>
+        ) : null}
 
         {offerSource !== 'api' && staticGeneratedAt ? (
           <p className="-mt-4 mb-6 text-sm font-medium text-slate-500">
@@ -499,9 +544,9 @@ export default function HomePage() {
           </section>
         ) : null}
 
-        {!loading && offers.length > 0 ? (
+        {!loading && displayOffers.length > 0 ? (
           <section className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-            {offers.map((offer) => (
+            {displayOffers.map((offer) => (
               <OfferCard
                 key={offer.id}
                 offer={offer}
@@ -512,7 +557,7 @@ export default function HomePage() {
           </section>
         ) : null}
 
-        {!loading && !offers.length ? (
+        {!loading && !displayOffers.length ? (
           <div className="rounded-[28px] border border-dashed border-emerald-200 bg-white p-14 text-center shadow-sm">
             <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-emerald-50 text-4xl">
               ?

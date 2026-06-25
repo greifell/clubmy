@@ -86,13 +86,17 @@ export async function listSupermarkets(city?: string) {
     orderBy: [{ state: 'asc' }, { city: 'asc' }, { name: 'asc' }]
   });
 
-  return supermarkets.map((supermarket) =>
+  const localizedSupermarkets = supermarkets.map((supermarket) =>
     city && supermarket.name === 'Angeloni'
       ? {
           ...supermarket,
           city
         }
       : supermarket
+  );
+
+  return Array.from(
+    new Map(localizedSupermarkets.map((supermarket) => [supermarket.name, supermarket])).values()
   );
 }
 

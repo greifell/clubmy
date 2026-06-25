@@ -262,7 +262,7 @@ export async function fetchStaticSupermarkets(city?: string): Promise<Supermarke
   const markets = new Map<string, SupermarketOption>();
 
   for (const offer of offers) {
-    markets.set(`${offer.supermarket.name}-${offer.supermarket.city}`, {
+    markets.set(offer.supermarket.name, {
       id: markets.size + 1,
       name: offer.supermarket.name,
       city: offer.supermarket.city,
@@ -311,7 +311,7 @@ export async function fetchSupermarkets(city?: string): Promise<SupermarketOptio
       }
     });
     const apiMarkets = (response.data ?? []) as SupermarketOption[];
-    const merged = mergeByKey([...apiMarkets, ...staticMarkets], (market) => `${market.name}-${market.city}`);
+    const merged = mergeByKey([...apiMarkets, ...staticMarkets], (market) => market.name);
 
     return merged.map((market, index) => ({
       ...market,

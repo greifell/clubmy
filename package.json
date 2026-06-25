@@ -15,6 +15,7 @@
     "build": "npm run build --workspace frontend && npm run build --workspace backend",
     "lint": "npm run lint --workspace frontend",
     "collect:offers": "npm run collect:offers --workspace backend",
+    "download:mmrosso": "python scripts/download_mmrosso_catalogs.py",
     "collect:oferta": "npm run collect:oferta --workspace backend",
     "validate:offers": "npm run validate:offers --workspace backend"
   },

@@ -2,3 +2,4 @@ easyocr
 requests
 supabase
 beautifulsoup4
+playwright

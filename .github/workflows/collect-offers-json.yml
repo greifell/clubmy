@@ -24,8 +24,23 @@ jobs:
           node-version: 22
           cache: npm
 
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+
       - name: Install dependencies
         run: npm ci
+
+      - name: Install Python downloader dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install requests beautifulsoup4 playwright
+          python -m playwright install --with-deps chromium
+
+      - name: Download MM Rosso catalogs
+        run: python scripts/download_mmrosso_catalogs.py
 
       - name: Collect offers
         run: npm run collect:offers
@@ -36,6 +51,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
+          git add -A input_catalogs
           git add public/data/offers-vtex.json frontend/public/data/offers-vtex.json
 
           if [ -f archive/expired-offers.json ]; then

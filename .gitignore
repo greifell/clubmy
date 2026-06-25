@@ -8,3 +8,5 @@ npm-debug.log*
 .npm-cache/
 *.traineddata
 logs/*.log
+__pycache__/
+*.pyc

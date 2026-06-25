@@ -27,6 +27,13 @@ type Flyer = {
   validUntil: string | null;
 };
 
+type SupermarketOption = {
+  id: number;
+  name: string;
+  city: string;
+  state: string;
+};
+
 const GENERIC_COMPARE_WORDS = new Set([
   'cerveja',
   'lager',
@@ -133,6 +140,23 @@ function uniqueComparableOffers(offers: Offer[]) {
   return Array.from(unique.values());
 }
 
+function supermarketMenuKey(name: string) {
+  return normalizeProductText(name);
+}
+
+function uniqueSupermarketOptions(markets: SupermarketOption[]) {
+  const unique = new Map<string, SupermarketOption>();
+
+  for (const market of markets) {
+    const key = supermarketMenuKey(market.name);
+    if (!unique.has(key)) unique.set(key, market);
+  }
+
+  return Array.from(unique.values()).sort((a, b) =>
+    a.name.localeCompare(b.name, 'pt-BR')
+  );
+}
+
 export default function HomePage() {
   const [city, setCity] = useState('');
   const [category, setCategory] = useState('');
@@ -143,14 +167,7 @@ export default function HomePage() {
   const [flyers, setFlyers] = useState<Flyer[]>([]);
   const [regions, setRegions] = useState<Region[]>([]);
   const [categories, setCategories] = useState<string[]>([]);
-  const [supermarkets, setSupermarkets] = useState<
-    {
-      id: number;
-      name: string;
-      city: string;
-      state: string;
-    }[]
-  >([]);
+  const [supermarkets, setSupermarkets] = useState<SupermarketOption[]>([]);
 
   const [loading, setLoading] = useState(false);
   const [offerSource, setOfferSource] = useState<'api' | 'static' | 'mixed'>('api');
@@ -208,6 +225,11 @@ export default function HomePage() {
       Number(current.price) < Number(best.price) ? current : best
     ).id;
   }, [offers]);
+
+  const supermarketOptions = useMemo(
+    () => uniqueSupermarketOptions(supermarkets),
+    [supermarkets]
+  );
 
   function clearFilters() {
     setCity('');
@@ -351,8 +373,8 @@ export default function HomePage() {
             >
               <option value="">Todos supermercados</option>
 
-              {supermarkets.map((market) => (
-                <option key={market.id} value={market.name}>
+              {supermarketOptions.map((market) => (
+                <option key={supermarketMenuKey(market.name)} value={market.name}>
                   {market.name}
                 </option>
               ))}

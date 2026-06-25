@@ -15,6 +15,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v5
+        with:
+          ref: main
 
       - name: Setup Node
         uses: actions/setup-node@v5
@@ -29,7 +31,21 @@ jobs:
         run: npm run collect:offers
 
       - name: Commit updated JSON
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: Atualiza ofertas de supermercados
-          file_pattern: public/data/offers-vtex.json frontend/public/data/offers-vtex.json archive/expired-offers.json
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add public/data/offers-vtex.json frontend/public/data/offers-vtex.json
+
+          if [ -f archive/expired-offers.json ]; then
+            git add archive/expired-offers.json
+          fi
+
+          if git diff --cached --quiet; then
+            echo "Nenhuma alteracao de ofertas para publicar."
+            exit 0
+          fi
+
+          git commit -m "Atualiza ofertas de supermercados"
+          git push origin HEAD:main

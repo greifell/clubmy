@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-06-25T17:27:12-03:00",
-  "total": 43,
+  "generatedAt": "2026-06-26T08:44:06-03:00",
+  "total": 44,
   "items": [
     {
       "productId": "69e5f233546214d4",
@@ -392,6 +392,29 @@
       "rawText": "CERVEJA SPATEN\nLATA 350ML\n69,99\nVODKA\nABSOLUT 1L",
       "confidenceScore": 0.86,
       "status": "active_uncertain"
+    },
+    {
+      "productId": "ac6a690a5c19f5a5",
+      "productName": "H����o\u001cY\u001d��slwuu.H\u001c@B�S���vlwu�\u0012\u0012\u001c�pC \u0012 �8��bǙ$v<���H�9p@H\u001c8\u0010��\u0004��- �3,�\b������{�~o�^b髧����\u0003�� Y ��ѵ�R��b#i'jw���Z\u000e[���p7� ��1�\u0019�\u001eom؛�r�r\u001b����\u0006�t\u0007n�ܰ��f����.�-��t��[Ɍ�{��˷)U�՘,\u001f49",
+      "brand": null,
+      "description": "H����o\u001cY\u001d��slwuu.H\u001c@B�S���vlwu�\u0012\u0012\u001c�pC \u0012 �8��bǙ$v<���H�9p@H\u001c8\u0010��\u0004��- �3,�\b������{�~o�^b髧����\u0003�� Y ��ѵ�R��b#i'jw���Z\u000e[���p7� ��1�\u0019�\u001eom؛�r�r\u001b����\u0006�t\u0007n�ܰ��f����.�-��t��[Ɍ�{��˷)U�՘,\u001f49",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": "Criciúma",
+      "price": 3.3,
+      "listPrice": null,
+      "available": true,
+      "validFrom": "2032-11-07",
+      "validUntil": "2026-08-31",
+      "sourceUrl": "https://www.mmrosso.com/_files/ugd/004e6a_113497975d704aa2a888dfc7e3454dcf.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "129 0 obj\n<>/Filter/FlateDecode/Height 1920/Intent/RelativeColorimetric/Length 244863/Name/X/Subtype/Image/Type/XObject/Width 1080>>stream\nH����o\u001cY\u001d��slwuu.H\u001c@B�S���vlwu�\u0012\u0012\u001c�pC \u0012 �8��bǙ$v<���H�9p@H\u001c8\u0010��\u0004��- 3,30�3,�\b������{�~o�^b髧����\u0003��_Y ��ѵ�R��b#i'jw���Z\u000e[���p7�*��1�\u0019�\u001eom؛�r�r\u001b����\u0006�t\u0007n�ܰ��f����.�-��t��[Ɍ�{��˷)U�՘,\u001f49j�U\u001b�>ͨu�Z�\u0010�\nAx\u001a�v�~��u�A�7��er\u001e}�vo��Rײ��\u0003�2�I�G�L����\u0001�\u0013�\u001e����P�L��#�\u0005�w��߉oƹ���O�\u001czO�|v�D�+�~-�o��V�gN �sd/����s'���\u001c�^\n�;����=���~��\u001f���\\�G�����}�ͫ��g����CdU��\u0014�wd��֕�O��KQ\u001f1�O/�ą�Ǿ����",
+      "confidenceScore": 0.73,
+      "status": "active"
     },
     {
       "productId": "e8cc09e4748911d9",

@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-06-28T16:14:35-03:00",
-  "total": 44,
+  "generatedAt": "2026-06-29T10:07:13-03:00",
+  "total": 51,
   "items": [
     {
       "productId": "69e5f233546214d4",
@@ -394,6 +394,98 @@
       "status": "active_uncertain"
     },
     {
+      "productId": "5cf2f35d317fba40",
+      "productName": "G�Š\u001c\u001f\u0002H��y5 ��H�e\"p]>$\u001c\u001b\u0011�e��\u0011��@4�'\u001aᶎT�\u0018f\u001c�&�\u0018��\u001a��<\u0014�e8f�,v�`�FI� d\u0017�\u001b �N\u001a�Zt\u001a�\u001f��\u000f�\u0016\u001c��%/����!�����I(~0�\u001fl���/\u0010��\u0017�m\u0010�[�}\\?/�=� % ��@\u0012��㸷+ ��%������#\u0004'WG\u0012��\u0017c��������q���-��Op:",
+      "brand": null,
+      "description": "G�Š\u001c\u001f\u0002H��y5 ��H�e\"p]>$\u001c\u001b\u0011�e��\u0011��@4�'\u001aᶎT�\u0018f\u001c�&�\u0018��\u001a��<\u0014�e8f�,v�`�FI� d\u0017�\u001b �N\u001a�Zt\u001a�\u001f��\u000f�\u0016\u001c��%/����!�����I(~0�\u001fl���/\u0010��\u0017�m\u0010�[�}\\?/�=� % ��@\u0012��㸷+ ��%������#\u0004'WG\u0012��\u0017c��������q���-��Op:",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": "Criciúma",
+      "price": 61.89,
+      "listPrice": null,
+      "available": true,
+      "validFrom": "2034-03-17",
+      "validUntil": "2027-12-05",
+      "sourceUrl": "https://www.mmrosso.com/_files/ugd/5c9871_f3d77f119b104f23a96f364d16204557.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "�k���7W�4V�i(�zR~���v}\u0001��\u001d-�o��m�z��m�N�� ��\u0014��g�W\"�ₒc�R<��\u000e=\u0010B5�RW�\u0012\u0016[Ei���v�\"L��MO�7Q�&��\u001bO!M�-�1Nko�\u0001��<��<��}B-�r\u001d>�\u000e�T�y��Kg�1��ilrZ�:˟�&2X$FC`�x\u0013��(\u0019B���?j�\u001f�JP\"�+� �e�Q�\u0001�\u001c\u0004��\"�a\u0018 �\u001f�@Ȥ\u0010�2�L\u0004V\u001b�y��������mz�m�h,yR�\u0018S��/V�\u0015�sf�;� ���^e˽\nn)�[V���Ց����l�����T��U����\u001bӜ��h���\u0017��\u0004]�}�\u0003|��~@o���'�����\u0004��>�\u0013\u0018T�+\u0016�%b�T�'\u0003�\u001a\u001c\u0018\u0019\u0012�\n�G�Š\u001c\u001f\u0002H��y5*��H�e\"p]>$\u001c\u001b\u0011�e��\u0011��@4�'\u001aᶎT�\u0018f\u001c�&�\u0018��\u001a��<\u0014�e8f�,v�`�FI�_d\u0017�\u001b �N\u001a�Zt\u001a�\u001f��\u000f�\u0016\u001c��%/����!�����I(~0�\u001fl���/\u0010��\u0017�m\u0010�[�}\\?/�=� %*��@\u0012��㸷+ ��%������#\u0004'WG\u0012��\u0017c��������q���-��Op:� �v=�'�b\u001eX;��^̾mG���;7;�m�ۘ�m̽��D�#���#\u001c<�;At;w�\u001c\u001bJ�9{2�\u0016��t�~)�~��\u0018y61,89.,73-73�8�nQvVQ���[�w�\u0017��(e����[e�ُK�95\u0015��ʎg�����Nn\u000f���E[o{3�\u0019�[W��*{R����m,�yt�Ux���fM^ze�Պ��Ҵ��䈲�Xfz\\]v*�0�\u0019��",
+      "confidenceScore": 0.73,
+      "status": "active"
+    },
+    {
+      "productId": "3011210eb31876f8",
+      "productName": "H:\\Meu Drive\\WINER\\Clientes Winer\\MM Rosso e Rossão\\Banco de Imagens de Produtos\\Iogurte de Morango Zero Lac. Nestlé .png",
+      "brand": "Nestlé",
+      "description": "H:\\Meu Drive\\WINER\\Clientes Winer\\MM Rosso e Rossão\\Banco de Imagens de Produtos\\Iogurte de Morango Zero Lac. Nestlé .png",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": "Criciúma",
+      "price": 1.15,
+      "listPrice": null,
+      "available": true,
+      "validFrom": "2034-03-17",
+      "validUntil": "2027-12-05",
+      "sourceUrl": "https://www.mmrosso.com/_files/ugd/5c9871_f3d77f119b104f23a96f364d16204557.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "xmp.iid:d7518092-db12-2c49-9f92-fbe0fdcb8433\nEmbedByReference\nH:\\Meu Drive\\WINER\\Clientes Winer\\MM Rosso e Rossão\\Banco de Imagens de Produtos\\Iogurte de Morango Zero Lac. Nestlé 1,15kg.png\nxmp.did:844e2e16-e936-2c4b-a1b6-cb103bb1a739\nxmp.iid:844e2e16-e936-2c4b-a1b6-cb103bb1a739",
+      "confidenceScore": 0.78,
+      "status": "active"
+    },
+    {
+      "productId": "237531b36b6d8ba1",
+      "productName": "H:\\Meu Drive\\WINER\\Clientes Winer\\MM Rosso e Rossão\\Banco de Imagens de Produtos\\IOGURTE NESTLÉ MORANGO .png",
+      "brand": "MORANGO",
+      "description": "H:\\Meu Drive\\WINER\\Clientes Winer\\MM Rosso e Rossão\\Banco de Imagens de Produtos\\IOGURTE NESTLÉ MORANGO .png",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": "Criciúma",
+      "price": 1.15,
+      "listPrice": null,
+      "available": true,
+      "validFrom": "2034-03-17",
+      "validUntil": "2027-12-05",
+      "sourceUrl": "https://www.mmrosso.com/_files/ugd/5c9871_f3d77f119b104f23a96f364d16204557.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "0\nEmbedByReference\nH:\\Meu Drive\\WINER\\Clientes Winer\\MM Rosso e Rossão\\Banco de Imagens de Produtos\\IOGURTE NESTLÉ MORANGO 1,15KG.png\nxmp.did:f2e6d4e6-2770-e04c-9631-dc5874c7e324\nxmp.iid:f2e6d4e6-2770-e04c-9631-dc5874c7e324",
+      "confidenceScore": 0.78,
+      "status": "active"
+    },
+    {
+      "productId": "b302f65970f66ab5",
+      "productName": "H:\\Meu Drive\\WINER\\Clientes Winer\\MM Rosso e Rossão\\Banco de Imagens de Produtos\\Iogurte Zero Lac. Nestlé .png",
+      "brand": "Nestlé",
+      "description": "H:\\Meu Drive\\WINER\\Clientes Winer\\MM Rosso e Rossão\\Banco de Imagens de Produtos\\Iogurte Zero Lac. Nestlé .png",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": "Criciúma",
+      "price": 1.15,
+      "listPrice": null,
+      "available": true,
+      "validFrom": "2034-03-17",
+      "validUntil": "2027-12-05",
+      "sourceUrl": "https://www.mmrosso.com/_files/ugd/5c9871_f3d77f119b104f23a96f364d16204557.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "0\nEmbedByReference\nH:\\Meu Drive\\WINER\\Clientes Winer\\MM Rosso e Rossão\\Banco de Imagens de Produtos\\Iogurte Zero Lac. Nestlé 1,15kg.png\nxmp.did:d7518092-db12-2c49-9f92-fbe0fdcb8433\nxmp.iid:d7518092-db12-2c49-9f92-fbe0fdcb8433",
+      "confidenceScore": 0.78,
+      "status": "active"
+    },
+    {
       "productId": "ac6a690a5c19f5a5",
       "productName": "H����o\u001cY\u001d��slwuu.H\u001c@B�S���vlwu�\u0012\u0012\u001c�pC \u0012 �8��bǙ$v<���H�9p@H\u001c8\u0010��\u0004��- �3,�\b������{�~o�^b髧����\u0003�� Y ��ѵ�R��b#i'jw���Z\u000e[���p7� ��1�\u0019�\u001eom؛�r�r\u001b����\u0006�t\u0007n�ܰ��f����.�-��t��[Ɍ�{��˷)U�՘,\u001f49",
       "brand": null,
@@ -461,6 +553,52 @@
       "rawText": "MORTADELA\nFATIADA JCW 500G\n34,99\nQUEIJO TIPO COLONIAL\nBLOEMER KG",
       "confidenceScore": 0.86,
       "status": "active_uncertain"
+    },
+    {
+      "productId": "c9845044678ddb4e",
+      "productName": "L�\u0017�\u0010\u0006�>kI\u001f�����~\u0017��\u001e����J �$�A�Ք��\u0012�\u0011\u001c��\u0004��I�B%n�j�x�� #\"?�Ԧ���\u001b$�\u001b��QG2\"��K\u0012���\\5~+�� 9�3dGl��\u0018,\u001a#�p�@����3����X�צ �u�K4鲞t��?P����\u000ej2����+#\u0016zB}S!&T�J�\bH\u0002\u0004\b\b�45�\u0014\u0012J\u0002\u0001\u0002 ! 5 E�+",
+      "brand": null,
+      "description": "L�\u0017�\u0010\u0006�>kI\u001f�����~\u0017��\u001e����J �$�A�Ք��\u0012�\u0011\u001c��\u0004��I�B%n�j�x�� #\"?�Ԧ���\u001b$�\u001b��QG2\"��K\u0012���\\5~+�� 9�3dGl��\u0018,\u001a#�p�@����3����X�צ �u�K4鲞t��?P����\u000ej2����+#\u0016zB}S!&T�J�\bH\u0002\u0004\b\b�45�\u0014\u0012J\u0002\u0001\u0002 ! 5 E�+",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": "Criciúma",
+      "price": 3.73,
+      "listPrice": null,
+      "available": true,
+      "validFrom": "2034-03-17",
+      "validUntil": "2027-12-05",
+      "sourceUrl": "https://www.mmrosso.com/_files/ugd/5c9871_f3d77f119b104f23a96f364d16204557.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "�\b�SJ|U\u0012_\n.R\u0013>\u001aB�\u0012 ��\u0002�X���E(%�*q�\\\u0010�\u0010$nP$��\u0013�+�\"U`�\u001a\u0007)1tr�:��������36Ɏ���I\u000fٗ�ܟ��\u001e%�\u0011%��`qjQ|�8>$p\u0013-�Ĉ\"�k�)\u0005\u0011\n�\u0006_���(L�\u0017�\u0010\u0006�>kI\u001f�����~\u0017��\u001e����J �$�A�Ք��\u0012�\u0011\u001c��\u0004��I�B%n�j�x�� #\"?3,73�Ԧ���\u001b$�\u001b��QG2\"��K\u0012���\\5~+�� 9�3dGl��\u0018,\u001a#�p�@����3����X�צ �u�K4鲞t��?P����\u000ej2����+#\u0016zB}S!&T�J�\bH\u0002\u0004\b\b�45�\u0014\u0012J\u0002\u0001\u0002 ! 5 E�+�\\ *�Xp\u0017�<ʢX)\u001e�\b\n\u0004P�[=������|�7���>�;�I�=�-�\u0018#\u001f�n2��\u000fg\u0014�oO qW��)��,�׌�\bq�Iu�\u0013�e\u0011���n�����A\\��(�(b\u0010Y�f� f�Ia\u001c^\u0012�燡�C!5g�����sn�4r�\nl�\u0019��j�k�ЯYDn�\u0006v\u0014\u0006^,�\u0002풐�J�g%�C���p|�\\�� r}��2�Y��Rt� �'V��j�\u0007��)u|�*�C��_��Z��HrS��W1�*��U���,��S\u001e\u0015�=4��\u0003Z�Ok\u001e�\\\u001e����eE�MM\u0012�}�)��Q�h\u0016\u00064g\u0007(���<\u0004��|�é �� L\u0016�)+�Iq�O��G�`�(\u000e;�gd����{cí{",
+      "confidenceScore": 0.73,
+      "status": "active"
+    },
+    {
+      "productId": "1ada165edc9aeaeb",
+      "productName": "m`�^��+D\u001f?\u0003�(�A���PR ���11\u0005��-9���f��b�Wc��2M�a�\u0015�G�/>y�y�'�1� {L���w#4@�y�߫K�ha�7�b�e k��\b&)U[�b,�Z �ش��M �mwE�/$�=TR���,\b�[�n��%������6��iL\u0014\u0018߈�)iQ\u0002M\u0012:�F�Uc��P�~�\u0010�\u001bt2�\u0004��1 ��\bI�Ӆ",
+      "brand": null,
+      "description": "m`�^��+D\u001f?\u0003�(�A���PR ���11\u0005��-9���f��b�Wc��2M�a�\u0015�G�/>y�y�'�1� {L���w#4@�y�߫K�ha�7�b�e k��\b&)U[�b,�Z �ش��M �mwE�/$�=TR���,\b�[�n��%������6��iL\u0014\u0018߈�)iQ\u0002M\u0012:�F�Uc��P�~�\u0010�\u001bt2�\u0004��1 ��\bI�Ӆ",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": "Criciúma",
+      "price": 1.91,
+      "listPrice": null,
+      "available": true,
+      "validFrom": "2034-03-17",
+      "validUntil": "2027-12-05",
+      "sourceUrl": "https://www.mmrosso.com/_files/ugd/5c9871_f3d77f119b104f23a96f364d16204557.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "1&\u001d\u001f�0Z�\nP�\u0016�\u0016�$f�X�:{��L�Z� 6�S�\"E�~��,*��\u000f �쒯h*\u001a\u001e\u001e��Jќ���\u0007�PW� �*�[����[�L���￟�y\"M(��/�ȑ�\u000e��K}�o4�\n�[\"m`�^��+D\u001f?\u0003�(�A���PR*���11\u0005��-9���f��b�Wc��2M�a�\u0015�G�/>y�y�'�1�_{L���w#4@�y�߫K�ha�7�b�e*k��\b&)U[�b,�Z �ش��M �mwE�/$�=TR���,\b�[�n��%������6��iL\u0014\u0018߈�1,91)iQ\u0002M\u0012:�F�Uc��P�~�\u0010�\u001bt2�\u0004��1 ��\bI�Ӆ����$\u001d\n�(��\n�fE�\u0016F�\u0005�8 !<ː���2���\u0010",
+      "confidenceScore": 0.73,
+      "status": "active"
     },
     {
       "productId": "3ea1db6d601cf78d",
@@ -1013,6 +1151,29 @@
       "rawText": "MASSA DE SÊMOLA\nISABELA FURADA E PENE 400G\n1,49\nMACARRÃO INSTANTÂNEO\nISABELA 75G",
       "confidenceScore": 0.86,
       "status": "active_uncertain"
+    },
+    {
+      "productId": "b134cf7a62f1fea9",
+      "productName": "դ����뤦҈f��ۅQw(䖜���ѷ/F6fE4f��І+��\u0005{ (�ʫ�Ur\u0013����5��[�}�K�N���2\u001b��6[f��2\u001a�I�z��A�t\b't\bi:��:\u0001�:��t�%��M��K��?��w\\gO���I��+��ٺ�y�\u0011�&qT�\u0016�K�ȥ7^M�U3s��� x��\u0013\u0006���\u0003��9���� �>\u001f?~�\u0005\u001e�����hK\u0007 ",
+      "brand": null,
+      "description": "դ����뤦҈f��ۅQw(䖜���ѷ/F6fE4f��І+��\u0005{ (�ʫ�Ur\u0013����5��[�}�K�N���2\u001b��6[f��2\u001a�I�z��A�t\b't\bi:��:\u0001�:��t�%��M��K��?��w\\gO���I��+��ٺ�y�\u0011�&qT�\u0016�K�ȥ7^M�U3s��� x��\u0013\u0006���\u0003��9���� �>\u001f?~�\u0005\u001e�����hK\u0007 ",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": "Criciúma",
+      "price": 68.68,
+      "listPrice": null,
+      "available": true,
+      "validFrom": "2034-03-17",
+      "validUntil": "2027-12-05",
+      "sourceUrl": "https://www.mmrosso.com/_files/ugd/5c9871_f3d77f119b104f23a96f364d16204557.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "H�ZK�r�t�\u0014v;S�,�B� ��RYk��ki���v\u000f�cO�}Oj�\u0017����\u001aof�w1ssq��*��JF@--�:�P}՗����m`iF\u0010#5��\u0016T�J,I �|K(L\n��G��\u001e,�/\u001a�/\u001a�^����ˮ��2\u0011�\u0014J*!Y�D�\u0014�Ϸw�k�����|�����DJ��;M��6_d=����nRR?)�\u001a�E5�G��\u001d�y��쨦lrkNܽ�І�a\n��դ����뤦҈f��ۅQw(䖜���ѷ/F6fE4f��І+��\u0005{*(�ʫ�Ur\u0013����5��[�}�K�N���2\u001b��6[f��2\u001a�I�z��A�t\b't\bi:��:\u0001�:��t�%��M��K��?��w\\gO���I��+��ٺ�y�\u0011�&qT�\u0016�K�ȥ7^M�U3s���_x��\u0013\u0006���\u0003��9����_�>\u001f?~�\u0005\u001e�����hK\u0007 � �\u0003�\u001d���\u0011\u0004b$�\u0018\u0017r0�@(068,68<6�\u0004�Y�İ\u0018bh,1�L ��\u001f\u0012\u001d\u0018\u001c\u0013\u0018\u0012E8@�\u000f\u0004����v�&W\u000f',�c��皿\u0013|��ָ�L�@�1\n�2��6h�/9��\u0004Gڨ-s�Z�him���@�W�l�Xۂhe��045G��\u0017- ��M�X\u0013S��\u001eJO\u001f���\u001a�27@�#\u0010V�&N8kG,�����\u0012�\n���X��#�",
+      "confidenceScore": 0.73,
+      "status": "active"
     }
   ]
 }

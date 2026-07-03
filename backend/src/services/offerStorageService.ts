@@ -2,7 +2,7 @@ import { mkdir, readFile, rename, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 
 import type { ParsedOffer, VtexOffer, VtexOffersFile } from '../types/catalogOffers.js';
-import { dedupeOffers, offerHash, toVtexOffer } from './offerParserService.js';
+import { dedupeOffers, offerHash, sanitizeProductDescription, toVtexOffer } from './offerParserService.js';
 import { logOfferCollector } from './offerLoggerService.js';
 
 const rootDir = process.cwd().endsWith('backend')
@@ -41,6 +41,20 @@ function isExpired(offer: VtexOffer) {
   return new Date(`${offer.validUntil}T23:59:59`) < new Date();
 }
 
+function sanitizeVtexOffer(offer: VtexOffer) {
+  const productName = sanitizeProductDescription(offer.productName);
+  const description = sanitizeProductDescription(offer.description);
+  const resolvedName = productName || description;
+
+  if (!resolvedName) return null;
+
+  return {
+    ...offer,
+    productName: resolvedName,
+    description: description || resolvedName
+  };
+}
+
 function keyFromVtex(offer: VtexOffer) {
   return offer.productId || offerHash({
     supermarketName: offer.supermarketName,
@@ -69,8 +83,13 @@ export async function saveOffersFile(newParsedOffers: ParsedOffer[]) {
   await mkdir(frontendDataDir, { recursive: true });
   await mkdir(archiveDir, { recursive: true });
 
-  const existingOffers = await readExistingOffers();
-  const newOffers = dedupeOffers(newParsedOffers).map(toVtexOffer);
+  const existingOffers = (await readExistingOffers())
+    .map(sanitizeVtexOffer)
+    .filter((offer): offer is VtexOffer => Boolean(offer));
+  const newOffers = dedupeOffers(newParsedOffers)
+    .map(toVtexOffer)
+    .map(sanitizeVtexOffer)
+    .filter((offer): offer is VtexOffer => Boolean(offer));
   const hasManualInput = newOffers.some((offer) => offer.sourceUrl.startsWith('manual://'));
   const merged = new Map<string, VtexOffer>();
 

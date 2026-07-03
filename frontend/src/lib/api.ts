@@ -103,11 +103,38 @@ function normalizeText(value: string) {
     .toLowerCase();
 }
 
+const localFilePathPattern = /\b[A-Za-z]:[\\/]|\\{1,2}|\b(?:Meu Drive|Banco de Imagens|Clientes Winer|WINER)\b/i;
+const imageFilePattern = /\.(?:png|jpe?g|webp|gif|bmp|tiff?)\b/i;
+
+function cleanStaticProductName(value: string) {
+  const normalized = value.replace(/\s+/g, ' ').trim();
+
+  if (!normalized) return '';
+
+  if (localFilePathPattern.test(normalized) || imageFilePattern.test(normalized)) {
+    const fileName = normalized.replace(/\//g, '\\').split('\\').filter(Boolean).at(-1) ?? '';
+
+    return fileName
+      .replace(imageFilePattern, '')
+      .replace(/[_-]+/g, ' ')
+      .replace(/^[^\p{L}\d]+|[^\p{L}\d]+$/gu, '')
+      .replace(/\s+/g, ' ')
+      .trim();
+  }
+
+  return normalized;
+}
+
 function inferCategory(item: VtexOffer) {
   return item.categories.at(-1) ?? 'Ofertas';
 }
 
 function vtexToOffer(item: VtexOffer, index: number): Offer {
+  const productName =
+    cleanStaticProductName(item.productName) ||
+    cleanStaticProductName(item.description) ||
+    'Produto em oferta';
+
   return {
     id: Number.parseInt(item.productId.slice(0, 12), 16) || index + 1,
     price: String(item.price),
@@ -116,7 +143,7 @@ function vtexToOffer(item: VtexOffer, index: number): Offer {
     createdAt: item.validFrom ?? new Date().toISOString(),
     expiresAt: item.validUntil ?? undefined,
     product: {
-      name: item.productName || item.description,
+      name: productName,
       category: inferCategory(item)
     },
     supermarket: {

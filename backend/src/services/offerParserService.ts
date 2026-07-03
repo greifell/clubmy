@@ -111,6 +111,41 @@ function cleanDescription(value: string) {
   );
 }
 
+const localFilePathPattern = /\b[A-Za-z]:[\\/]|\\{1,2}|\b(?:Meu Drive|Banco de Imagens|Clientes Winer|WINER)\b/i;
+const imageFilePattern = /\.(?:png|jpe?g|webp|gif|bmp|tiff?)\b/i;
+
+function pathBasename(value: string) {
+  const normalized = value.replace(/\//g, '\\');
+  const fileName = normalized.split('\\').filter(Boolean).at(-1) ?? '';
+
+  return normalizeSpaces(
+    fileName
+      .replace(imageFilePattern, '')
+      .replace(/[_-]+/g, ' ')
+      .replace(/^[^\p{L}\d]+|[^\p{L}\d]+$/gu, '')
+  );
+}
+
+export function sanitizeProductDescription(value: string) {
+  const cleaned = cleanDescription(value);
+
+  if (localFilePathPattern.test(cleaned) || imageFilePattern.test(cleaned)) {
+    return cleanDescription(pathBasename(cleaned));
+  }
+
+  return cleaned;
+}
+
+function isInvalidProductDescription(value: string) {
+  const cleaned = normalizeSpaces(value);
+
+  if (cleaned.length < 3) return true;
+  if (!/\p{L}/u.test(cleaned)) return true;
+  if (localFilePathPattern.test(cleaned) || imageFilePattern.test(cleaned)) return true;
+
+  return false;
+}
+
 function hasPrice(value: string) {
   pricePattern.lastIndex = 0;
   return pricePattern.test(value);
@@ -121,7 +156,7 @@ function isPriceOnlyLine(value: string) {
 }
 
 function isLikelyDescriptionLine(value: string) {
-  const cleaned = cleanDescription(value);
+  const cleaned = sanitizeProductDescription(value);
   if (cleaned.length < 3) return false;
   if (isPriceOnlyLine(cleaned)) return false;
   if (/^\d+$/.test(cleaned)) return false;
@@ -132,7 +167,7 @@ function isLikelyDescriptionLine(value: string) {
 }
 
 function buildDescriptionCandidate(lines: string[], index: number, line: string) {
-  const inlineDescription = cleanDescription(line);
+  const inlineDescription = sanitizeProductDescription(line);
   if (inlineDescription.length >= 4 && !isPriceOnlyLine(inlineDescription)) {
     return inlineDescription;
   }
@@ -148,7 +183,7 @@ function buildDescriptionCandidate(lines: string[], index: number, line: string)
     previousDescriptions.unshift(cleanDescription(candidate));
   }
 
-  return normalizeSpaces(previousDescriptions.join(' '));
+  return sanitizeProductDescription(previousDescriptions.join(' '));
 }
 
 export function parseOffersFromCatalog(catalog: ExtractedCatalogText): ParsedOffer[] {
@@ -172,9 +207,15 @@ export function parseOffersFromCatalog(catalog: ExtractedCatalogText): ParsedOff
       const price = parseBrazilianPrice(match[1]);
       if (!Number.isFinite(price) || price <= 0) continue;
 
-      const descriptionCandidate = buildDescriptionCandidate(lines, index, line);
+      const descriptionCandidate = sanitizeProductDescription(buildDescriptionCandidate(lines, index, line));
 
-      if (descriptionCandidate.length < 3 || /^\d/.test(descriptionCandidate)) continue;
+      if (
+        descriptionCandidate.length < 3 ||
+        /^\d/.test(descriptionCandidate) ||
+        isInvalidProductDescription(descriptionCandidate)
+      ) {
+        continue;
+      }
 
       const rawText = compactRawContext(lines, index);
       const city = inferCity(rawText, catalog.source.city);

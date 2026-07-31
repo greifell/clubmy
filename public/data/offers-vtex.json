@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-07-30T16:20:21-03:00",
-  "total": 90,
+  "generatedAt": "2026-07-31T08:27:59-03:00",
+  "total": 92,
   "items": [
     {
       "productId": "c9845044678ddb4e",
@@ -92,6 +92,29 @@
       ],
       "rawText": "QUEIJO FATIADO BLOEMER\nMUSSARELA 300G\n6,99\nCREME DE LEITE NATA\nBLOEMER 300G",
       "confidenceScore": 0.96,
+      "status": "active"
+    },
+    {
+      "productId": "0807b7b4ee89a7f2",
+      "productName": "bA,�\u0005� �\u0018b���XG\u0007!�rm����a���{ɰ���N2lǎ�.�I���[�0wr��A���L�v �n0�ܧ��\u0004A",
+      "brand": null,
+      "description": "bA,�\u0005� �\u0018b���XG\u0007!�rm����a���{ɰ���N2lǎ�.�I���[�0wr��A���L�v �n0�ܧ��\u0004A",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": "Criciúma",
+      "price": 2.33,
+      "listPrice": null,
+      "available": true,
+      "validFrom": "2032-11-07",
+      "validUntil": "2026-08-31",
+      "sourceUrl": "https://www.mmrosso.com/_files/ugd/004e6a_33fa34070dcf4356a9917167c17f07cb.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "���b1g��J��y\u0012��%�iö\u0007i�XM�Q4TCe�\u0012`�[��b\n�����΅������-6�����\u001a�����GY/��\u0012��ؚuw�\u0018;\u0015>�Jn\u0018���\u001a;���-��\u001b�֔z���n���\u0007�b�4��z�\u0016�R��x;�b�咥�R��\n\u000f���bu��BĨ\u000f����/�Ce����;d��`B\u000f\u0019��{�\u0016˦��K\\\u0010 bA,�\u0005� �\u0018b���XG\u0007!�rm����a���{ɰ���N2lǎ�.2,33�I���[�0wr��A���L�v*�n0�ܧ��\u0004A�\n�ۨ�-\"F����\u0011��DX�YĞ@�UG�X\u0002����Y7c���z\u000ffj&���,\u0016?�\u001d�a���Q\u001f\u0016�+\u001a;��\bjm�����\u0002\u0005�\u001a�\u0015*X\u0016\u001a;�`����.P�`o\na��t>�܂�~\u000f�a!\u0017�X�Iy��X�aU�4�K�5\u0014167\u0012럪`Vt\u0011z[�L�X쀂���b'\u0015L(�b��IQ7�\u0016���1N��b��g\u0015�|\u0003��V}\u0001��Ua�b��",
+      "confidenceScore": 0.73,
       "status": "active"
     },
     {
@@ -751,13 +774,13 @@
       "available": true,
       "validFrom": "2032-11-07",
       "validUntil": "2026-08-31",
-      "sourceUrl": "https://www.mmrosso.com/_files/ugd/004e6a_fa8da2dc1b5646998784b241a8142cc8.pdf",
+      "sourceUrl": "https://www.mmrosso.com/_files/ugd/004e6a_33fa34070dcf4356a9917167c17f07cb.pdf",
       "imageUrl": null,
       "categories": [
         "Supermercado",
         "Ofertas"
       ],
-      "rawText": "\u001d��Kһ��N�T`\u0014b�f]\u001fTX\u0007�Td*��A�t ! \u0011�Y8b1�(:$Ԟ���f)\u0011#\u001f��\u0011*\nK��\u0014�\u0011��)\u0017.2�\u000e���5$�;f88���\u0019yHD��TI��}�H���r�|}{�\bl\u0004��\u0014�����~�5\u001b����`\"�@�x\u0003��\u0004B��O�\u00190vk��@j�}hX~�\u0003aы�\u0012e\u0014r���R�L��\u0010����bN�md;I!A���>/Filter/FlateDecode/Height 1920/Intent/RelativeColorimetric/Length 244863/Name/X/Subtype/Image/Type/XObject/Width 1080>>stream\nH����o\u001cY\u001d��slwuu.H\u001c@B�S���vlwu�\u0012\u0012\u001c�pC \u0012 �8��bǙ$v<���H�9p@H\u001c8\u0010��\u0004��- 3,30�3,�\b������{�~o�^b髧����\u0003��_Y ��ѵ�R��b#i'jw���Z\u000e[���p7�*��1�\u0019�\u001eom؛�r�r\u001b����\u0006�t\u0007n�ܰ��f����.�-��t��[Ɍ�{��˷)U�՘,\u001f49j�U\u001b�>ͨu�Z�\u0010�\nAx\u001a�v�~��u�A�7��er\u001e}�vo��Rײ��\u0003�2�I�G�L����\u0001�\u0013�\u001e����P�L��#�\u0005�w��߉oƹ���O�\u001czO�|v�D�+�~-�o��V�gN �sd/����s'���\u001c�^\n�;����=���~��\u001f���\\�G�����}�ͫ��g����CdU��\u0014�wd��֕�O��KQ\u001f1�O/�ą�Ǿ����",
+      "rawText": "155 0 obj\n<>/Filter/FlateDecode/Height 1920/Intent/RelativeColorimetric/Length 244863/Name/X/Subtype/Image/Type/XObject/Width 1080>>stream\nH����o\u001cY\u001d��slwuu.H\u001c@B�S���vlwu�\u0012\u0012\u001c�pC \u0012 �8��bǙ$v<���H�9p@H\u001c8\u0010��\u0004��- 3,30�3,�\b������{�~o�^b髧����\u0003��_Y ��ѵ�R��b#i'jw���Z\u000e[���p7�*��1�\u0019�\u001eom؛�r�r\u001b����\u0006�t\u0007n�ܰ��f����.�-��t��[Ɍ�{��˷)U�՘,\u001f49j�U\u001b�>ͨu�Z�\u0010�\nAx\u001a�v�~��u�A�7��er\u001e}�vo��Rײ��\u0003�2�I�G�L����\u0001�\u0013�\u001e����P�L��#�\u0005�w��߉oƹ���O�\u001czO�|v�D�+�~-�o��V�gN �sd/����s'���\u001c�^\n�;����=���~��\u001f���\\�G�����}�ͫ��g����CdU��\u0014�wd��֕�O��KQ\u001f1�O/�ą�Ǿ����",
       "confidenceScore": 0.73,
       "status": "active"
     },
@@ -1518,6 +1541,29 @@
       ],
       "rawText": "LINGUIÇA TOSCANA\nSEARA 600G\n3,99\nEMPANADO SEARA\nRECHEADO 110G",
       "confidenceScore": 0.96,
+      "status": "active"
+    },
+    {
+      "productId": "d79fa352189c1a09",
+      "productName": "M�[�J\u0019Р",
+      "brand": null,
+      "description": "M�[�J\u0019Р",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": "Criciúma",
+      "price": 6.97,
+      "listPrice": null,
+      "available": true,
+      "validFrom": "2032-11-07",
+      "validUntil": "2026-08-31",
+      "sourceUrl": "https://www.mmrosso.com/_files/ugd/004e6a_33fa34070dcf4356a9917167c17f07cb.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "�\u0002oV��\nT۲V��H�m�y�V�g$&a#���l\u0005�J.4�$\u0017.W]V-7M\"d:�Z[ >���+���n�F��W\u001b��\u001bF�L�U]�ηliknQ�#č\u0002$'�X\u0013\u0012�č\u0006\"\"�3]E�*���\u0015\u000e: ���@��\u001e,�Q���Q\u001b���M%\u0014�ܻGV���Ҳ��U-E\u000e�Ht�9��bõ&��ff�[M��-)�H�Ec\u001c�\b�bCj1���U��Zfc��\u001c�32\u0011���i&�X�\u000ecq���h���q���]n�ؖ�E��m �\nB�-���RQl����_�fn�\\�ض<��\u0018�T�h���6,97�J�2;\u0011S-�L�S��,KN[5��Ce>\u001a�M��5�.�b+�*��\u001br��ۑk}+�;���%���!c�G#���\u0011���v�&*ߓJgk��{����f�z�j�ah�W:�ud�&�f�ֵ�#vM;+%\u000e\u0012��,yt��EL��H��S�KI�Ǵmx�R��P� ՛��M,\u0014j+\u001a�W�=9t��N�\u0011��\"��<�| d�\u0011)���W*Er��q􊊵��Y�s�x�\u0019\u0001�\"�����kU�j��iQ\u001c�SDm���**2��TG2��Ԙ\u0015�W9U\u0015��V��N\u001a����c�rzF^$\u0018��ۣ�j�V\u001c\u0006D���mR����y�YY���,�6di)X·.�\"GYxy�\"�U�~2�\u001a����[�y��1���s��\u0011r\"\\��(�M�[�J\u0019Р9\u001b\n\u001b\u0015��c�uU\u0015\\�9Q�UUM%UN\u0016\u0019�zԜ��J�UW�\u0004�e\u001dU)\u001c�8��RԞ�\u001e�9ɘI2Ʋ &S\u0019�t(1Z�j���W\u0015\u0011��ҚS���3b�� iN��$���2��\u001b\u0011�",
+      "confidenceScore": 0.66,
       "status": "active"
     },
     {

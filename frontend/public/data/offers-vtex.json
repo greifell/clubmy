@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-06T08:20:15-03:00",
-  "total": 77,
+  "generatedAt": "2026-08-06T20:56:01-03:00",
+  "total": 79,
   "items": [
     {
       "productId": "c9845044678ddb4e",
@@ -463,6 +463,29 @@
       "status": "active"
     },
     {
+      "productId": "24c54d77be75a5d4",
+      "productName": "GV\"�G",
+      "brand": null,
+      "description": "GV\"�G",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": "Criciúma",
+      "price": 5.73,
+      "listPrice": null,
+      "available": true,
+      "validFrom": "2033-01-31",
+      "validUntil": "2032-05-02",
+      "sourceUrl": "https://www.mmrosso.com/_files/ugd/004e6a_7d56b41a59d8443782e7ec437ed2cc0a.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "�\u001b��aC=e\u0006���%��噆GA��ũi���#\u001c \u0002=U%\u001c��h�J�@\u001c)�����1���N�U�;e4���\u0005H�\u001c�2��N�\u0017\u0002\u001c�3*\b��x\u000e.8���8\u001a\u0013\u001c�0��&\u0011�\"/\u0016����\u001b\n11100���ʘ���\u0018i���}�e3��\u001eML�\u0014���\"Yupq�` �hW`�.�@$M�0�|��B�:�y}Df:�9E\u0001H�p��,�\u0016Ɓ���#�k\u0006\u0007lWĴ��P�\b�F�\u0002��a���!����8%l�\nz\u0018P�\u0015yxy\u0004w,���vb��`���*�\u0001l�6�gҲY8}&Ssmm��o��\u001b�1\u0018(�@�3�[�*� k�R �lOd{#�zGh%�\u0015�o��\\Xq�v\u0018�>� �U��!\u001c��ܰ���=1m~��\u0001��\u0014����mp/lb9C!\u0006��\u0004�3�;�\u000f� M�\u0019���h ^\u0016\u0004z��:��\u0012\u0017�N�cE�5,73\u0016@�.��\u0018��Y[��y\\-GV\"�G\n\u0004�tuu!�����\u0018�|�6\u0006}��#�\bz\u001c�\nE+\"H\u0012#��)�9p�\u0019#xf%\u0019\u0018�-�d \u00038[\u0002Q ���bbc-�����\u0018o��ʘ���\u0018i�v��ɗ�ϛ����F�����D�8I,Q�n̡T�",
+      "confidenceScore": 0.66,
+      "status": "active"
+    },
+    {
       "productId": "ac6a690a5c19f5a5",
       "productName": "H����o\u001cY\u001d��slwuu.H\u001c@B�S���vlwu�\u0012\u0012\u001c�pC \u0012 �8��bǙ$v<���H�9p@H\u001c8\u0010��\u0004��- �3,�\b������{�~o�^b髧����\u0003�� Y ��ѵ�R��b#i'jw���Z\u000e[���p7� ��1�\u0019�\u001eom؛�r�r\u001b����\u0006�t\u0007n�ܰ��f����.�-��t��[Ɍ�{��˷)U�՘,\u001f",
       "brand": null,
@@ -528,6 +551,29 @@
         "Ofertas"
       ],
       "rawText": "129 0 obj\n<>/Filter/FlateDecode/Height 1920/Intent/RelativeColorimetric/Length 244863/Name/X/Subtype/Image/Type/XObject/Width 1080>>stream\nH����o\u001cY\u001d��slwuu.H\u001c@B�S���vlwu�\u0012\u0012\u001c�pC \u0012 �8��bǙ$v<���H�9p@H\u001c8\u0010��\u0004��- 3,30�3,�\b������{�~o�^b髧����\u0003��_Y ��ѵ�R��b#i'jw���Z\u000e[���p7�*��1�\u0019�\u001eom؛�r�r\u001b����\u0006�t\u0007n�ܰ��f����.�-��t��[Ɍ�{��˷)U�՘,\u001f49j�U\u001b�>ͨu�Z�\u0010�\nAx\u001a�v�~��u�A�7��er\u001e}�vo��Rײ��\u0003�2�I�G�L����\u0001�\u0013�\u001e����P�L��#�\u0005�w��߉oƹ���O�\u001czO�|v�D�+�~-�o��V�gN �sd/����s'���\u001c�^\n�;����=���~��\u001f���\\�G�����}�ͫ��g����CdU��\u0014�wd��֕�O��KQ\u001f1�O/�ą�Ǿ����",
+      "confidenceScore": 0.73,
+      "status": "active"
+    },
+    {
+      "productId": "5241c538eb6f9f47",
+      "productName": "H����o\u001cY\u001d��slwuu.H\u001c@B�S���vlwu�\u0012\u0012\u001c�pC \u0012 �8��bǙ$v<���H�9p@H\u001c8\u0010��\u0004��- �3,�\b������{�~o�^b髧����\u0003�� Y ��ѵ�R��b#i'jw���Z\u000e[���p7� ��1�\u0019�\u001eom؛�r�r\u001b����\u0006�t\u0007n�ܰ��f����.�-��t��[Ɍ�{��˷)U�՘,\u001f",
+      "brand": null,
+      "description": "H����o\u001cY\u001d��slwuu.H\u001c@B�S���vlwu�\u0012\u0012\u001c�pC \u0012 �8��bǙ$v<���H�9p@H\u001c8\u0010��\u0004��- �3,�\b������{�~o�^b髧����\u0003�� Y ��ѵ�R��b#i'jw���Z\u000e[���p7� ��1�\u0019�\u001eom؛�r�r\u001b����\u0006�t\u0007n�ܰ��f����.�-��t��[Ɍ�{��˷)U�՘,\u001f",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": "Criciúma",
+      "price": 3.3,
+      "listPrice": null,
+      "available": true,
+      "validFrom": "2033-01-31",
+      "validUntil": "2032-05-02",
+      "sourceUrl": "https://www.mmrosso.com/_files/ugd/004e6a_7d56b41a59d8443782e7ec437ed2cc0a.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "�v1 \u0005�Η���9j�P��.\n��#\u0010������>�<@>/Filter/FlateDecode/Height 1920/Intent/RelativeColorimetric/Length 244863/Name/X/Subtype/Image/Type/XObject/Width 1080>>stream\nH����o\u001cY\u001d��slwuu.H\u001c@B�S���vlwu�\u0012\u0012\u001c�pC \u0012 �8��bǙ$v<���H�9p@H\u001c8\u0010��\u0004��- 3,30�3,�\b������{�~o�^b髧����\u0003��_Y ��ѵ�R��b#i'jw���Z\u000e[���p7�*��1�\u0019�\u001eom؛�r�r\u001b����\u0006�t\u0007n�ܰ��f����.�-��t��[Ɍ�{��˷)U�՘,\u001f49j�U\u001b�>ͨu�Z�\u0010�\nAx\u001a�v�~��u�A�7��er\u001e}�vo��Rײ��\u0003�2�I�G�L����\u0001�\u0013�\u001e����P�L��#�\u0005�w��߉oƹ���O�\u001czO�|v�D�+�~-�o��V�gN �sd/����s'���\u001c�^\n�;����=���~��\u001f���\\�G�����}�ͫ��g����CdU��\u0014�wd��֕�O��KQ\u001f1�O/�ą�Ǿ����",
       "confidenceScore": 0.73,
       "status": "active"
     },

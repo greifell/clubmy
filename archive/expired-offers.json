@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-06T08:20:15-03:00",
+  "generatedAt": "2026-08-06T20:56:01-03:00",
   "total": 14,
   "items": [
     {
@@ -394,6 +394,29 @@
       "status": "expired"
     },
     {
+      "productId": "f38a27b49568a2f1",
+      "productName": "a�'��\u001d&�fef$��C͑�a�b4�\u0002A�l��o��\u001b�\"..\u000eV��� H lLz\u001a)<\u0010V�#H��ޫ^��",
+      "brand": null,
+      "description": "a�'��\u001d&�fef$��C͑�a�b4�\u0002A�l��o��\u001b�\"..\u000eV��� H lLz\u001a)<\u0010V�#H��ޫ^��",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": "Criciúma",
+      "price": 4,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-09-18",
+      "validUntil": "2026-06-07",
+      "sourceUrl": "https://www.mmrosso.com/_files/ugd/5c9871_7693b4db370640708c6d38dd3bd310be.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "\u000f�\b \u000f\nN��JOMJ����iH0�\n\u000e���a�'��\u001d&�fef$��C͑�a�b4�\u0002A�l��o��\u001b�\"..\u000eV��� H|lLz\u001a)<4,00\u0010V�#H��ޫ^��\nP ������̣G���R�\u0006hQ||<$UwO�@������y���\u0005��}\u001d\u0016��\nd�\u0007��\u0005��\u0002a��",
+      "confidenceScore": 0.73,
+      "status": "expired"
+    },
+    {
       "productId": "98f0bad7a92b99e0",
       "productName": "cB�����@�h2\u0019ڃ\u0012G��x�\u0010\b�\u001f%XV ��/n���Msct4�D!��o�\u0010�f5�B!c\u00166B\u0019�\u0002�0X��d�֮ �z�\u001a0 6s��`���`7���r\u0019ؗȤB1l+\u0011�㍍U����� L����R����l>u��������J�jmmS �)��Qw����f�N٩\u0010h\u0014MJq�F~�[)�U�hխ��\"]�ĨU\u000e�w\u000e꺌�]&",
       "brand": null,
@@ -555,25 +578,25 @@
       "status": "expired"
     },
     {
-      "productId": "06822e8c3eeeb230",
-      "productName": "e.�Fl�y�� ~�izzz��\u0003s�Ӝ����7o���{���G�~�zjjj�����������>4MO������\u001fL��\u0017k\u0012���\b\u001a�C�y� \"H �\u001f��E",
+      "productId": "98f0bad7a92b99e0",
+      "productName": "cB�����@�h2\u0019ڃ\u0012G��x�\u0010\b�\u001f%XV ��/n���Msct4�D!��o�\u0010�f5�B!c\u00166B\u0019�\u0002�0X��d�֮ �z�\u001a0 6s��`���`7���r\u0019ؗȤB1l+\u0011�㍍U����� L����R����l>u��������J�jmmS �)��Qw����f�N٩\u0010h\u0014MJq�F~�[)�U�hխ��\"]�ĨU\u000e�w\u000e꺌�]&",
       "brand": null,
-      "description": "e.�Fl�y�� ~�izzz��\u0003s�Ӝ����7o���{���G�~�zjjj�����������>4MO������\u001fL��\u0017k\u0012���\b\u001a�C�y� \"H �\u001f��E",
+      "description": "cB�����@�h2\u0019ڃ\u0012G��x�\u0010\b�\u001f%XV ��/n���Msct4�D!��o�\u0010�f5�B!c\u00166B\u0019�\u0002�0X��d�֮ �z�\u001a0 6s��`���`7���r\u0019ؗȤB1l+\u0011�㍍U����� L����R����l>u��������J�jmmS �)��Qw����f�N٩\u0010h\u0014MJq�F~�[)�U�hխ��\"]�ĨU\u000e�w\u000e꺌�]&",
       "supermarketName": "MM Rosso",
       "seller": "MM Rosso",
       "city": "Criciúma",
-      "price": 4.47,
+      "price": 2.02,
       "listPrice": null,
       "available": false,
-      "validFrom": "2029-11-15",
-      "validUntil": "2026-04-08",
-      "sourceUrl": "https://www.mmrosso.com/_files/ugd/5c9871_703ab6213aa3408d8837df04ab3c567a.pdf",
+      "validFrom": "2026-09-18",
+      "validUntil": "2026-06-07",
+      "sourceUrl": "https://www.mmrosso.com/_files/ugd/5c9871_7693b4db370640708c6d38dd3bd310be.pdf",
       "imageUrl": null,
       "categories": [
         "Supermercado",
         "Ofertas"
       ],
-      "rawText": "���\"*��+��r�� �\u0019\u0003\nKg\"QXB\u0010��\u0004�\u0004�>\u0013���\u0013:�N\u001b��|�����\u0006\bJ��\u0004�\u0001�\n\u0002�\u0017��3#x�\u001eo\u001b/�G�\u0004�P\u001f�lܱ�e\u0011gCR�G7��7�j��j���\u0006\bK��m��F�\u0013\u0005z�H��o�{�2EX\u0016 ԃf8�m�O��*\u0011�Xil���\u0007�\u0010\u0004z?�\u0006\u0002R�l�#\u001b�\u0011}#0\u0001�\u0004�� \u0016��A�`i�ghf\u0017��A�;aN\u0017ʵԳG��֋\u001c�\u0005��\u0005�\u0005p\u001e\u0006��cY��-gC-g��@K\u0013��D\u001c��37��4,47,��/\u001c���9��O�NI͸u�8\\矛�M�*߿e��+|�\u001f��ٲF����9Q���wqeeŮGm�-�_^����;�yO�T_��ނ\u0017}E6 ����E��?~5��oƵ�Lk�>��\u001f�v���ۗ-�X\u0014����.��.O�'����\u001f���uͩ��U7ss�u��:]�U=�9�����/��e.�Fl�y��_~�izzz��\u0003s�Ӝ����7o���{���G�~�zjjj�����������>4MO������\u001fL��\u0017k\u0012���\b\u001a�C�y�-\"H �\u001f��E�'\n�Dx\u0011\u0001?\\�� Q�\u0010�s<}� ' �\ba�\u0010��\u001c�v�\baqN���L.��pX\\\u0016�N%Q��@����|�\u0005�\u001e�yn��n�N�NX\u0017�\u001e����X\u0017�3������}\u001e�\u001d��.//����{{{������.� ��\u0013\bx\" O �\u0013\u0002�� B\u0010�\u001cB�P�����Pf\b\u001d\u000e��4\u001a�F��\u0018<:��`�\u0019t�AC\u0018 ��D�,!�\u0016°\u001d���\u0011s�\u0012\u000e�N�� ��y\u0007��/?\u0003�#�����",
+      "rawText": "�E\u0019�7�Q�t&�ʠ�\u0012�Ћ�f�M�8�\u0003Y��\u0012�Q� r\\,��d�\u0012 .ѱ\u0014nr���jE�Z�Vi���\u001d\u001d*�Z��)W*�*e��wrv�}e�EcЩt\u00188:\u0003��\u0019 *�\u0006�\n\u001f�\u0012*�\u0006�-)+m8�(�J%2�H,Vut�5\u001a�R�&���\u0004'�a\u0015\u0001���\u0012q�D�.��Qd�2�D)\u0017�ڡ��U��H*\u0001��� ��=���\u001d�\u001b\u001dC&Sbb(\u0014�\u0012\u0017\u001b\u0013\u0017\u001b\u001b\u001f\u0007\n�cB�����@�h2\u0019ڃ\u0012G��x�\u0010\b�\u001f%XV*��/n���Msct4�D!��o�\u0010�f5�B!c\u00166B\u0019�\u0002�0X��d�֮_�z�\u001a0 6s��`���`7���r\u0019ؗȤB1l+\u0011�㍍U�����|L����R����l>u��������J�jmmS*�)��Qw����f�N٩\u0010h\u0014MJq�F~�[)�U�hխ��\"]�ĨU\u000e�w\u000e꺌�]&��<�?l6�Mz��`0�`a�;4R�\u0002h>�&hn9RW[YY������-hj\u0010 ��r�R�ڡh�u���Fu�\u001bʟ\u0017��*п]p�&�ݪ�#�r۴�w��QQ���]\u001f��~*��綼k�\u001d�Dy\u0017��I2}.5e�6e�ԅ���\u0019m�]�ݩ�~]�s�k��=�)�r���oݻo��n���\u001a:8}�i�t�?g��\u0017�^� �9�M�-$2,02,�MDX0��\u0006F���c/���0���\"�\u0006_\u0013�22���o<�\u0013\u0011�\u0001�'\u0001\b\u0006�\u0004\u0001ci�D�'\u0011\u0003�\u0004�'���~D\"���c��y���\u0004<���P�@�\u0005�0\bKҧ@�fO��e\u0001�&AP�(�qONJ�!^n\u0010�� ą-�\u0010/w��P�n����\n/X�",
       "confidenceScore": 0.73,
       "status": "expired"
     },
@@ -781,6 +804,52 @@
         "Ofertas"
       ],
       "rawText": "���\"*��+��r�� �\u0019\u0003\nKg\"QXB\u0010��\u0004�\u0004�>\u0013���\u0013:�N\u001b��|�����\u0006\bJ��\u0004�\u0001�\n\u0002�\u0017��3#x�\u001eo\u001b/�G�\u0004�P\u001f�lܱ�e\u0011gCR�G7��7�j��j���\u0006\bK��m��F�\u0013\u0005z�H��o�{�2EX\u0016 ԃf8�m�O��*\u0011�Xil���\u0007�\u0010\u0004z?�\u0006\u0002R�l�#\u001b�\u0011}#0\u0001�\u0004�� \u0016��A�`i�ghf\u0017��A�;aN\u0017ʵԳG��֋\u001c�\u0005��\u0005�\u0005p\u001e\u0006��cY��-gC-g��@K\u0013��D\u001c��37��4,47,��/\u001c���9��O�NI͸u�8\\矛�M�*߿e��+|�\u001f��ٲF����9Q���wqeeŮGm�-�_^����;�yO�T_��ނ\u0017}E6 ����E��?~5��oƵ�Lk�>��\u001f�v���ۗ-�X\u0014����.��.O�'����\u001f���uͩ��U7ss�u��:]�U=�9�����/��e.�Fl�y��_~�izzz��\u0003s�Ӝ����7o���{���G�~�zjjj�����������>4MO������\u001fL��\u0017k\u0012���\b\u001a�C�y�-\"H �\u001f��E�'\n�Dx\u0011\u0001?\\�� Q�\u0010�s<}� ' �\ba�\u0010��\u001c�v�\baqN���L.��pX\\\u0016�N%Q��@����|�\u0005�\u001e�yn��n�N�NX\u0017�\u001e����X\u0017�3������}\u001e�\u001d��.//����{{{������.� ��\u0013\bx\" O �\u0013\u0002�� B\u0010�\u001cB�P�����Pf\b\u001d\u000e��4\u001a�F��\u0018<:��`�\u0019t�AC\u0018 ��D�,!�\u0016°\u001d���\u0011s�\u0012\u000e�N�� ��y\u0007��/?\u0003�#�����",
+      "confidenceScore": 0.73,
+      "status": "expired"
+    },
+    {
+      "productId": "06822e8c3eeeb230",
+      "productName": "e.�Fl�y�� ~�izzz��\u0003s�Ӝ����7o���{���G�~�zjjj�����������>4MO������\u001fL��\u0017k\u0012���\b\u001a�C�y� \"H �\u001f��E",
+      "brand": null,
+      "description": "e.�Fl�y�� ~�izzz��\u0003s�Ӝ����7o���{���G�~�zjjj�����������>4MO������\u001fL��\u0017k\u0012���\b\u001a�C�y� \"H �\u001f��E",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": "Criciúma",
+      "price": 4.47,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2029-11-15",
+      "validUntil": "2026-04-08",
+      "sourceUrl": "https://www.mmrosso.com/_files/ugd/5c9871_703ab6213aa3408d8837df04ab3c567a.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "���\"*��+��r�� �\u0019\u0003\nKg\"QXB\u0010��\u0004�\u0004�>\u0013���\u0013:�N\u001b��|�����\u0006\bJ��\u0004�\u0001�\n\u0002�\u0017��3#x�\u001eo\u001b/�G�\u0004�P\u001f�lܱ�e\u0011gCR�G7��7�j��j���\u0006\bK��m��F�\u0013\u0005z�H��o�{�2EX\u0016 ԃf8�m�O��*\u0011�Xil���\u0007�\u0010\u0004z?�\u0006\u0002R�l�#\u001b�\u0011}#0\u0001�\u0004�� \u0016��A�`i�ghf\u0017��A�;aN\u0017ʵԳG��֋\u001c�\u0005��\u0005�\u0005p\u001e\u0006��cY��-gC-g��@K\u0013��D\u001c��37��4,47,��/\u001c���9��O�NI͸u�8\\矛�M�*߿e��+|�\u001f��ٲF����9Q���wqeeŮGm�-�_^����;�yO�T_��ނ\u0017}E6 ����E��?~5��oƵ�Lk�>��\u001f�v���ۗ-�X\u0014����.��.O�'����\u001f���uͩ��U7ss�u��:]�U=�9�����/��e.�Fl�y��_~�izzz��\u0003s�Ӝ����7o���{���G�~�zjjj�����������>4MO������\u001fL��\u0017k\u0012���\b\u001a�C�y�-\"H �\u001f��E�'\n�Dx\u0011\u0001?\\�� Q�\u0010�s<}� ' �\ba�\u0010��\u001c�v�\baqN���L.��pX\\\u0016�N%Q��@����|�\u0005�\u001e�yn��n�N�NX\u0017�\u001e����X\u0017�3������}\u001e�\u001d��.//����{{{������.� ��\u0013\bx\" O �\u0013\u0002�� B\u0010�\u001cB�P�����Pf\b\u001d\u000e��4\u001a�F��\u0018<:��`�\u0019t�AC\u0018 ��D�,!�\u0016°\u001d���\u0011s�\u0012\u000e�N�� ��y\u0007��/?\u0003�#�����",
+      "confidenceScore": 0.73,
+      "status": "expired"
+    },
+    {
+      "productId": "22579e0523cc0e8b",
+      "productName": "e8<\u001f\u000eσ����g��I8",
+      "brand": null,
+      "description": "e8<\u001f\u000eσ����g��I8",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": "Criciúma",
+      "price": 72.32,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-09-18",
+      "validUntil": "2026-06-07",
+      "sourceUrl": "https://www.mmrosso.com/_files/ugd/5c9871_7693b4db370640708c6d38dd3bd310be.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "��3�Mt�٥o�'�T�\u0007�Ӿ5ݖ�����,�y}I2�0\u0011�y�i�^�c)s��38���T߲K������MT~=�b\u0013�Bݪ��{R#�/ݔ�\u0019�\u001f���\"$k�f�b�j]�r\u0004�18����nsC��S \u0004\u0015C�U\b� A�`�y\b�\u0003���AG �\u000ej-/8��t9�ɕⵜ�f\ne�\u001f-rCl,u�F\n\u0006Ӈ��0�n �\u0018\u001f_ca~\u001d\u0001�63\u0007Vfd�72,32*�7���)A K\u0011\b<\u0012Q\u000eG�!�\u0015HD�zD� uj��\u001aL\u0016�w$\\��B\b*�TR4��_V���.�M����\"۝��gz'\u0014���l �<\u0010Z�oCŁ�7�C+R�N�Gbcg�흛�\u0012]Z��Q\u0012P|�Љ#[��s���jwU��̪Y�U�\u0015��5�cD���g\u0017��6�9�Z�\u0011�gP��,�Êut���/�� !�e8<\u001f\u000eσ����g��I8<\n��\u000fA����o�\u0018�}\u0019�\u0002\u0006�\u0003�עȾ�Ԡ jT456��F��ѽht7\u001a݅F�GE⭬���s��N��N\u001c���u�p�������O��)^W�LO�\\W�\u0002��n��\u001e�����\u0006\u0006�s�6\u0019\u001b߲����x�ͽ�ۻ���\u0012W�������o\u000f\nE��������CB���h\u0011\u0011�",
       "confidenceScore": 0.73,
       "status": "expired"
     },
@@ -2027,25 +2096,25 @@
       "status": "expired"
     },
     {
-      "productId": "22c8553734057cc3",
-      "productName": "IOGURTE NESTLÉ MORANGO",
-      "brand": "MORANGO",
-      "description": "IOGURTE NESTLÉ MORANGO",
+      "productId": "8fab571eeccf77d1",
+      "productName": "Iogurte de Morango Zero Lac. Nestlé",
+      "brand": "Nestlé",
+      "description": "Iogurte de Morango Zero Lac. Nestlé",
       "supermarketName": "MM Rosso",
       "seller": "MM Rosso",
       "city": "Criciúma",
       "price": 1.15,
       "listPrice": null,
       "available": false,
-      "validFrom": "2029-11-15",
-      "validUntil": "2026-04-08",
-      "sourceUrl": "https://www.mmrosso.com/_files/ugd/5c9871_703ab6213aa3408d8837df04ab3c567a.pdf",
+      "validFrom": "2026-09-18",
+      "validUntil": "2026-06-07",
+      "sourceUrl": "https://www.mmrosso.com/_files/ugd/5c9871_7693b4db370640708c6d38dd3bd310be.pdf",
       "imageUrl": null,
       "categories": [
         "Supermercado",
         "Ofertas"
       ],
-      "rawText": "0\nEmbedByReference\nH:\\Meu Drive\\WINER\\Clientes Winer\\MM Rosso e Rossão\\Banco de Imagens de Produtos\\IOGURTE NESTLÉ MORANGO 1,15KG.png\nxmp.did:f2e6d4e6-2770-e04c-9631-dc5874c7e324\nxmp.iid:f2e6d4e6-2770-e04c-9631-dc5874c7e324",
+      "rawText": "xmp.iid:d7518092-db12-2c49-9f92-fbe0fdcb8433\nEmbedByReference\nH:\\Meu Drive\\WINER\\Clientes Winer\\MM Rosso e Rossão\\Banco de Imagens de Produtos\\Iogurte de Morango Zero Lac. Nestlé 1,15kg.png\nxmp.did:844e2e16-e936-2c4b-a1b6-cb103bb1a739\nxmp.iid:844e2e16-e936-2c4b-a1b6-cb103bb1a739",
       "confidenceScore": 0.78,
       "status": "expired"
     },
@@ -2253,6 +2322,52 @@
         "Ofertas"
       ],
       "rawText": "0\nEmbedByReference\nH:\\Meu Drive\\WINER\\Clientes Winer\\MM Rosso e Rossão\\Banco de Imagens de Produtos\\IOGURTE NESTLÉ MORANGO 1,15KG.png\nxmp.did:f2e6d4e6-2770-e04c-9631-dc5874c7e324\nxmp.iid:f2e6d4e6-2770-e04c-9631-dc5874c7e324",
+      "confidenceScore": 0.78,
+      "status": "expired"
+    },
+    {
+      "productId": "22c8553734057cc3",
+      "productName": "IOGURTE NESTLÉ MORANGO",
+      "brand": "MORANGO",
+      "description": "IOGURTE NESTLÉ MORANGO",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": "Criciúma",
+      "price": 1.15,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2029-11-15",
+      "validUntil": "2026-04-08",
+      "sourceUrl": "https://www.mmrosso.com/_files/ugd/5c9871_703ab6213aa3408d8837df04ab3c567a.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "0\nEmbedByReference\nH:\\Meu Drive\\WINER\\Clientes Winer\\MM Rosso e Rossão\\Banco de Imagens de Produtos\\IOGURTE NESTLÉ MORANGO 1,15KG.png\nxmp.did:f2e6d4e6-2770-e04c-9631-dc5874c7e324\nxmp.iid:f2e6d4e6-2770-e04c-9631-dc5874c7e324",
+      "confidenceScore": 0.78,
+      "status": "expired"
+    },
+    {
+      "productId": "57d4815f2798fbc7",
+      "productName": "IOGURTE NESTLÉ MORANGO",
+      "brand": "MORANGO",
+      "description": "IOGURTE NESTLÉ MORANGO",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": "Criciúma",
+      "price": 1.15,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-09-18",
+      "validUntil": "2026-06-07",
+      "sourceUrl": "https://www.mmrosso.com/_files/ugd/5c9871_7693b4db370640708c6d38dd3bd310be.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "xmp.iid:d7518092-db12-2c49-9f92-fbe0fdcb8433\nEmbedByReference\nH:\\Meu Drive\\WINER\\Clientes Winer\\MM Rosso e Rossão\\Banco de Imagens de Produtos\\IOGURTE NESTLÉ MORANGO 1,15KG.png\nxmp.did:f2e6d4e6-2770-e04c-9631-dc5874c7e324\nxmp.iid:f2e6d4e6-2770-e04c-9631-dc5874c7e324",
       "confidenceScore": 0.78,
       "status": "expired"
     },
@@ -2809,14 +2924,14 @@
       "status": "expired"
     },
     {
-      "productId": "0caf11d2e648adc6",
-      "productName": "Lq �h�q4\u000f\u0019� \"a�;@h+8A\u0005���=��OQl >9%<$",
-      "brand": null,
-      "description": "Lq �h�q4\u000f\u0019� \"a�;@h+8A\u0005���=��OQl >9%<$",
+      "productId": "7ed6bcb32888d705",
+      "productName": "Iogurte Zero Lac. Nestlé",
+      "brand": "Nestlé",
+      "description": "Iogurte Zero Lac. Nestlé",
       "supermarketName": "MM Rosso",
       "seller": "MM Rosso",
       "city": "Criciúma",
-      "price": 4.44,
+      "price": 1.15,
       "listPrice": null,
       "available": false,
       "validFrom": "2026-09-18",
@@ -2827,8 +2942,8 @@
         "Supermercado",
         "Ofertas"
       ],
-      "rawText": "TGK��EJ\u001f�ҧH�K�{\u0017���\u001e�\u0011�{b��)�Y��4��8�g\u001c\u0003?�\u0003�Y �\n\u00043�'\u0018V� LDajN�ɓ!A�XlX\\\\\\RR\u0012\u001e�'\u0012���\u0001 ܀eb���1����څ���؆�躹����zED�@ �\u0016�A���\u000e�J���H�e&'d%�ʊ���ǵ��\nLq|�h�q4\u000f\u0019� \"a�;@h+8A\u0005���=��OQl*>9%<$4,44**\n�å���Z�7 \u0010\b�\u0015X,������\u0014� �\u0012�\u0016�mqr�?��OD��d\\lnfZaޙrraS-�\n��}���B粘��L\u0016��hn��\\I�()/!�^*�YYL�.%�S*\u001bk)U�%�d\u0012� ���39Y\u0019Y\u0019��i���D����I�x���L�(�*#�V��\u001akYLj\u000f���b",
-      "confidenceScore": 0.73,
+      "rawText": "0\nEmbedByReference\nH:\\Meu Drive\\WINER\\Clientes Winer\\MM Rosso e Rossão\\Banco de Imagens de Produtos\\Iogurte Zero Lac. Nestlé 1,15kg.png\nxmp.did:d7518092-db12-2c49-9f92-fbe0fdcb8433\nxmp.iid:d7518092-db12-2c49-9f92-fbe0fdcb8433",
+      "confidenceScore": 0.78,
       "status": "expired"
     },
     {
@@ -2967,6 +3082,75 @@
       ],
       "rawText": "TGK��EJ\u001f�ҧH�K�{\u0017���\u001e�\u0011�{b��)�Y��4��8�g\u001c\u0003?�\u0003�Y �\n\u00043�'\u0018V� LDajN�ɓ!A�XlX\\\\\\RR\u0012\u001e�'\u0012���\u0001 ܀eb���1����څ���؆�躹����zED�@ �\u0016�A���\u000e�J���H�e&'d%�ʊ���ǵ��\nLq|�h�q4\u000f\u0019� \"a�;@h+8A\u0005���=��OQl*>9%<$4,44**\n�å���Z�7 \u0010\b�\u0015X,������\u0014� �\u0012�\u0016�mqr�?��OD��d\\lnfZaޙrraS-�\n��}���B粘��L\u0016��hn��\\I�()/!�^*�YYL�.%�S*\u001bk)U�%�d\u0012� ���39Y\u0019Y\u0019��i���D����I�x���L�(�*#�V��\u001akYLj\u000f���b",
       "confidenceScore": 0.73,
+      "status": "expired"
+    },
+    {
+      "productId": "0caf11d2e648adc6",
+      "productName": "Lq �h�q4\u000f\u0019� \"a�;@h+8A\u0005���=��OQl >9%<$",
+      "brand": null,
+      "description": "Lq �h�q4\u000f\u0019� \"a�;@h+8A\u0005���=��OQl >9%<$",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": "Criciúma",
+      "price": 4.44,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-09-18",
+      "validUntil": "2026-06-07",
+      "sourceUrl": "https://www.mmrosso.com/_files/ugd/5c9871_7693b4db370640708c6d38dd3bd310be.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "TGK��EJ\u001f�ҧH�K�{\u0017���\u001e�\u0011�{b��)�Y��4��8�g\u001c\u0003?�\u0003�Y �\n\u00043�'\u0018V� LDajN�ɓ!A�XlX\\\\\\RR\u0012\u001e�'\u0012���\u0001 ܀eb���1����څ���؆�躹����zED�@ �\u0016�A���\u000e�J���H�e&'d%�ʊ���ǵ��\nLq|�h�q4\u000f\u0019� \"a�;@h+8A\u0005���=��OQl*>9%<$4,44**\n�å���Z�7 \u0010\b�\u0015X,������\u0014� �\u0012�\u0016�mqr�?��OD��d\\lnfZaޙrraS-�\n��}���B粘��L\u0016��hn��\\I�()/!�^*�YYL�.%�S*\u001bk)U�%�d\u0012� ���39Y\u0019Y\u0019��i���D����I�x���L�(�*#�V��\u001akYLj\u000f���b",
+      "confidenceScore": 0.73,
+      "status": "expired"
+    },
+    {
+      "productId": "0caf11d2e648adc6",
+      "productName": "Lq �h�q4\u000f\u0019� \"a�;@h+8A\u0005���=��OQl >9%<$",
+      "brand": null,
+      "description": "Lq �h�q4\u000f\u0019� \"a�;@h+8A\u0005���=��OQl >9%<$",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": "Criciúma",
+      "price": 4.44,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-09-18",
+      "validUntil": "2026-06-07",
+      "sourceUrl": "https://www.mmrosso.com/_files/ugd/5c9871_7693b4db370640708c6d38dd3bd310be.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "TGK��EJ\u001f�ҧH�K�{\u0017���\u001e�\u0011�{b��)�Y��4��8�g\u001c\u0003?�\u0003�Y �\n\u00043�'\u0018V� LDajN�ɓ!A�XlX\\\\\\RR\u0012\u001e�'\u0012���\u0001 ܀eb���1����څ���؆�躹����zED�@ �\u0016�A���\u000e�J���H�e&'d%�ʊ���ǵ��\nLq|�h�q4\u000f\u0019� \"a�;@h+8A\u0005���=��OQl*>9%<$4,44**\n�å���Z�7 \u0010\b�\u0015X,������\u0014� �\u0012�\u0016�mqr�?��OD��d\\lnfZaޙrraS-�\n��}���B粘��L\u0016��hn��\\I�()/!�^*�YYL�.%�S*\u001bk)U�%�d\u0012� ���39Y\u0019Y\u0019��i���D����I�x���L�(�*#�V��\u001akYLj\u000f���b",
+      "confidenceScore": 0.73,
+      "status": "expired"
+    },
+    {
+      "productId": "1989f7a3f2812e60",
+      "productName": "m��B",
+      "brand": null,
+      "description": "m��B",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": "Criciúma",
+      "price": 6.44,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-09-18",
+      "validUntil": "2026-06-07",
+      "sourceUrl": "https://www.mmrosso.com/_files/ugd/5c9871_7693b4db370640708c6d38dd3bd310be.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "��#�r\u0003�\u001c���U��V��)��f�p�iF���CR؜A��\u0014 nPj> �\u0018�X\u000eH�����bb���/�\u000eHl�Ķ�b�>1�_��'r�\u00153���\u001e!�[��%bv Y�=��\u000f?�K3J;8\u0003�\u001b�z-3��L�\u0017����O��O\u0013�Ry�D,@\"����\n�� �� ��.\"\u0010\u0017��b��9�2\n��9?aIZH\\V�ޓ1�\u000fo�+>x�aNR��#���S��,KJ�å�Yx9'�Rβ\u001b\u0005A�N��\u001fڻ㯜S��2o�=~}�k R �b\u0012���z%d��)�yi&1<=�`{ �9g���6,44<�1<�6�G�sШl\u0014*\u0013�:�B�\u0019�\u000f\u0018�2�\u001e� bD�V|��|\u0014����b0u8|�?G\u001c\u001d-�[&��\u0017&� \u0012\u0013y�\u0012�W�.sw�n8���z\u001c\u0011�($��é��{������\u000e�\\lb�Q1\u0016{\u001bk|\u0007k|\u0017��c<���9esL��\"\u0012ኙ��\b�,\u0004\"Y\u001f�@\u001f\u0019�@nA\"2\u0010zy\bD��^�\u0001��޾�۫b^�ew�U;�]s��TJcP�\u00133�\u001a\u0007�gvN�8S��5��ז1\\��m��B\u001f\u0007\u0007=\n\u000e�\n�\u000e\u000e�",
+      "confidenceScore": 0.66,
       "status": "expired"
     },
     {
@@ -3292,14 +3476,14 @@
       "status": "expired"
     },
     {
-      "productId": "4482654a2b5717c0",
-      "productName": "o��\u0018\u001d\u001dGZ0dF\u0014�c:7ð\u001c\u001fi���ʩ���̼���?�~.���%�\u001f����?�;v�y>(\u001f=z���C���D�����h}7O�.� i�剦����T�L?���Dfrr�������{D�V �����]e��<\u0017�,3�, �<'�� \u0017y\u0019\u0016�,+�\b",
+      "productId": "1048f025028124ae",
+      "productName": "NKOK���$%��D �@!GD�1\u0018\u0014\u000e��`0`5\u0002\u0001O&�h����t�JNvZ: }��4ZJjʥ�쌜�,�T B,�������L\u0005 ��^��μt)�B!S.^+��FS(\u0017��b�������������������X\u0012��F��6�D\"\u0016�]�A���6x~=���a\u001akC",
       "brand": null,
-      "description": "o��\u0018\u001d\u001dGZ0dF\u0014�c:7ð\u001c\u001fi���ʩ���̼���?�~.���%�\u001f����?�;v�y>(\u001f=z���C���D�����h}7O�.� i�剦����T�L?���Dfrr�������{D�V �����]e��<\u0017�,3�, �<'�� \u0017y\u0019\u0016�,+�\b",
+      "description": "NKOK���$%��D �@!GD�1\u0018\u0014\u000e��`0`5\u0002\u0001O&�h����t�JNvZ: }��4ZJjʥ�쌜�,�T B,�������L\u0005 ��^��μt)�B!S.^+��FS(\u0017��b�������������������X\u0012��F��6�D\"\u0016�]�A���6x~=���a\u001akC",
       "supermarketName": "MM Rosso",
       "seller": "MM Rosso",
       "city": "Criciúma",
-      "price": 22.26,
+      "price": 6.22,
       "listPrice": null,
       "available": false,
       "validFrom": "2026-09-18",
@@ -3310,7 +3494,7 @@
         "Supermercado",
         "Ofertas"
       ],
-      "rawText": "����\u0018xC�n�O\u001e�{\b�\u0013m@y\u0007�:�54�:o\u001b)*1C����\u001bו\u001a�i\u0003g�BLk� �T#OP�\u0007p�\u000e4\u0017G��\u0003�ى�bOs�c\\?e\u0006��d\u001bش��ɎaEc:�Z'�%�ע�[�p+j�\u00195�\u0002 �`�*\"�icK�Z\u0017M�Í��V�\u0002����VY���|7�w{�VT�k����\u001aC���~�\u0007Ey�q����H\u0010DNaw9=@��e9 \u0018X.�\u001a�F��F\u001bcT����$\n��v&\u001d��\u0018���*r+��ǲ�r���ﲰ��ȱ �\u0010ڤ\u001d\u001d�}��E\u0003�v2�\u001fN[���|��}���=�\"F��B5��4!~e��fٗ��d\u0006��0,�!\u00194\u0015�\u001c;�Z{['�\u001d:�5\u001c���j��i\u001c�\u001c��3\u0013\u001d��� vTt@5v.��������n\u0011�\u00104��BGƸ8p\u0010s�9��j\u001c�P\u0007��k]3>�\n�-�o��\u0018\u001d\u001dGZ0dF\u0014�c:7ð\u001c\u001fi���ʩ���̼���?�~.���%�\u001f����?�;v�y>(\u001f=z���C���D�����h}7O�.�_i�剦����T�L?���Dfrr�������{D�V|�����]e��<\u0017�,3�, �<'�� \u0017y\u0019\u0016�,+22,26�\b\n,Y���}�ć/��� |Ů�eln��C\u001e��im�f�*y�Y����V������\n7��FG�EG�DF�F\bs\"��BanxDv��vX������Ќ��[�6%�l�\u001e����u4����egMW^asn�Ys��\u0001q�ùj��j��W�v\u0017���-���\b�?��?P��'��o������\u001b6�[�d�X��qV�rÂ",
+      "rawText": "��\u001a:���q���O\u001b�liض�~붧Ʀ�]\\^x\u001c�{\u001cy�XשSt?_�ٳtzP\u0010=(�+4�\u001e\u0016FG�:Q�N4�\u0013�y�ž��\b\u0004:)�\u001eE�����(z$��H���\u0018? \u0010� \u0004FD\u0004�U\u000f\u001e�\u001d\u001e���t���(\u0014#4�\u0011\u001c�\u001d\u0018���g�;�8s���������ax{w\u0003^^=^��������[������\n�\u0006�}������c��n\u000f\n��\u0002!+�b|\\ )�H�a��P 6,22\".��\u0010\u001b���r���LM���\u0001A\u0001\u0001\u0001��Yk�V\u0013\u001c\u001c jHH\b\u001a����/F_�&ŧ$'e����R��ҳ2��k9Yׯ]��ɼ�AKOK�\u0006ǳ.g\\NKOK���$%��D_�@!GD�1\u0018\u0014\u000e��`0`5\u0002\u0001O&�h����t�JNvZ:-}��4ZJjʥ�쌜�,�T|B,�������L\u0005_��^��μt)�B!S.^+��FS(\u0017��b�������������������X\u0012��F��6�D\"\u0016�]�A���6x~=���a\u001akC\u0001?\u000e\nEmHXX\u0018z5�Xlxx8�L������\u0010�D��04\n��D�����i�\u001b������I�a4~\u0018���\u00060����\u001b�\u001a\u0014\u0010�nc����7�V��h\u001c\u0007��` �p\u0002\u0017\u001f9B �FRF�1c� �qIS�)S����ټ���_�\u0012\u0014|!���D��J��o%�\u0016��R����^q�^�C��\u0007��E����x�~���xy�#�X\u0016\u001a7�� ���P\u0018\u0016",
       "confidenceScore": 0.73,
       "status": "expired"
     },
@@ -3449,6 +3633,75 @@
         "Ofertas"
       ],
       "rawText": "����\u0018xC�n�O\u001e�{\b�\u0013m@y\u0007�:�54�:o\u001b)*1C����\u001bו\u001a�i\u0003g�BLk� �T#OP�\u0007p�\u000e4\u0017G��\u0003�ى�bOs�c\\?e\u0006��d\u001bش��ɎaEc:�Z'�%�ע�[�p+j�\u00195�\u0002 �`�*\"�icK�Z\u0017M�Í��V�\u0002����VY���|7�w{�VT�k����\u001aC���~�\u0007Ey�q����H\u0010DNaw9=@��e9 \u0018X.�\u001a�F��F\u001bcT����$\n��v&\u001d��\u0018���*r+��ǲ�r���ﲰ��ȱ �\u0010ڤ\u001d\u001d�}��E\u0003�v2�\u001fN[���|��}���=�\"F��B5��4!~e��fٗ��d\u0006��0,�!\u00194\u0015�\u001c;�Z{['�\u001d:�5\u001c���j��i\u001c�\u001c��3\u0013\u001d��� vTt@5v.��������n\u0011�\u00104��BGƸ8p\u0010s�9��j\u001c�P\u0007��k]3>�\n�-�o��\u0018\u001d\u001dGZ0dF\u0014�c:7ð\u001c\u001fi���ʩ���̼���?�~.���%�\u001f����?�;v�y>(\u001f=z���C���D�����h}7O�.�_i�剦����T�L?���Dfrr�������{D�V|�����]e��<\u0017�,3�, �<'�� \u0017y\u0019\u0016�,+22,26�\b\n,Y���}�ć/��� |Ů�eln��C\u001e��im�f�*y�Y����V������\n7��FG�EG�DF�F\bs\"��BanxDv��vX������Ќ��[�6%�l�\u001e����u4����egMW^asn�Ys��\u0001q�ùj��j��W�v\u0017���-���\b�?��?P��'��o������\u001b6�[�d�X��qV�rÂ",
+      "confidenceScore": 0.73,
+      "status": "expired"
+    },
+    {
+      "productId": "4482654a2b5717c0",
+      "productName": "o��\u0018\u001d\u001dGZ0dF\u0014�c:7ð\u001c\u001fi���ʩ���̼���?�~.���%�\u001f����?�;v�y>(\u001f=z���C���D�����h}7O�.� i�剦����T�L?���Dfrr�������{D�V �����]e��<\u0017�,3�, �<'�� \u0017y\u0019\u0016�,+�\b",
+      "brand": null,
+      "description": "o��\u0018\u001d\u001dGZ0dF\u0014�c:7ð\u001c\u001fi���ʩ���̼���?�~.���%�\u001f����?�;v�y>(\u001f=z���C���D�����h}7O�.� i�剦����T�L?���Dfrr�������{D�V �����]e��<\u0017�,3�, �<'�� \u0017y\u0019\u0016�,+�\b",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": "Criciúma",
+      "price": 22.26,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-09-18",
+      "validUntil": "2026-06-07",
+      "sourceUrl": "https://www.mmrosso.com/_files/ugd/5c9871_7693b4db370640708c6d38dd3bd310be.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "����\u0018xC�n�O\u001e�{\b�\u0013m@y\u0007�:�54�:o\u001b)*1C����\u001bו\u001a�i\u0003g�BLk� �T#OP�\u0007p�\u000e4\u0017G��\u0003�ى�bOs�c\\?e\u0006��d\u001bش��ɎaEc:�Z'�%�ע�[�p+j�\u00195�\u0002 �`�*\"�icK�Z\u0017M�Í��V�\u0002����VY���|7�w{�VT�k����\u001aC���~�\u0007Ey�q����H\u0010DNaw9=@��e9 \u0018X.�\u001a�F��F\u001bcT����$\n��v&\u001d��\u0018���*r+��ǲ�r���ﲰ��ȱ �\u0010ڤ\u001d\u001d�}��E\u0003�v2�\u001fN[���|��}���=�\"F��B5��4!~e��fٗ��d\u0006��0,�!\u00194\u0015�\u001c;�Z{['�\u001d:�5\u001c���j��i\u001c�\u001c��3\u0013\u001d��� vTt@5v.��������n\u0011�\u00104��BGƸ8p\u0010s�9��j\u001c�P\u0007��k]3>�\n�-�o��\u0018\u001d\u001dGZ0dF\u0014�c:7ð\u001c\u001fi���ʩ���̼���?�~.���%�\u001f����?�;v�y>(\u001f=z���C���D�����h}7O�.�_i�剦����T�L?���Dfrr�������{D�V|�����]e��<\u0017�,3�, �<'�� \u0017y\u0019\u0016�,+22,26�\b\n,Y���}�ć/��� |Ů�eln��C\u001e��im�f�*y�Y����V������\n7��FG�EG�DF�F\bs\"��BanxDv��vX������Ќ��[�6%�l�\u001e����u4����egMW^asn�Ys��\u0001q�ùj��j��W�v\u0017���-���\b�?��?P��'��o������\u001b6�[�d�X��qV�rÂ",
+      "confidenceScore": 0.73,
+      "status": "expired"
+    },
+    {
+      "productId": "4482654a2b5717c0",
+      "productName": "o��\u0018\u001d\u001dGZ0dF\u0014�c:7ð\u001c\u001fi���ʩ���̼���?�~.���%�\u001f����?�;v�y>(\u001f=z���C���D�����h}7O�.� i�剦����T�L?���Dfrr�������{D�V �����]e��<\u0017�,3�, �<'�� \u0017y\u0019\u0016�,+�\b",
+      "brand": null,
+      "description": "o��\u0018\u001d\u001dGZ0dF\u0014�c:7ð\u001c\u001fi���ʩ���̼���?�~.���%�\u001f����?�;v�y>(\u001f=z���C���D�����h}7O�.� i�剦����T�L?���Dfrr�������{D�V �����]e��<\u0017�,3�, �<'�� \u0017y\u0019\u0016�,+�\b",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": "Criciúma",
+      "price": 22.26,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-09-18",
+      "validUntil": "2026-06-07",
+      "sourceUrl": "https://www.mmrosso.com/_files/ugd/5c9871_7693b4db370640708c6d38dd3bd310be.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "����\u0018xC�n�O\u001e�{\b�\u0013m@y\u0007�:�54�:o\u001b)*1C����\u001bו\u001a�i\u0003g�BLk� �T#OP�\u0007p�\u000e4\u0017G��\u0003�ى�bOs�c\\?e\u0006��d\u001bش��ɎaEc:�Z'�%�ע�[�p+j�\u00195�\u0002 �`�*\"�icK�Z\u0017M�Í��V�\u0002����VY���|7�w{�VT�k����\u001aC���~�\u0007Ey�q����H\u0010DNaw9=@��e9 \u0018X.�\u001a�F��F\u001bcT����$\n��v&\u001d��\u0018���*r+��ǲ�r���ﲰ��ȱ �\u0010ڤ\u001d\u001d�}��E\u0003�v2�\u001fN[���|��}���=�\"F��B5��4!~e��fٗ��d\u0006��0,�!\u00194\u0015�\u001c;�Z{['�\u001d:�5\u001c���j��i\u001c�\u001c��3\u0013\u001d��� vTt@5v.��������n\u0011�\u00104��BGƸ8p\u0010s�9��j\u001c�P\u0007��k]3>�\n�-�o��\u0018\u001d\u001dGZ0dF\u0014�c:7ð\u001c\u001fi���ʩ���̼���?�~.���%�\u001f����?�;v�y>(\u001f=z���C���D�����h}7O�.�_i�剦����T�L?���Dfrr�������{D�V|�����]e��<\u0017�,3�, �<'�� \u0017y\u0019\u0016�,+22,26�\b\n,Y���}�ć/��� |Ů�eln��C\u001e��im�f�*y�Y����V������\n7��FG�EG�DF�F\bs\"��BanxDv��vX������Ќ��[�6%�l�\u001e����u4����egMW^asn�Ys��\u0001q�ùj��j��W�v\u0017���-���\b�?��?P��'��o������\u001b6�[�d�X��qV�rÂ",
+      "confidenceScore": 0.73,
+      "status": "expired"
+    },
+    {
+      "productId": "d195675fcd2c4af3",
+      "productName": "qȑ[�$�����w9!)���� ɐ�\u0012%�()���!)\u0012�9�s�&tX���HD\u0001��(\u0005\u0006\u0013\u0005:1��c��� t A9f叇��\u0018��D`>��2�\u0005J�]`b�\bcBA\u0017z",
+      "brand": null,
+      "description": "qȑ[�$�����w9!)���� ɐ�\u0012%�()���!)\u0012�9�s�&tX���HD\u0001��(\u0005\u0006\u0013\u0005:1��c��� t A9f叇��\u0018��D`>��2�\u0005J�]`b�\bcBA\u0017z",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": "Criciúma",
+      "price": 1.19,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-09-18",
+      "validUntil": "2026-06-07",
+      "sourceUrl": "https://www.mmrosso.com/_files/ugd/5c9871_7693b4db370640708c6d38dd3bd310be.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "qb\u001b\u0003\n$� wC;�N\b\u0014S�\u000f����h���$fR\u000e��Ʋ�\u000e\u001f�%K�lK�/ɲ\u000eK��]i���\u0013���N�h�\u001d�|g�I�;޾�~�ٝ>}�4���S�L��j�ܓ&L��\u001a)\u0016�C�r��1���c�������\u001e�\u001c;���(���\u001e��4\u001e:�q�>�\n�u��I�S�͞1s����]s��� \u0017�d~\u0001L˜�8����`����\u0019 �>��\u0019�z*�Ut�w�\u00103F�v\b\u001c\u0016�XӦ�L�\u0013�a��Y`�#�c��\u0018u�QŌn1f}�6��3bcf��?\u0013�4,\u0010�\u0017��y�a?�久��K\u0016��d\u0011�� \u0017�> [�y�a�= �8k�왱p\u0005\u0018\u0012,\u0016�\u000eL�ܹs{zz���|bO�=��I#\b�?~�b���8��x~�(�����\u001f�\u001c�#�J�\u001fQ4\u0011\"�����\u0010w\u0012\"CH�\u0019\u0010\u001b��v\\0\u0014\u0014�)�nJ��\u0014�(�Ԉ[\u0015�\u0001�0���@Mk��#\u001f郂����΂s\u001b�!�1,19�\u0014�ٕڬrR��+k=_�Ϫ�\u001aM��%�ӥ�3%m�j�\u001a\u001d^�u�W���0^i0]yD˻m�H�g*�g+ �'\u001a�\u0005\u001d\u0015j��J�M��obR�\u0013\u0010\u001aHQgHh ����;$4�p_\u0018C��W�#��$!�oC��\u0005�8\u00019\u0016�\"�\u0014 ~/\u000e+\u0019\u001a�qȑ[�$�����w9!)���� ɐ�\u0012%�()���!)\u0012�9�s�&tX���HD\u0001��(\u0005\u0006\u0013\u0005:1��c���| t A9f叇��\u0018��D`>��2�\u0005J�]`b�\bcBA\u0017z-�}���\n�9]\u0002DVēޏڰ\u0002� <�\u001dD}�K[\u0011F��6�&���\u0018=\u0002�\u0010�B3\u000e�_����(Ѕ1-\b\u0014)G(%",
       "confidenceScore": 0.73,
       "status": "expired"
     },
@@ -4465,6 +4718,29 @@
       "status": "expired"
     },
     {
+      "productId": "ad53b9164efdc079",
+      "productName": "Xp\u0017�<ʢX",
+      "brand": null,
+      "description": "Xp\u0017�<ʢX",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": "Criciúma",
+      "price": 3.73,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-09-18",
+      "validUntil": "2026-06-07",
+      "sourceUrl": "https://www.mmrosso.com/_files/ugd/5c9871_7693b4db370640708c6d38dd3bd310be.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "�\b�SJ|U\u0012_\n.R\u0013>\u001aB�\u0012 ��\u0002�X���E(%�*q�\\\u0010�\u0010$nP$��\u0013�+�\"U`�\u001a\u0007)1tr�:��������36Ɏ���I\u000fٗ�ܟ��\u001e%�\u0011%��`qjQ|�8>$p\u0013-�Ĉ\"�k�)\u0005\u0011\n�\u0006_���(L�\u0017�\u0010\u0006�>kI\u001f�����~\u0017��\u001e����J �$�A�Ք��\u0012�\u0011\u001c��\u0004��I�B%n�j�x�� #\"?3,73�Ԧ���\u001b$�\u001b��QG2\"��K\u0012���\\5~+�� 9�3dGl��\u0018,\u001a#�p�@����3����X�צ �u�K4鲞t��?P����\u000ej2����+#\u0016zB}S!&T�J�\bH\u0002\u0004\b\b�45�\u0014\u0012J\u0002\u0001\u0002 ! 5 E�+�\\ *�Xp\u0017�<ʢX)\u001e�\b\n\u0004P�[=������|�7���>�;�I�=�-�\u0018#\u001f�n2��\u000fg\u0014�oO qW��)��,�׌�\bq�Iu�\u0013�e\u0011���n�����A\\��(�(b\u0010Y�f� f�Ia\u001c^\u0012�燡�C!5g�����sn�4r�\nl�\u0019��j�k�ЯYDn�\u0006v\u0014\u0006^,�\u0002풐�J�g%�C���p|�\\�� r}��2�Y��Rt� �'V��j�\u0007��)u|�*�C��_��Z��HrS��W1�*��U���,��S\u001e\u0015�=4��\u0003Z�Ok\u001e�\\\u001e����eE�MM\u0012�}�)��Q�h\u0016\u00064g\u0007(���<\u0004��|�é �� L\u0016�)+�Iq�O��G�`�(\u000e;�gd����{cí{",
+      "confidenceScore": 0.66,
+      "status": "expired"
+    },
+    {
       "productId": "64bfa08bb37b03ce",
       "productName": "Y�\u001c��\u0017\u001d���~���O\u0007� �f���C �4.R\u001e\u0019�X\u0015�X�(T��a9�\u0017kW-�]�4wE�jE�2:<{}xN�ꂤ�\u00128�X��\u0004 4O��Sw�\u0017�/�u\u00034�\u001d\u001ay�8\u0005��-\u000e�� W�$T��Ki�F�8\u0003�J,��\u0016҈\u0006��-�������uz�G�\u001a]�\u001a��Ȭ�p\u0015qyz�\"ɚE��!���1B\u00170�\u0002X��ՙ��5�J��",
       "brand": null,
@@ -5082,6 +5358,52 @@
         "Ofertas"
       ],
       "rawText": "��Ĕ��d:1Y,�\u0011 �\u0003ݒ�nIO[���������NT�j�J\u0001\u00165�U�_N�\u0002(�ɔ̤�l<������ݹ\u001a~�j��+g9,���_.\u001c��V�O7#~�R��p\\L\u0004.�2�FT������\"�G�\u0016�\u0013��_Xp.����\b�O\u0019�-��W�Ai��\u0007���I�c�� Z\u001d�V�.\u0007��.o`W�Ա[ꫛj��Z�Dȓ\bxї�\\�x�� '��?y���\u0017N�\\:\nD�\u001f� ?\u001e\u0015~�ҩ��D�>\u0012q�htDX�尟a���#Ϟ�<{��Z=r�؁s����\u0004��\u001b�k�Ļ��]��\u0013pا\u001c6 `��\u0003\u0006� ��\u001e�\u001d\u001e�}*\u0016=\u001575�Y\">�Ϡ�1���\u001b�\u0013�\u0005[�E/򒅯N\u0018�\u001e\u0018>>��e�ǵ�Y\\�,x\\�U�s\u0019\u0019D�K�S��)��8o��1kgL\u001a�Vfю\u001a�/\n�\u0003�!�z�w��]��>���\u0012�陨�G�m��KjhMU\u0005MU������tVn\"+�\u001e=�\u0006P��V��F�]\u0001ȉ���Ȃ;\u00111�<� 6,36 bʕ�)WN� �+�jj\u0001�Jjm\u0016\u0002͂��\u0006~S\u001d���m�����}��5ue\u0001��VŊ�!�\"(*3�\n��\u0002�2_�Ku��|�\"�V\u0011(�\u0006�\u0004�B�X�\u0002\"�⒰ %T��B\u0016�\u0013�I\b�@\b�m�{�j\u0010�`�����ɹ������\u0016RJ\n��\u0005a�ׄ����|�����.���m�r��,�ki�%�ƿ8��V9�8wG0�}A \u0012\u0011�V/\u000e�X���\u0005���\u000e�\u0006z��7z�\u0007��\u001f�\u001a�k��w\u0005��Â\u000f�m:�g�ѽ[\"��v q;ܒ��wD\u001e�\u0001����#�n�ػ�PXȡoB��\u0019tpg�ޭ�}[p;",
+      "confidenceScore": 0.73,
+      "status": "expired"
+    },
+    {
+      "productId": "cb625d13c792b37e",
+      "productName": "z�w��]��>���\u0012�陨�G�m��KjhMU\u0005MU������tVn\"+�\u001e=�\u0006P��V��F�]\u0001ȉ���Ȃ;\u00111�<� bʕ�)WN� �+�jj\u0001�Jjm\u0016\u0002͂��\u0006~S\u001d���m�����}��5ue\u0001��VŊ�!�\"( 3�",
+      "brand": null,
+      "description": "z�w��]��>���\u0012�陨�G�m��KjhMU\u0005MU������tVn\"+�\u001e=�\u0006P��V��F�]\u0001ȉ���Ȃ;\u00111�<� bʕ�)WN� �+�jj\u0001�Jjm\u0016\u0002͂��\u0006~S\u001d���m�����}��5ue\u0001��VŊ�!�\"( 3�",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": "Criciúma",
+      "price": 6.36,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-09-18",
+      "validUntil": "2026-06-07",
+      "sourceUrl": "https://www.mmrosso.com/_files/ugd/5c9871_7693b4db370640708c6d38dd3bd310be.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "��Ĕ��d:1Y,�\u0011 �\u0003ݒ�nIO[���������NT�j�J\u0001\u00165�U�_N�\u0002(�ɔ̤�l<������ݹ\u001a~�j��+g9,���_.\u001c��V�O7#~�R��p\\L\u0004.�2�FT������\"�G�\u0016�\u0013��_Xp.����\b�O\u0019�-��W�Ai��\u0007���I�c�� Z\u001d�V�.\u0007��.o`W�Ա[ꫛj��Z�Dȓ\bxї�\\�x�� '��?y���\u0017N�\\:\nD�\u001f� ?\u001e\u0015~�ҩ��D�>\u0012q�htDX�尟a���#Ϟ�<{��Z=r�؁s����\u0004��\u001b�k�Ļ��]��\u0013pا\u001c6 `��\u0003\u0006� ��\u001e�\u001d\u001e�}*\u0016=\u001575�Y\">�Ϡ�1���\u001b�\u0013�\u0005[�E/򒅯N\u0018�\u001e\u0018>>��e�ǵ�Y\\�,x\\�U�s\u0019\u0019D�K�S��)��8o��1kgL\u001a�Vfю\u001a�/\n�\u0003�!�z�w��]��>���\u0012�陨�G�m��KjhMU\u0005MU������tVn\"+�\u001e=�\u0006P��V��F�]\u0001ȉ���Ȃ;\u00111�<� 6,36 bʕ�)WN� �+�jj\u0001�Jjm\u0016\u0002͂��\u0006~S\u001d���m�����}��5ue\u0001��VŊ�!�\"(*3�\n��\u0002�2_�Ku��|�\"�V\u0011(�\u0006�\u0004�B�X�\u0002\"�⒰ %T��B\u0016�\u0013�I\b�@\b�m�{�j\u0010�`�����ɹ������\u0016RJ\n��\u0005a�ׄ����|�����.���m�r��,�ki�%�ƿ8��V9�8wG0�}A \u0012\u0011�V/\u000e�X���\u0005���\u000e�\u0006z��7z�\u0007��\u001f�\u001a�k��w\u0005��Â\u000f�m:�g�ѽ[\"��v q;ܒ��wD\u001e�\u0001����#�n�ػ�PXȡoB��\u0019tpg�ޭ�}[p;",
+      "confidenceScore": 0.73,
+      "status": "expired"
+    },
+    {
+      "productId": "0e1e8fbbaa1808c9",
+      "productName": "ݎ7M\u001f���@y6�T�f���q��ۧ��\u0010�U %>>^�T",
+      "brand": null,
+      "description": "ݎ7M\u001f���@y6�T�f���q��ۧ��\u0010�U %>>^�T",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": "Criciúma",
+      "price": 79.26,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-09-18",
+      "validUntil": "2026-06-07",
+      "sourceUrl": "https://www.mmrosso.com/_files/ugd/5c9871_7693b4db370640708c6d38dd3bd310be.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "� 2*���(2��C{�\u0014��(\u0017�\u0016v��T� �L��l*��g�``�`����Á�C�g�\u0003�9��,2� ���4\n��B���\u001d�\ng\u0004Txs\u0007���\u0003J\u0006\u0002������I�.��.�(V��\u0003��A�C�Ő\u0007�V{%2��T������ �\u000f(l��<��\u0001��Y�\u001f2��\u0019�����Š��`P/�\u0017(�B���f���q������������;t�`pP��c�Q1\u001cNbJJ:�����W���u 79,264\"&*.!9�w*+\u0017,-3'�\u0014/44\u001c��\u0002��\u0017��S��\\.W,\u0016�ox������\u0014\u0004݅1\u0012�D�;22\u0002�pC��� NXXؼ���I8$���0\u001f{e�����R$\u0014���\u0007�U�\u0004� \u0017�X1�@�y5c%�+�Z�+���%)�����/�<-, ����_ݎ7M\u001f���@y6�T�f���q��ۧ��\u0010�U|%>>^�T�\n�\n���%a��x��\u001c\u000eg^Loo�<�|%a��q��~�>��hjj�7����wԓ'O&&&�w\u0015��z�����O2��̼�~���d�ͧ-�S-\u0003S�\u0003���\u001e������)�\u0017���3|�ج%�4�}�%��%�i���T\u001d(�왪NL����U��j.��4\u000fu��\u001a�_���\u001a�_�}H�3P�;P�+H�����1���4\u000f\u001e'\u0006�\u0013�ÉA\u0011:A��Gb�����*^�X�N\bG'��Z�n\u0018X�~D\u001a�D�~�I�� RL�al�^\u0004��zQY\u0006�lR\\.��q��f�o�hg�������֓˃/�����g�o?�����\u001b��\\|���0��7�n��e���������� \u000f�\u0019",
       "confidenceScore": 0.73,
       "status": "expired"
     },

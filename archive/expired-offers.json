@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-09T17:21:42-03:00",
-  "total": 0,
+  "generatedAt": "2026-09-10T10:19:36-03:00",
+  "total": 4,
   "items": [
     {
       "productId": "d7831ca622d7062b",
@@ -3430,6 +3430,29 @@
       "status": "active"
     },
     {
+      "productId": "d06475442701ca79",
+      "productName": "H����o\u001cY\u001d��slwuu.H\u001c@B�S���vlwu�\u0012\u0012\u001c�pC \u0012 �8��bǙ$v<���H�9p@H\u001c8\u0010��\u0004��- �3,�\b������{�~o�^b髧����\u0003�� Y ��ѵ�R��b#i'jw���Z\u000e[���p7� ��1�\u0019�\u001eom؛�r�r\u001b����\u0006�t\u0007n�ܰ��f����.�-��t��[Ɍ�{��˷)U�՘,\u001f",
+      "brand": null,
+      "description": "H����o\u001cY\u001d��slwuu.H\u001c@B�S���vlwu�\u0012\u0012\u001c�pC \u0012 �8��bǙ$v<���H�9p@H\u001c8\u0010��\u0004��- �3,�\b������{�~o�^b髧����\u0003�� Y ��ѵ�R��b#i'jw���Z\u000e[���p7� ��1�\u0019�\u001eom؛�r�r\u001b����\u0006�t\u0007n�ܰ��f����.�-��t��[Ɍ�{��˷)U�՘,\u001f",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": "Criciúma",
+      "price": 3.3,
+      "listPrice": null,
+      "available": true,
+      "validFrom": "2026-10-03",
+      "validUntil": "2026-09-09",
+      "sourceUrl": "https://www.mmrosso.com/_files/ugd/004e6a_db1361da82c44701b14ffe22d733beba.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "147 0 obj\n<>/Filter/FlateDecode/Height 1920/Intent/RelativeColorimetric/Length 244863/Name/X/Subtype/Image/Type/XObject/Width 1080>>stream\nH����o\u001cY\u001d��slwuu.H\u001c@B�S���vlwu�\u0012\u0012\u001c�pC \u0012 �8��bǙ$v<���H�9p@H\u001c8\u0010��\u0004��- 3,30�3,�\b������{�~o�^b髧����\u0003��_Y ��ѵ�R��b#i'jw���Z\u000e[���p7�*��1�\u0019�\u001eom؛�r�r\u001b����\u0006�t\u0007n�ܰ��f����.�-��t��[Ɍ�{��˷)U�՘,\u001f49j�U\u001b�>ͨu�Z�\u0010�\nAx\u001a�v�~��u�A�7��er\u001e}�vo��Rײ��\u0003�2�I�G�L����\u0001�\u0013�\u001e����P�L��#�\u0005�w��߉oƹ���O�\u001czO�|v�D�+�~-�o��V�gN �sd/����s'���\u001c�^\n�;����=���~��\u001f���\\�G�����}�ͫ��g����CdU��\u0014�wd��֕�O��KQ\u001f1�O/�ą�Ǿ����",
+      "confidenceScore": 0.73,
+      "status": "active"
+    },
+    {
       "productId": "32d25c7c86ee6b4b",
       "productName": "Iogurte de Morango Zero Lac. Nestlé",
       "brand": "Nestlé",
@@ -5267,6 +5290,29 @@
       ],
       "rawText": "REFRIGERANTE\nGUARANÁ KUAT 2L\n15,99\nKIT COCA-COLA +\nFANTA GUARANÁ 2L",
       "confidenceScore": 0.96,
+      "status": "active"
+    },
+    {
+      "productId": "2c331b72e61c95b9",
+      "productName": "i�~U�ZS���JJJA�B��D �)� ���))�y�\"��K�\u000e����祢�M��K5��E+X(����e��id��Ǯ�C\u0001��v���}ߡ�X����ȷ��`��Eֲ,g\u0012\u0012���ų",
+      "brand": null,
+      "description": "i�~U�ZS���JJJA�B��D �)� ���))�y�\"��K�\u000e����祢�M��K5��E+X(����e��id��Ǯ�C\u0001��v���}ߡ�X����ȷ��`��Eֲ,g\u0012\u0012���ų",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": "Criciúma",
+      "price": 1.55,
+      "listPrice": null,
+      "available": true,
+      "validFrom": "2026-10-03",
+      "validUntil": "2026-09-09",
+      "sourceUrl": "https://www.mmrosso.com/_files/ugd/004e6a_db1361da82c44701b14ffe22d733beba.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "z�Z<��\u0019S$�0�H\u0011�>Ε����5��Y~�\u001a��i��¶I �I �0'gJ��M\u001c:i�:��)�q\u0015�l�V��J�\u0003K&�&��J���\"1�~�!f�)�d3�NX\u001e�,����\u0003��ۓq?zyA��\u0012;��zd`�2\u001f�l\n�h��]$�\\YL���_B�P�\u001e�a�\b=�B�\u001e�N�?o� ��$)j\u0004\u001aZc��K�ǮV�\u001aRV\u0001\u0006�\u0001�G���\u001b�H�\u001a�\u001er@a\u0006t�]\b\u001a�p<6T��{�X��9� �[ə � K�ӿʹ-�`%b�$\u0012;��Q�t�\u000e�9��\u001f?v̙��B�\u0017��,KKAI�j��\u001b\u0018��\u001b�x��\u0005}�`D�ⰪC\u0019@#h˾2�$1��p�z*�RU�i��3Ϯ�)�f9�0�P˧P�R ��\n��smTU��\u0015=�1,55Ұ\u0005�\u0015(�(*T�\u001c���+v)/4v�Ej���� ����EK��\u0002R�\u000e +�.�\u0010\u0006ܲ�J�\u0016M�]��\u0015�A�e�db�e�4���J[ $^��F\u0018���k}=O 76HYڎ��IR�P��9\u0014�\u0001B�\bB�ボ�#j�~a�|��\u0005e\u001d,޿)Q�mHG�����R�\u0018ݩ�\\$�MCEI\u0004�\u0018\u0004��\u0018��]\u000f�w�\u000fi�e[|!/j�\\\u0018 \u001a\u001f(����*�h�~{�lz�\u0002x(:�Q\u0014�7 _�����Y���nq�+�\u0010RI�Z]\u0001�c\u001b )����F#��f��eb�S��\\\u000e�6~���\u0012}\b�^�W����vz�LJ�����p�\u0019�P=�G��\u001acW� ��2!���\u0002Lx��=��\u0010�Q�\u000fwl�\u00123���2Y W ;�F��Ү[���b��_lopKz\u0005Rg\b5\u0001�P\u0003\u0007���",
+      "confidenceScore": 0.73,
       "status": "active"
     },
     {
@@ -8467,6 +8513,29 @@
       "status": "active"
     },
     {
+      "productId": "2984264ce9791598",
+      "productName": "V��R\u001b��N:�s.��J�W��.#9 �\u001a\u0014t",
+      "brand": null,
+      "description": "V��R\u001b��N:�s.��J�W��.#9 �\u001a\u0014t",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": "Criciúma",
+      "price": 7.91,
+      "listPrice": null,
+      "available": true,
+      "validFrom": "2026-10-03",
+      "validUntil": "2026-09-09",
+      "sourceUrl": "https://www.mmrosso.com/_files/ugd/004e6a_5d9ea3175c43472babbf02b854c3a627.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "(#\nd�l[#\u0002�7�-J�nHS<�KWiVӲ�5�96֗\u0003�i\nx��\u0003�6���Qi}��N��\u0013x\u0005G@\u0005D\u0001~�c�,���6Z`�Pg\\��7���s��U�>\u0012�bw,��c5��[ANj��!Ğ�y�y\u0018_tF�fd�T��^!IѠ�0\u0016P��س�4�×u\u0010�\u0005X�\u0018�F\u0019�\u001ar�eۘb�\\��mɕ\u00042�èJԥh\u0019���O\u0011\u0017D7,91��6��;E\u000e&�V\u000e)-������g�(�)!`��;q=�U�5��M����; J\u0012�7ܔ�)H�߄t\u0004�nW+�\u0012z�T͓�Yy��q(uM�(Vi�\u000e%ۮ�P��:���o\\� *v�U\u0007��\u0015PA\u0003\u0003c�[\u0017�J���SE&�\u0016-/�V��R\u001b��N:�s.��J�W��.#9 �\u001a\u0014t\n\u001acB�hI)\u001b���h�Zՠ�\u0013!\n\u0002\u00111fM�� ,����\u0018���zbu��HC,)�\u001cB[.-�\u001d\u0005B��6�]fm垵��Y�* �i�i�ve>�]������\u0010A͸�\u001e,��:�d�p��\u0012Й��\u001d#׌�m��mj��@PJ�@\u0015\u0015",
+      "confidenceScore": 0.73,
+      "status": "active"
+    },
+    {
       "productId": "54fca39f920a46e6",
       "productName": "WHISKY BALLANTINES 1L WHISKY DRURYS 900ML",
       "brand": "DRURYS",
@@ -8510,6 +8579,29 @@
       ],
       "rawText": "COQUETEL\nMIRULLA 900ML\n29,99\nREFRIGERANTE\nFRUKI 200ML",
       "confidenceScore": 0.96,
+      "status": "active"
+    },
+    {
+      "productId": "b3e20adbf9990ac2",
+      "productName": "wKE!�V��&X ݴ\u0019UL��=�\u0003�4�U��t�WGs�VTPVC�ESK+� oR��Ы �\u00158=A#�\u00116�\u0016Fhm��j��Y�E;��\u000f0$����f��\u0003S�؆�rcb�lp�#��C��\u001e�\u001cw",
+      "brand": null,
+      "description": "wKE!�V��&X ݴ\u0019UL��=�\u0003�4�U��t�WGs�VTPVC�ESK+� oR��Ы �\u00158=A#�\u00116�\u0016Fhm��j��Y�E;��\u000f0$����f��\u0003S�؆�rcb�lp�#��C��\u001e�\u001cw",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": "Criciúma",
+      "price": 8.7,
+      "listPrice": null,
+      "available": true,
+      "validFrom": "2026-10-03",
+      "validUntil": "2026-09-09",
+      "sourceUrl": "https://www.mmrosso.com/_files/ugd/004e6a_db1361da82c44701b14ffe22d733beba.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "��0\u0001$�Jp\u000f��8�B�3I�)�\u0012���\u000f\u0011)[%'�T\u0016�#��na�\\cx\u0002|�9#�8�!\b�\u0006�R�\u0004���|Nz�g\u0019�qﮘ�Yϡչ';D\u0012e|�����M��1%��^��$�y3������rx�J�N��M�q\u0010�VZ\u0006iR~\u001by���:\" ���:���x�x���\u001e@�I/25a��\b�H\u0019�A��3���K��\"��f�!��\nyr:��o�|=_S��ѥ�����O`�K\u001d;\u001d�\b\u0018\u0016�8\u001d��BA��\u001d\u001cId�UR8j��\\L8IV*�i\u0006��6��L��6�(��F�[�g�S�y��}�ǏzQ�^��\u0003%�O7�1���㵯�Z����%��[j΀�Pm�\u0010\u0014\u001e�c�G�^=����L�,�$��*�\u0011�\u001e�\u0007�����w�� #]-�L\\,�K�(&� �K6ن����J.e\u0011\u001b\u001f;HB�#�㻟��8��\u0014n�Ԣ�g;�sd��<\u0001 �*<:�����`��kd�Tt2I\n\u001cc\u0003�ǇLS�-\u001e��5s\b�*D��(�ƹ\u0018󑻡\u001e\u0018�\u001c� �f���4\u001f��t�\u001c\u0010������OQ!�T�anM�^e\u001e�q�8�<=��\\p�� #h��{�\u0007)�\u0006<�@3׉����6�zKsRA h��}���{҃�����\u001du�]�y'���y��R=~� %\u001dL�⑌!��\u001cm�\u0003\u000f^�\u001e\u001cm�½r���ʭ�Z�i�R\u0006.�K�>w_\u0015\u0004&s5D�2\u0004\u0003�6��\u001b�}�f�Di��56In\u0013IY-\\UI]��3$PF\u0017�i�\u0004�NI��q�\u0019/�_�\u0014W�\u0003S��\\�wKE!�V��&X ݴ\u0019UL��=�\u0003�4�U��t�WGs�VTPVC�ESK+�",
+      "confidenceScore": 0.73,
       "status": "active"
     },
     {

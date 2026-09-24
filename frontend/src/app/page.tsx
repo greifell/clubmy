@@ -231,7 +231,11 @@ export default function HomePage() {
         }
       })
       .then((response) => {
-        setFlyers(response.data ?? []);
+        setFlyers(
+          ((response.data ?? []) as Flyer[]).filter(
+            (flyer) => !flyer.supermarketName.toLowerCase().includes('moniari')
+          )
+        );
       });
   }, [city]);
 

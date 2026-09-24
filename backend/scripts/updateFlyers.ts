@@ -44,17 +44,6 @@ async function upsertFlyer(data: {
 
 async function main() {
   await upsertFlyer({
-    supermarketName: 'Moniari',
-    city: 'Criciúma',
-    state: 'SC',
-    title: 'Encarte Quinzenal Digital Moniari',
-    url: 'https://www.flipsnack.com/EAC95866AED/encarte-quinzenal-digital-29-04-12-05-2026',
-    source: 'moniari-flipsnack',
-    validFrom: new Date('2026-04-29T00:00:00'),
-    validUntil: new Date('2026-05-12T23:59:59')
-  });
-
-  await upsertFlyer({
     supermarketName: 'MM Rosso',
     city: 'Criciúma',
     state: 'SC',

@@ -41,11 +41,14 @@ const GENERIC_COMPARE_WORDS = new Set([
   'malte',
   'produto',
   'bebida',
-  'bebidas'
+  'bebidas',
+  'refrigerante',
+  'lata',
+  'garrafa',
+  'long',
+  'neck',
+  'descartavel'
 ]);
-
-const PACKAGE_WORDS = ['lata', 'garrafa', 'long neck', 'descartavel'];
-const ALCOHOL_FREE_WORDS = ['zero', 'alcool'];
 
 function normalizeProductText(value: string) {
   return value
@@ -55,21 +58,6 @@ function normalizeProductText(value: string) {
     .replace(/[^\w\s,.]/g, ' ')
     .replace(/\s+/g, ' ')
     .trim();
-}
-
-function extractQuantities(value: string) {
-  const normalized = normalizeProductText(value);
-  const matches = normalized.matchAll(/(\d+(?:[,.]\d+)?)\s*(ml|l|kg|g)\b/g);
-
-  return Array.from(matches, (match) => {
-    const amount = Number(match[1].replace(',', '.'));
-    const unit = match[2];
-
-    if (unit === 'l') return `${amount * 1000}ml`;
-    if (unit === 'kg') return `${amount * 1000}g`;
-
-    return `${amount}${unit}`;
-  });
 }
 
 function extractWords(value: string) {
@@ -85,56 +73,17 @@ function getCompareSearchTerm(productName: string) {
   );
 }
 
-function isComparableProduct(targetName: string, candidateName: string) {
-  const target = normalizeProductText(targetName);
-  const candidate = normalizeProductText(candidateName);
-  const targetQuantities = extractQuantities(target);
-
-  if (targetQuantities.length > 0) {
-    const candidateQuantities = extractQuantities(candidate);
-    const hasSameQuantity = targetQuantities.every((quantity) =>
-      candidateQuantities.includes(quantity)
-    );
-
-    if (!hasSameQuantity) return false;
-  }
-
-  for (const word of PACKAGE_WORDS) {
-    if (target.includes(word) && !candidate.includes(word)) return false;
-  }
-
-  const targetIsAlcoholFree = ALCOHOL_FREE_WORDS.every((word) =>
-    target.includes(word)
-  );
-  const candidateIsAlcoholFree = ALCOHOL_FREE_WORDS.every((word) =>
-    candidate.includes(word)
-  );
-
-  if (targetIsAlcoholFree !== candidateIsAlcoholFree) return false;
-
-  const importantWords = extractWords(targetName).filter(
-    (word) =>
-      !GENERIC_COMPARE_WORDS.has(word) &&
-      !PACKAGE_WORDS.includes(word) &&
-      !ALCOHOL_FREE_WORDS.includes(word) &&
-      !/^\d/.test(word)
-  );
-
-  return importantWords.every((word) => candidate.includes(word));
-}
-
 function uniqueComparableOffers(offers: Offer[]) {
   const unique = new Map<string, Offer>();
 
   for (const offer of offers) {
     const key = [
-      offer.supermarket.name,
-      offer.supermarket.city,
-      offer.product.name,
-      offer.price
+      normalizeProductText(offer.supermarket.name),
+      normalizeProductText(offer.supermarket.city)
     ].join('|');
 
-    if (!unique.has(key)) unique.set(key, offer);
+    const existing = unique.get(key);
+    unique.set(key, existing ? pickDisplayOffer(existing, offer) : offer);
   }
 
   return Array.from(unique.values());
@@ -158,10 +107,7 @@ function uniqueSupermarketOptions(markets: SupermarketOption[]) {
 }
 
 function offerDisplayKey(offer: Offer) {
-  return [
-    normalizeProductText(offer.product.name),
-    normalizeProductText(offer.supermarket.name)
-  ].join('|');
+  return normalizeProductText(offer.product.name);
 }
 
 function pickDisplayOffer(current: Offer, candidate: Offer) {
@@ -171,6 +117,9 @@ function pickDisplayOffer(current: Offer, candidate: Offer) {
   if (candidatePrice !== currentPrice) {
     return candidatePrice < currentPrice ? candidate : current;
   }
+
+  const market = candidate.supermarket.name.localeCompare(current.supermarket.name, 'pt-BR');
+  if (market !== 0) return market < 0 ? candidate : current;
 
   return candidate.supermarket.city.localeCompare(current.supermarket.city, 'pt-BR') < 0
     ? candidate
@@ -258,14 +207,6 @@ export default function HomePage() {
       });
   }, [city, supermarket, category, search]);
 
-  const bestOfferId = useMemo(() => {
-    if (!offers.length) return null;
-
-    return offers.reduce((best, current) =>
-      Number(current.price) < Number(best.price) ? current : best
-    ).id;
-  }, [offers]);
-
   const supermarketOptions = useMemo(
     () => uniqueSupermarketOptions(supermarkets),
     [supermarkets]
@@ -285,29 +226,15 @@ export default function HomePage() {
     setCompareLoading(true);
 
     try {
-      const visibleComparable = uniqueComparableOffers(
-        offers.filter((item: Offer) =>
-          isComparableProduct(offer.product.name, item.product.name)
-        )
-      );
-
-      if (visibleComparable.length > 0) {
-        setCompareResults(
-          visibleComparable.sort(
-            (a: Offer, b: Offer) => Number(a.price) - Number(b.price)
-          )
-        );
-        return;
-      }
-
       const response = await fetchOffers({
+        city: city || undefined,
         search: getCompareSearchTerm(offer.product.name)
       });
 
       const results = response.offers ?? [];
       const comparable = uniqueComparableOffers(
         results.filter((item: Offer) =>
-          isComparableProduct(offer.product.name, item.product.name)
+          offerDisplayKey(item) === offerDisplayKey(offer)
         )
       );
 
@@ -318,6 +245,7 @@ export default function HomePage() {
       setCompareResults(filtered);
     } catch (error) {
       console.error(error);
+      setCompareResults([offer]);
     } finally {
       setCompareLoading(false);
     }
@@ -350,10 +278,10 @@ export default function HomePage() {
                   </div>
                   <div>
                     <p className="text-[11px] font-black uppercase text-slate-500">
-                      Ofertas encontradas
+                      Produtos encontrados
                     </p>
                     <p className="mt-0.5 text-2xl font-black text-emerald-950">
-                      {offers.length}
+                      {displayOffers.length}
                     </p>
                   </div>
                 </div>
@@ -518,15 +446,14 @@ export default function HomePage() {
 
           {!loading ? (
             <div className="rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm font-black text-emerald-950 shadow-sm">
-              {displayOffers.length} ofertas encontradas
+              {displayOffers.length} produtos encontrados
             </div>
           ) : null}
         </div>
 
         {!loading && hiddenDuplicateOffers > 0 ? (
           <p className="-mt-4 mb-6 text-sm font-medium text-slate-500">
-            {hiddenDuplicateOffers} ofertas iguais foram agrupadas. Use
-            Comparar para ver todas as cidades e lojas.
+            {hiddenDuplicateOffers} preços do mesmo produto foram agrupados.
           </p>
         ) : null}
 
@@ -554,7 +481,7 @@ export default function HomePage() {
               <OfferCard
                 key={offer.id}
                 offer={offer}
-                highlight={offer.id === bestOfferId}
+                highlight={offer.id === displayOffers[0]?.id}
                 onCompare={handleCompare}
               />
             ))}

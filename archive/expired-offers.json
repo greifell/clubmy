@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-01T18:38:59-03:00",
-  "total": 0,
+  "generatedAt": "2026-11-02T16:06:57-03:00",
+  "total": 82,
   "items": [
     {
       "productId": "d7831ca622d7062b",
@@ -47,6 +47,29 @@
       "rawText": "Baly\nKids 220ml\n3,99\nIsotônico\nHidrate 500ml",
       "confidenceScore": 0.96,
       "status": "active"
+    },
+    {
+      "productId": "e836ee4afaee0ab4",
+      "productName": "ÁGUA CRYSTAL COM GÁS SABORES 510ML CERVEJA THEREZÓPOLIS PURO MALTE GOLD LATA 350ML",
+      "brand": "LATA",
+      "description": "ÁGUA CRYSTAL COM GÁS SABORES 510ML CERVEJA THEREZÓPOLIS PURO MALTE GOLD LATA 350ML",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": null,
+      "price": 3.79,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-10-30",
+      "validUntil": "2026-11-01",
+      "sourceUrl": "manual://input_catalogs/mmrosso-ofertas-da-semana-2026-11-02.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "CERVEJA THEREZÓPOLIS PURO\nMALTE GOLD LATA 350ML\n3,79\nÁGUA MINERAL CRYSTAL\nSEM GÁS 1,5L",
+      "confidenceScore": 0.96,
+      "status": "expired"
     },
     {
       "productId": "ddebfe95c686145d",
@@ -141,6 +164,29 @@
       "status": "active"
     },
     {
+      "productId": "91a9da54ec30cf55",
+      "productName": "ÁGUA MINERAL CRYSTAL COM GÁS 1,5L REFRIGERANTE FANTA / SPRITE 2L",
+      "brand": "SPRITE",
+      "description": "ÁGUA MINERAL CRYSTAL COM GÁS 1,5L REFRIGERANTE FANTA / SPRITE 2L",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": null,
+      "price": 17.69,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-10-30",
+      "validUntil": "2026-11-01",
+      "sourceUrl": "manual://input_catalogs/mmrosso-ofertas-da-semana-2026-11-02.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "REFRIGERANTE\nFANTA / SPRITE 2L\n17,69\nKIT COCA-COLA + FANTA\nLARANJA 2L",
+      "confidenceScore": 0.96,
+      "status": "expired"
+    },
+    {
       "productId": "ebc30110d634ef99",
       "productName": "ÁGUA MINERAL DA PEDRA COM / SEM GÁS 500ML ENERGÉTICO RED HORSE 2L",
       "brand": "HORSE",
@@ -164,6 +210,29 @@
       "status": "active"
     },
     {
+      "productId": "04448f8069fd366c",
+      "productName": "ÁGUA MINERAL DA PEDRA COM GÁS 500ML REFRIGERANTE FRUKI 2L",
+      "brand": "FRUKI",
+      "description": "ÁGUA MINERAL DA PEDRA COM GÁS 500ML REFRIGERANTE FRUKI 2L",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": null,
+      "price": 5.59,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-10-30",
+      "validUntil": "2026-11-01",
+      "sourceUrl": "manual://input_catalogs/mmrosso-ofertas-da-semana-2026-11-02.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "REFRIGERANTE\nFRUKI 2L\n5,59\nREFRIGERANTE\nFRUKI 200ML",
+      "confidenceScore": 0.96,
+      "status": "expired"
+    },
+    {
       "productId": "d48e6eb48b39203d",
       "productName": "ÁGUA MINERAL DA PEDRA SEM GÁS 5L WHISKY OLDEN WACK 900ML",
       "brand": "WACK",
@@ -185,6 +254,29 @@
       "rawText": "WHISKY\nOLDEN WACK 900ML\n13,99\nCOQUETEL\nMIRULLA 900ML",
       "confidenceScore": 0.96,
       "status": "active"
+    },
+    {
+      "productId": "2feb21331f820949",
+      "productName": "ÁGUA MINERAL VALLE AZUL COM OU SEM GÁS 510ML ÁGUA MINERAL FLORESTA 5L",
+      "brand": "FLORESTA",
+      "description": "ÁGUA MINERAL VALLE AZUL COM OU SEM GÁS 510ML ÁGUA MINERAL FLORESTA 5L",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": null,
+      "price": 4.48,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-10-30",
+      "validUntil": "2026-11-01",
+      "sourceUrl": "manual://input_catalogs/mmrosso-ofertas-da-semana-2026-11-02.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "ÁGUA MINERAL\nFLORESTA 5L\n4,48\nREFRIGERANTE\nXBET 2L",
+      "confidenceScore": 0.96,
+      "status": "expired"
     },
     {
       "productId": "343d74810bfafe95",
@@ -231,6 +323,29 @@
       "rawText": "APERITIVO\nAPEROL 750ML\n5,49\nSMIRNOFF ICE\nLONG NECK 275ML",
       "confidenceScore": 0.96,
       "status": "active"
+    },
+    {
+      "productId": "9791c409f6dd9a1e",
+      "productName": "AGUARDENTE VELHO BARREIRO 910ML GIN SEAGERS 980ML",
+      "brand": "SEAGERS",
+      "description": "AGUARDENTE VELHO BARREIRO 910ML GIN SEAGERS 980ML",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": null,
+      "price": 6.5,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-10-30",
+      "validUntil": "2026-11-01",
+      "sourceUrl": "manual://input_catalogs/mmrosso-ofertas-da-semana-2026-11-02.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "GIN SEAGERS\n980ML\n6,50\nKEEP COOLER\nCLASSIC 275ML",
+      "confidenceScore": 0.96,
+      "status": "expired"
     },
     {
       "productId": "dc9ff8351bec2782",
@@ -300,6 +415,29 @@
       "rawText": "CERVEJA\nKAISER 350ML\n4,89\nCERVEJA SOL PREMIUM\nLONG NECK 330ML",
       "confidenceScore": 0.96,
       "status": "active"
+    },
+    {
+      "productId": "388fd69900bf1799",
+      "productName": "APERITIVO APEROL 750ML AGUARDENTE VELHO BARREIRO 910ML",
+      "brand": "BARREIRO",
+      "description": "APERITIVO APEROL 750ML AGUARDENTE VELHO BARREIRO 910ML",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": null,
+      "price": 44.9,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-10-30",
+      "validUntil": "2026-11-01",
+      "sourceUrl": "manual://input_catalogs/mmrosso-ofertas-da-semana-2026-11-02.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "AGUARDENTE VELHO\nBARREIRO 910ML\n44,90\nGIN SEAGERS\n980ML",
+      "confidenceScore": 0.96,
+      "status": "expired"
     },
     {
       "productId": "6df4944e00a62a07",
@@ -946,6 +1084,29 @@
       "status": "active"
     },
     {
+      "productId": "aece1a66b8be8bca",
+      "productName": "Baly Kids 220ml Baly Muscle Protein 250ml",
+      "brand": "Protein",
+      "description": "Baly Kids 220ml Baly Muscle Protein 250ml",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": null,
+      "price": 5.99,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-10-30",
+      "validUntil": "2026-11-01",
+      "sourceUrl": "manual://input_catalogs/mmrosso-ofertas-da-semana-2026-11-02.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "Baly Muscle\nProtein 250ml\n5,99\nGin Intencion\n900ml",
+      "confidenceScore": 0.96,
+      "status": "expired"
+    },
+    {
       "productId": "3013cf0c7f0a64d7",
       "productName": "Baly Kids 220ml Isotônico Hidrate 500ml",
       "brand": "Hidrate",
@@ -1015,6 +1176,29 @@
       "status": "active"
     },
     {
+      "productId": "934bc7b16cc1a08e",
+      "productName": "Baly Muscle Protein 250ml Gin Intencion 900ml",
+      "brand": "Intencion",
+      "description": "Baly Muscle Protein 250ml Gin Intencion 900ml",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": null,
+      "price": 18.99,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-10-30",
+      "validUntil": "2026-11-01",
+      "sourceUrl": "manual://input_catalogs/mmrosso-ofertas-da-semana-2026-11-02.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "Gin Intencion\n900ml\n18,99\nVodka Intencion\n900ml",
+      "confidenceScore": 0.96,
+      "status": "expired"
+    },
+    {
       "productId": "1e7c52762fb5e171",
       "productName": "Baly Muscle Protein 250ml Vodka Intencion 900ml",
       "brand": "Intencion",
@@ -1061,6 +1245,29 @@
       "status": "active"
     },
     {
+      "productId": "63693020b94e942a",
+      "productName": "BEBIDA ADOÇADA MAC FRUIT LARANJA 1,5L BEBIDA ADOÇADA MAC FRUIT LARANJA 2,8L",
+      "brand": "LARANJA",
+      "description": "BEBIDA ADOÇADA MAC FRUIT LARANJA 1,5L BEBIDA ADOÇADA MAC FRUIT LARANJA 2,8L",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": null,
+      "price": 7.99,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-10-30",
+      "validUntil": "2026-11-01",
+      "sourceUrl": "manual://input_catalogs/mmrosso-ofertas-da-semana-2026-11-02.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "BEBIDA ADOÇADA MAC\nFRUIT LARANJA 2,8L\n7,99\nCHOPP LOHN BIER\nPILSEN PET 1L",
+      "confidenceScore": 0.96,
+      "status": "expired"
+    },
+    {
       "productId": "c5d8ba126749eacb",
       "productName": "BEBIDA ADOÇADA MAC FRUIT LARANJA 2,8L CHOPP LOHN BIER PILSEN 1L",
       "brand": "PILSEN",
@@ -1082,6 +1289,52 @@
       "rawText": "CHOPP LOHN BIER\nPILSEN 1L\n6,99\nCHOPP LOHN BIER\nPREMIUM LAGER 1L",
       "confidenceScore": 0.96,
       "status": "active"
+    },
+    {
+      "productId": "8b0cfc2c7196137b",
+      "productName": "BEBIDA ADOÇADA MAC FRUIT LARANJA 2,8L CHOPP LOHN BIER PILSEN PET 1L",
+      "brand": "PET",
+      "description": "BEBIDA ADOÇADA MAC FRUIT LARANJA 2,8L CHOPP LOHN BIER PILSEN PET 1L",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": null,
+      "price": 10.99,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-10-30",
+      "validUntil": "2026-11-01",
+      "sourceUrl": "manual://input_catalogs/mmrosso-ofertas-da-semana-2026-11-02.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "CHOPP LOHN BIER\nPILSEN PET 1L\n10,99\nCHOPP LOHN BIER\nULTRA PET 1L",
+      "confidenceScore": 0.96,
+      "status": "expired"
+    },
+    {
+      "productId": "e5b48226f3b6fbcd",
+      "productName": "BEBIDA ADOÇADA MAGUARY 1L ENERGÉTICO RED BULL 250ML",
+      "brand": "BULL",
+      "description": "BEBIDA ADOÇADA MAGUARY 1L ENERGÉTICO RED BULL 250ML",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": null,
+      "price": 3.99,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-10-30",
+      "validUntil": "2026-11-01",
+      "sourceUrl": "manual://input_catalogs/mmrosso-ofertas-da-semana-2026-11-02.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "ENERGÉTICO\nRED BULL 250ML\n3,99\nENERGY DRINK RED\nHORSE LATA 473ML",
+      "confidenceScore": 0.96,
+      "status": "expired"
     },
     {
       "productId": "6d942ce7037c968f",
@@ -1130,6 +1383,29 @@
       "status": "active"
     },
     {
+      "productId": "6fa7aa7a9bf0f7c5",
+      "productName": "BEBIDA LÁCTEA PIRAKIDS CHOCOLATE 200ML 2 of 8 -- Proibido a venda de bebidas alcoólicas para menores de 18 anos. Beba com moderação.",
+      "brand": "Beba",
+      "description": "BEBIDA LÁCTEA PIRAKIDS CHOCOLATE 200ML 2 of 8 -- Proibido a venda de bebidas alcoólicas para menores de 18 anos. Beba com moderação.",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": null,
+      "price": 6.29,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-10-30",
+      "validUntil": "2026-11-01",
+      "sourceUrl": "manual://input_catalogs/mmrosso-ofertas-da-semana-2026-11-02.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "Proibido a venda de bebidas alcoólicas para menores de 18 anos. Beba com moderação.\nOFERTAS VÁLIDAS DE SEXTA A DOMINGO (30/10 A 01/11/2026)\n6,29\nREFRIGERANTE SODA\nLIMONADA 2L",
+      "confidenceScore": 0.96,
+      "status": "expired"
+    },
+    {
       "productId": "5ac59b17e834e25f",
       "productName": "BEBIDA MISTA FRUTA AKI 1L SUCO DE UVA INTEGRAL GARIBALDI 1,5L",
       "brand": "GARIBALDI",
@@ -1174,6 +1450,29 @@
       "rawText": "ENERGÉTICO\nRED BULL 250ML\n4,29\nCERVEJA LOHN BIER\nPREMIUM LAGER 600ML",
       "confidenceScore": 0.96,
       "status": "active"
+    },
+    {
+      "productId": "7d7caf8d6ab9f0b0",
+      "productName": "BUS 9 750ML VINHO PORTUGUES QUEIJO PROVOLONE EL MAESTRO ORIGENS KG",
+      "brand": "ORIGENS",
+      "description": "BUS 9 750ML VINHO PORTUGUES QUEIJO PROVOLONE EL MAESTRO ORIGENS KG",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": null,
+      "price": 72.99,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-10-30",
+      "validUntil": "2026-11-01",
+      "sourceUrl": "manual://input_catalogs/mmrosso-ofertas-da-semana-2026-11-02.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "QUEIJO PROVOLONE\nEL MAESTRO ORIGENS KG\n72,99\nkg\nA cada 100g pague:",
+      "confidenceScore": 0.96,
+      "status": "expired"
     },
     {
       "productId": "431f986699f60b99",
@@ -1659,6 +1958,29 @@
       "status": "active"
     },
     {
+      "productId": "4cb699f90a3bd1a9",
+      "productName": "CERVEJA AMSTEL LATA SLEEK 350ML CERVEJA HEINEKEN LATA 473ML",
+      "brand": "LATA",
+      "description": "CERVEJA AMSTEL LATA SLEEK 350ML CERVEJA HEINEKEN LATA 473ML",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": null,
+      "price": 11.99,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-10-30",
+      "validUntil": "2026-11-01",
+      "sourceUrl": "manual://input_catalogs/mmrosso-ofertas-da-semana-2026-11-02.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "CERVEJA HEINEKEN\nLATA 473ML\n11,99\nKOMBUCHA\nBENJAMIM 400ML",
+      "confidenceScore": 0.96,
+      "status": "expired"
+    },
+    {
       "productId": "e5cc079d2d556d9c",
       "productName": "CERVEJA BRAHMA LATA 350ML REFRIGERANTE 2L GUARANÁ ANTARCTICA",
       "brand": "ANTARCTICA",
@@ -1680,6 +2002,29 @@
       "rawText": "REFRIGERANTE 2L\nGUARANÁ ANTARCTICA\n4,49\nH2OH!\n500ML",
       "confidenceScore": 0.96,
       "status": "active"
+    },
+    {
+      "productId": "5717ef3fcfe64803",
+      "productName": "CERVEJA BRAHMA MALZBIER LONG NECK 355ML REFRIGERANTE PEPSI LATA 350ML",
+      "brand": "LATA",
+      "description": "CERVEJA BRAHMA MALZBIER LONG NECK 355ML REFRIGERANTE PEPSI LATA 350ML",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": null,
+      "price": 4.99,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-10-30",
+      "validUntil": "2026-11-01",
+      "sourceUrl": "manual://input_catalogs/mmrosso-ofertas-da-semana-2026-11-02.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "REFRIGERANTE PEPSI\nLATA 350ML\n4,99\nISOTÔNICO\nGATORADE 500ML",
+      "confidenceScore": 0.96,
+      "status": "expired"
     },
     {
       "productId": "8cd1d02ea00b4513",
@@ -1728,6 +2073,29 @@
       "status": "active"
     },
     {
+      "productId": "22e68a29d629c055",
+      "productName": "CERVEJA BRAHMA ZERO ÁLCOOL 350ML CERVEJA RETORNÁVEL BRAHMA 300ML",
+      "brand": "BRAHMA",
+      "description": "CERVEJA BRAHMA ZERO ÁLCOOL 350ML CERVEJA RETORNÁVEL BRAHMA 300ML",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": null,
+      "price": 6.39,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-10-30",
+      "validUntil": "2026-11-01",
+      "sourceUrl": "manual://input_catalogs/mmrosso-ofertas-da-semana-2026-11-02.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "CERVEJA RETORNÁVEL\nBRAHMA 300ML\n6,39\nCERVEJA BRAHMA MALZBIER\nLONG NECK 355ML",
+      "confidenceScore": 0.96,
+      "status": "expired"
+    },
+    {
       "productId": "3c3d7b6354dc24b4",
       "productName": "CERVEJA BUDWEISER LATA 350ML CERVEJA FLYING FISH LATA 350ML",
       "brand": "LATA",
@@ -1772,6 +2140,29 @@
       "rawText": "CERVEJA SKOL\nZERO 350ML\n4,49\nCERVEJA SPATEN\nLATA 350ML",
       "confidenceScore": 0.96,
       "status": "active"
+    },
+    {
+      "productId": "30a487512c3a31d7",
+      "productName": "CERVEJA BUDWEISER LONG NECK 330ML CERVEJA BRAHMA ZERO ÁLCOOL 350ML",
+      "brand": "ÁLCOOL",
+      "description": "CERVEJA BUDWEISER LONG NECK 330ML CERVEJA BRAHMA ZERO ÁLCOOL 350ML",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": null,
+      "price": 2.59,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-10-30",
+      "validUntil": "2026-11-01",
+      "sourceUrl": "manual://input_catalogs/mmrosso-ofertas-da-semana-2026-11-02.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "CERVEJA BRAHMA ZERO\nÁLCOOL 350ML\n2,59\nCERVEJA RETORNÁVEL\nBRAHMA 300ML",
+      "confidenceScore": 0.96,
+      "status": "expired"
     },
     {
       "productId": "56e1065b6a9b7f0f",
@@ -1912,6 +2303,121 @@
       "status": "active"
     },
     {
+      "productId": "828bec31289a6984",
+      "productName": "CERVEJA HEINEKEN LATA 473ML KOMBUCHA BENJAMIM 400ML",
+      "brand": "BENJAMIM",
+      "description": "CERVEJA HEINEKEN LATA 473ML KOMBUCHA BENJAMIM 400ML",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": null,
+      "price": 5.99,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-10-30",
+      "validUntil": "2026-11-01",
+      "sourceUrl": "manual://input_catalogs/mmrosso-ofertas-da-semana-2026-11-02.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "KOMBUCHA\nBENJAMIM 400ML\n5,99\nCERVEJA HEINEKEN\nLONG NECK 330ML",
+      "confidenceScore": 0.96,
+      "status": "expired"
+    },
+    {
+      "productId": "a64b1c500acdf361",
+      "productName": "CERVEJA HEINEKEN LONG NECK 330ML CERVEJA HEINEKEN ULTIMATE SEM GLÚTEN LATA 350ML",
+      "brand": "LATA",
+      "description": "CERVEJA HEINEKEN LONG NECK 330ML CERVEJA HEINEKEN ULTIMATE SEM GLÚTEN LATA 350ML",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": null,
+      "price": 6.89,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-10-30",
+      "validUntil": "2026-11-01",
+      "sourceUrl": "manual://input_catalogs/mmrosso-ofertas-da-semana-2026-11-02.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "CERVEJA HEINEKEN ULTIMATE\nSEM GLÚTEN LATA 350ML\n6,89\nCERVEJA HEINEKEN ULTIMATE\nSEM GLÚTEN LONG NECK 330ML",
+      "confidenceScore": 0.96,
+      "status": "expired"
+    },
+    {
+      "productId": "0c153be0b1e4edba",
+      "productName": "CERVEJA HEINEKEN RETORNÁVEL 600ML CERVEJA LOHN BIER PREMIUM LAGER 600ML",
+      "brand": "LAGER",
+      "description": "CERVEJA HEINEKEN RETORNÁVEL 600ML CERVEJA LOHN BIER PREMIUM LAGER 600ML",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": null,
+      "price": 3.99,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-10-30",
+      "validUntil": "2026-11-01",
+      "sourceUrl": "manual://input_catalogs/mmrosso-ofertas-da-semana-2026-11-02.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "CERVEJA LOHN BIER\nPREMIUM LAGER 600ML\n3,99\nCERVEJA LOHN BIER\nULTRA LONG NECK 355ML",
+      "confidenceScore": 0.96,
+      "status": "expired"
+    },
+    {
+      "productId": "4747eba25b4c3762",
+      "productName": "CERVEJA HEINEKEN ULTIMATE SEM GLÚTEN LATA 350ML CERVEJA HEINEKEN ULTIMATE SEM GLÚTEN LONG NECK 330ML",
+      "brand": "NECK",
+      "description": "CERVEJA HEINEKEN ULTIMATE SEM GLÚTEN LATA 350ML CERVEJA HEINEKEN ULTIMATE SEM GLÚTEN LONG NECK 330ML",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": null,
+      "price": 8.99,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-10-30",
+      "validUntil": "2026-11-01",
+      "sourceUrl": "manual://input_catalogs/mmrosso-ofertas-da-semana-2026-11-02.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "CERVEJA HEINEKEN ULTIMATE\nSEM GLÚTEN LONG NECK 330ML\n8,99\nCERVEJA HEINEKEN\nRETORNÁVEL 600ML",
+      "confidenceScore": 0.96,
+      "status": "expired"
+    },
+    {
+      "productId": "30cfaa33fa6103b2",
+      "productName": "CERVEJA HEINEKEN ULTIMATE SEM GLÚTEN LONG NECK 330ML CERVEJA HEINEKEN RETORNÁVEL 600ML",
+      "brand": "RETORNÁVEL",
+      "description": "CERVEJA HEINEKEN ULTIMATE SEM GLÚTEN LONG NECK 330ML CERVEJA HEINEKEN RETORNÁVEL 600ML",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": null,
+      "price": 4.48,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-10-30",
+      "validUntil": "2026-11-01",
+      "sourceUrl": "manual://input_catalogs/mmrosso-ofertas-da-semana-2026-11-02.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "CERVEJA HEINEKEN\nRETORNÁVEL 600ML\n4,48\nCERVEJA LOHN BIER\nPREMIUM LAGER 600ML",
+      "confidenceScore": 0.96,
+      "status": "expired"
+    },
+    {
       "productId": "aa3816f107218af0",
       "productName": "CERVEJA KAISER 350ML CERVEJA SOL PREMIUM LONG NECK 330ML",
       "brand": "NECK",
@@ -1935,6 +2441,29 @@
       "status": "active"
     },
     {
+      "productId": "526d0880bd1670fb",
+      "productName": "CERVEJA LOHN BIER PREMIUM LAGER 600ML CERVEJA LOHN BIER ULTRA LONG NECK 355ML",
+      "brand": "NECK",
+      "description": "CERVEJA LOHN BIER PREMIUM LAGER 600ML CERVEJA LOHN BIER ULTRA LONG NECK 355ML",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": null,
+      "price": 2.19,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-10-30",
+      "validUntil": "2026-11-01",
+      "sourceUrl": "manual://input_catalogs/mmrosso-ofertas-da-semana-2026-11-02.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "CERVEJA LOHN BIER\nULTRA LONG NECK 355ML\n2,19\nCERVEJA PROIBIDA\nLATA 350ML",
+      "confidenceScore": 0.96,
+      "status": "expired"
+    },
+    {
       "productId": "a84e59041dcd6996",
       "productName": "CERVEJA LOHN BIER PREMIUM LAGER 600ML CERVEJA SCHIN LATA 350ML",
       "brand": "LATA",
@@ -1956,6 +2485,52 @@
       "rawText": "CERVEJA SCHIN LATA\n350ML\n4,79\nCERVEJA HEINEKEN\nLATA 350ML",
       "confidenceScore": 0.96,
       "status": "active"
+    },
+    {
+      "productId": "970d9ff738e58071",
+      "productName": "CERVEJA LOHN BIER ULTRA LATA 350ML CERVEJA AMSTEL LATA SLEEK 350ML",
+      "brand": "SLEEK",
+      "description": "CERVEJA LOHN BIER ULTRA LATA 350ML CERVEJA AMSTEL LATA SLEEK 350ML",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": null,
+      "price": 5.99,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-10-30",
+      "validUntil": "2026-11-01",
+      "sourceUrl": "manual://input_catalogs/mmrosso-ofertas-da-semana-2026-11-02.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "CERVEJA AMSTEL\nLATA SLEEK 350ML\n5,99\nCERVEJA HEINEKEN\nLATA 473ML",
+      "confidenceScore": 0.96,
+      "status": "expired"
+    },
+    {
+      "productId": "bcedf86ba4340743",
+      "productName": "CERVEJA LOHN BIER ULTRA LONG NECK 355ML CERVEJA PROIBIDA LATA 350ML",
+      "brand": "LATA",
+      "description": "CERVEJA LOHN BIER ULTRA LONG NECK 355ML CERVEJA PROIBIDA LATA 350ML",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": null,
+      "price": 0.95,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-10-30",
+      "validUntil": "2026-11-01",
+      "sourceUrl": "manual://input_catalogs/mmrosso-ofertas-da-semana-2026-11-02.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "CERVEJA PROIBIDA\nLATA 350ML\n0,95\nÁGUA MINERAL VALLE AZUL\nCOM OU SEM GÁS 510ML",
+      "confidenceScore": 0.96,
+      "status": "expired"
     },
     {
       "productId": "7e7b46fdd6ac9cb5",
@@ -2025,6 +2600,52 @@
       "rawText": "CERVEJA BRAHMA ZERO\nÁLCOOL 350ML\n5,59\nCERVEJA MICHELOB\nULTRA LONG NECK 330ML",
       "confidenceScore": 0.96,
       "status": "active"
+    },
+    {
+      "productId": "c0e9720af7972cf9",
+      "productName": "CERVEJA PROIBIDA LATA 350ML ÁGUA MINERAL VALLE AZUL COM OU SEM GÁS 510ML",
+      "brand": "GÁS",
+      "description": "CERVEJA PROIBIDA LATA 350ML ÁGUA MINERAL VALLE AZUL COM OU SEM GÁS 510ML",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": null,
+      "price": 5.99,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-10-30",
+      "validUntil": "2026-11-01",
+      "sourceUrl": "manual://input_catalogs/mmrosso-ofertas-da-semana-2026-11-02.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "ÁGUA MINERAL VALLE AZUL\nCOM OU SEM GÁS 510ML\n5,99\nÁGUA MINERAL\nFLORESTA 5L",
+      "confidenceScore": 0.96,
+      "status": "expired"
+    },
+    {
+      "productId": "6d662955a9f503b2",
+      "productName": "CERVEJA PROIBIDA MALZBIER 355ML CERVEJA VERANO ULTRA 350ML",
+      "brand": "ULTRA",
+      "description": "CERVEJA PROIBIDA MALZBIER 355ML CERVEJA VERANO ULTRA 350ML",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": null,
+      "price": 3.79,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-10-30",
+      "validUntil": "2026-11-01",
+      "sourceUrl": "manual://input_catalogs/mmrosso-ofertas-da-semana-2026-11-02.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "CERVEJA VERANO\nULTRA 350ML\n3,79\nCERVEJA LOHN BIER\nULTRA LATA 350ML",
+      "confidenceScore": 0.96,
+      "status": "expired"
     },
     {
       "productId": "a694cb1fbb1ea61c",
@@ -2211,6 +2832,52 @@
       "status": "active"
     },
     {
+      "productId": "5071b23bf7f35a58",
+      "productName": "CERVEJA THEREZÓPOLIS PURO MALTE GOLD LATA 350ML ÁGUA MINERAL CRYSTAL SEM GÁS 1,5L",
+      "brand": "GÁS",
+      "description": "CERVEJA THEREZÓPOLIS PURO MALTE GOLD LATA 350ML ÁGUA MINERAL CRYSTAL SEM GÁS 1,5L",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": null,
+      "price": 4.09,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-10-30",
+      "validUntil": "2026-11-01",
+      "sourceUrl": "manual://input_catalogs/mmrosso-ofertas-da-semana-2026-11-02.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "ÁGUA MINERAL CRYSTAL\nSEM GÁS 1,5L\n4,09\nÁGUA MINERAL CRYSTAL\nCOM GÁS 1,5L",
+      "confidenceScore": 0.96,
+      "status": "expired"
+    },
+    {
+      "productId": "21f84246d6c2d74f",
+      "productName": "CERVEJA VERANO ULTRA 350ML CERVEJA LOHN BIER ULTRA LATA 350ML",
+      "brand": "LATA",
+      "description": "CERVEJA VERANO ULTRA 350ML CERVEJA LOHN BIER ULTRA LATA 350ML",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": null,
+      "price": 3.19,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-10-30",
+      "validUntil": "2026-11-01",
+      "sourceUrl": "manual://input_catalogs/mmrosso-ofertas-da-semana-2026-11-02.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "CERVEJA LOHN BIER\nULTRA LATA 350ML\n3,19\nCERVEJA AMSTEL\nLATA SLEEK 350ML",
+      "confidenceScore": 0.96,
+      "status": "expired"
+    },
+    {
       "productId": "446279516be07f7b",
       "productName": "CHÁ LEÃO ICE TEA PET 1,5L BEBIDA KAPO 200ML",
       "brand": "KAPO",
@@ -2280,6 +2947,29 @@
       "status": "active"
     },
     {
+      "productId": "9ba386a57013978a",
+      "productName": "CHOPP LOHN BIER PILSEN PET 1L CHOPP LOHN BIER ULTRA PET 1L",
+      "brand": "PET",
+      "description": "CHOPP LOHN BIER PILSEN PET 1L CHOPP LOHN BIER ULTRA PET 1L",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": null,
+      "price": 1.49,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-10-30",
+      "validUntil": "2026-11-01",
+      "sourceUrl": "manual://input_catalogs/mmrosso-ofertas-da-semana-2026-11-02.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "CHOPP LOHN BIER\nULTRA PET 1L\n1,49\nBEBIDA LÁCTEA CHOCOLEITE\nCHOCOLATE 200ML",
+      "confidenceScore": 0.96,
+      "status": "expired"
+    },
+    {
       "productId": "06ad215a405e39a4",
       "productName": "CHOPP LOHN BIER PREMIUM LAGER 1L CHOPP LOHN BIER ULTRA PET 1L",
       "brand": "PET",
@@ -2301,6 +2991,52 @@
       "rawText": "CHOPP LOHN BIER\nULTRA PET 1L\n5,99\nÁGUA DE COCO\nITAPOÃ 1L",
       "confidenceScore": 0.96,
       "status": "active"
+    },
+    {
+      "productId": "c4e11a0865eaf894",
+      "productName": "CHOPP LOHN BIER PREMIUM LAGER PET 1L BEBIDA ADOÇADA MAGUARY 1L",
+      "brand": "MAGUARY",
+      "description": "CHOPP LOHN BIER PREMIUM LAGER PET 1L BEBIDA ADOÇADA MAGUARY 1L",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": null,
+      "price": 8.49,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-10-30",
+      "validUntil": "2026-11-01",
+      "sourceUrl": "manual://input_catalogs/mmrosso-ofertas-da-semana-2026-11-02.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "BEBIDA ADOÇADA\nMAGUARY 1L\n8,49\nENERGÉTICO\nRED BULL 250ML",
+      "confidenceScore": 0.96,
+      "status": "expired"
+    },
+    {
+      "productId": "5375b4e00a3793be",
+      "productName": "CHOPP LOHN BIER ULTRA PET 1L BEBIDA LÁCTEA CHOCOLEITE CHOCOLATE 200ML",
+      "brand": "CHOCOLATE",
+      "description": "CHOPP LOHN BIER ULTRA PET 1L BEBIDA LÁCTEA CHOCOLEITE CHOCOLATE 200ML",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": null,
+      "price": 0.97,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-10-30",
+      "validUntil": "2026-11-01",
+      "sourceUrl": "manual://input_catalogs/mmrosso-ofertas-da-semana-2026-11-02.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "BEBIDA LÁCTEA CHOCOLEITE\nCHOCOLATE 200ML\n0,97\nBEBIDA LÁCTEA PIRAKIDS\nCHOCOLATE 200ML",
+      "confidenceScore": 0.96,
+      "status": "expired"
     },
     {
       "productId": "888d9ec13d7ba09b",
@@ -2372,6 +3108,29 @@
       "status": "active"
     },
     {
+      "productId": "ef1e18f5e8157bf3",
+      "productName": "COMBO MANSÃO MAROMBA 1L APERITIVO APEROL 750ML",
+      "brand": "APEROL",
+      "description": "COMBO MANSÃO MAROMBA 1L APERITIVO APEROL 750ML",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": null,
+      "price": 13.99,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-10-30",
+      "validUntil": "2026-11-01",
+      "sourceUrl": "manual://input_catalogs/mmrosso-ofertas-da-semana-2026-11-02.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "APERITIVO\nAPEROL 750ML\n13,99\nAGUARDENTE VELHO\nBARREIRO 910ML",
+      "confidenceScore": 0.96,
+      "status": "expired"
+    },
+    {
       "productId": "1f6d998b923fbeb9",
       "productName": "COMBO MANSÃO MAROMBA 1L CONHAQUE DREHER 900ML",
       "brand": "DREHER",
@@ -2439,6 +3198,29 @@
       "rawText": "GIN BEEFEATER\nLONDON 750ML\n120,00\nLICOR\nBALLENA 750ML",
       "confidenceScore": 0.96,
       "status": "active"
+    },
+    {
+      "productId": "0bc4426d21aa23db",
+      "productName": "COQUETEL COROTE 500ML COMBO MANSÃO MAROMBA 1L",
+      "brand": "MAROMBA",
+      "description": "COQUETEL COROTE 500ML COMBO MANSÃO MAROMBA 1L",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": null,
+      "price": 49.99,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-10-30",
+      "validUntil": "2026-11-01",
+      "sourceUrl": "manual://input_catalogs/mmrosso-ofertas-da-semana-2026-11-02.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "COMBO MANSÃO\nMAROMBA 1L\n49,99\nAPERITIVO\nAPEROL 750ML",
+      "confidenceScore": 0.96,
+      "status": "expired"
     },
     {
       "productId": "cffe7c76eab0dfcc",
@@ -3062,6 +3844,29 @@
       "status": "expired"
     },
     {
+      "productId": "22df7e33f94c3e64",
+      "productName": "EL MAESTRO ORIGENS KG A 100g pague: 7 of 8 -- Proibido a venda de bebidas alcoólicas para menores de 18 anos. Beba com moderação.",
+      "brand": "Beba",
+      "description": "EL MAESTRO ORIGENS KG A 100g pague: 7 of 8 -- Proibido a venda de bebidas alcoólicas para menores de 18 anos. Beba com moderação.",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": null,
+      "price": 25.99,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-10-30",
+      "validUntil": "2026-11-01",
+      "sourceUrl": "manual://input_catalogs/mmrosso-ofertas-da-semana-2026-11-02.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "Proibido a venda de bebidas alcoólicas para menores de 18 anos. Beba com moderação.\nOFERTAS VÁLIDAS DE SEXTA A DOMINGO (30/10 A 01/11/2026)\n25,99\nWHISKY\nCHANCELER 1L",
+      "confidenceScore": 0.96,
+      "status": "expired"
+    },
+    {
       "productId": "8aaa24bbe903a259",
       "productName": "embalagem a unidade sai 2 of 6 -- Proibido a venda de bebidas alcoólicas para menores de 18 anos. Beba com moderação.",
       "brand": "Beba",
@@ -3177,6 +3982,29 @@
       "status": "active"
     },
     {
+      "productId": "1328ce6ac6321049",
+      "productName": "Energético Baly 250ml Gin Intencion 473ml",
+      "brand": "Intencion",
+      "description": "Energético Baly 250ml Gin Intencion 473ml",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": null,
+      "price": 7.99,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-10-30",
+      "validUntil": "2026-11-01",
+      "sourceUrl": "manual://input_catalogs/mmrosso-ofertas-da-semana-2026-11-02.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "Gin Intencion\n473ml\n7,99\nEnergético\nBaly 2L",
+      "confidenceScore": 0.96,
+      "status": "expired"
+    },
+    {
       "productId": "14ab40d9685b6ab3",
       "productName": "Energético Baly 2L Energético Baly 473ml",
       "brand": "Baly",
@@ -3221,6 +4049,29 @@
       "rawText": "Energético\nBaly 473ml\n5,99\nEnergético\nBaly 250ml",
       "confidenceScore": 0.96,
       "status": "active"
+    },
+    {
+      "productId": "a0e212c1a675c82b",
+      "productName": "Energético Baly 2L Energético Baly Celebrate 250ml",
+      "brand": "Celebrate",
+      "description": "Energético Baly 2L Energético Baly Celebrate 250ml",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": null,
+      "price": 3.99,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-10-30",
+      "validUntil": "2026-11-01",
+      "sourceUrl": "manual://input_catalogs/mmrosso-ofertas-da-semana-2026-11-02.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "Energético Baly\nCelebrate 250ml\n3,99\nEnergético\nBaly 1L",
+      "confidenceScore": 0.96,
+      "status": "expired"
     },
     {
       "productId": "557084fdfe3a62ac",
@@ -3269,6 +4120,29 @@
       "status": "active"
     },
     {
+      "productId": "2de28aaac807ab25",
+      "productName": "Energético Baly 473ml Energético Baly 250ml",
+      "brand": "Baly",
+      "description": "Energético Baly 473ml Energético Baly 250ml",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": null,
+      "price": 3.99,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-10-30",
+      "validUntil": "2026-11-01",
+      "sourceUrl": "manual://input_catalogs/mmrosso-ofertas-da-semana-2026-11-02.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "Energético\nBaly 250ml\n3,99\nGin Intencion\n473ml",
+      "confidenceScore": 0.96,
+      "status": "expired"
+    },
+    {
       "productId": "9b2d1ea09d605754",
       "productName": "Energético Baly Celebrate 250ml Energético Baly 1L",
       "brand": "Baly",
@@ -3315,6 +4189,29 @@
       "status": "active"
     },
     {
+      "productId": "30c60d27fc8bec0e",
+      "productName": "Energético Baly Celebrate 250ml Energético Baly 1L",
+      "brand": "Baly",
+      "description": "Energético Baly Celebrate 250ml Energético Baly 1L",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": null,
+      "price": 6.99,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-10-30",
+      "validUntil": "2026-11-01",
+      "sourceUrl": "manual://input_catalogs/mmrosso-ofertas-da-semana-2026-11-02.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "Energético\nBaly 1L\n6,99\n1L\n1L 1L",
+      "confidenceScore": 0.96,
+      "status": "expired"
+    },
+    {
       "productId": "a4bfbf3b87191c59",
       "productName": "ENERGÉTICO MONSTER 473ML REFRIGERANTE FANTA / SPRITE 2L",
       "brand": "SPRITE",
@@ -3336,6 +4233,29 @@
       "rawText": "FANTA / SPRITE 2L\nVALIDADE 02/09/2026\n0,99\nBEBIDA KAPO\nABACAXI 200ML",
       "confidenceScore": 0.96,
       "status": "active"
+    },
+    {
+      "productId": "fd998aedcca19389",
+      "productName": "ENERGÉTICO RED BULL 250ML ENERGY DRINK RED HORSE LATA 473ML",
+      "brand": "LATA",
+      "description": "ENERGÉTICO RED BULL 250ML ENERGY DRINK RED HORSE LATA 473ML",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": null,
+      "price": 6.99,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-10-30",
+      "validUntil": "2026-11-01",
+      "sourceUrl": "manual://input_catalogs/mmrosso-ofertas-da-semana-2026-11-02.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "ENERGY DRINK RED\nHORSE LATA 473ML\n6,99\nENERGY DRINK RED\nHORSE 2L",
+      "confidenceScore": 0.96,
+      "status": "expired"
     },
     {
       "productId": "eae622bdb98f389e",
@@ -3405,6 +4325,75 @@
       "rawText": "CERVEJA\nAMSTEL 350ML\n0,88\nÁGUA MINERAL COM\nGÁS VALLE AZUL 510ML",
       "confidenceScore": 0.96,
       "status": "active"
+    },
+    {
+      "productId": "fdbde6780e620ea3",
+      "productName": "ENERGY DRINK RED HORSE 2L SUCO DE UVA INTEGRAL SABOR DO CAMPO PET 1,5L",
+      "brand": "PET",
+      "description": "ENERGY DRINK RED HORSE 2L SUCO DE UVA INTEGRAL SABOR DO CAMPO PET 1,5L",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": null,
+      "price": 6.99,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-10-30",
+      "validUntil": "2026-11-01",
+      "sourceUrl": "manual://input_catalogs/mmrosso-ofertas-da-semana-2026-11-02.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "SUCO DE UVA INTEGRAL\nSABOR DO CAMPO PET 1,5L\n6,99\nBEBIDA ADOÇADA MAC\nFRUIT LARANJA 1,5L",
+      "confidenceScore": 0.96,
+      "status": "expired"
+    },
+    {
+      "productId": "e453af577dd24006",
+      "productName": "ENERGY DRINK RED HORSE LATA 473ML ENERGY DRINK RED HORSE 2L",
+      "brand": "HORSE",
+      "description": "ENERGY DRINK RED HORSE LATA 473ML ENERGY DRINK RED HORSE 2L",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": null,
+      "price": 11.99,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-10-30",
+      "validUntil": "2026-11-01",
+      "sourceUrl": "manual://input_catalogs/mmrosso-ofertas-da-semana-2026-11-02.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "ENERGY DRINK RED\nHORSE 2L\n11,99\nSUCO DE UVA INTEGRAL\nSABOR DO CAMPO PET 1,5L",
+      "confidenceScore": 0.96,
+      "status": "expired"
+    },
+    {
+      "productId": "9ffcb47f864032cf",
+      "productName": "ESPUMANTE ARGENTINO MUMM 750ML VINHO CAMPO LARGO 750ML",
+      "brand": "LARGO",
+      "description": "ESPUMANTE ARGENTINO MUMM 750ML VINHO CAMPO LARGO 750ML",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": null,
+      "price": 19.99,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-10-30",
+      "validUntil": "2026-11-01",
+      "sourceUrl": "manual://input_catalogs/mmrosso-ofertas-da-semana-2026-11-02.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "VINHO CAMPO LARGO\n750ML\n19,99\nVINHO MARCUS JAMES\n750ML",
+      "confidenceScore": 0.96,
+      "status": "expired"
     },
     {
       "productId": "6ba0b8322916b008",
@@ -3752,6 +4741,29 @@
       "status": "active"
     },
     {
+      "productId": "68f701bd0097db13",
+      "productName": "Gin Intencion 473ml Energético Baly 2L",
+      "brand": "Baly",
+      "description": "Gin Intencion 473ml Energético Baly 2L",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": null,
+      "price": 10.98,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-10-30",
+      "validUntil": "2026-11-01",
+      "sourceUrl": "manual://input_catalogs/mmrosso-ofertas-da-semana-2026-11-02.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "Energético\nBaly 2L\n10,98\nEnergético Baly\nCelebrate 250ml",
+      "confidenceScore": 0.96,
+      "status": "expired"
+    },
+    {
       "productId": "d446e06512422040",
       "productName": "Gin Intencion 473ml Energético Baly Celebrate 250ml",
       "brand": "Celebrate",
@@ -3798,6 +4810,29 @@
       "status": "active"
     },
     {
+      "productId": "552c41fdfe67e4ce",
+      "productName": "Gin Intencion 900ml Vodka Intencion 900ml",
+      "brand": "Intencion",
+      "description": "Gin Intencion 900ml Vodka Intencion 900ml",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": null,
+      "price": 16.99,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-10-30",
+      "validUntil": "2026-11-01",
+      "sourceUrl": "manual://input_catalogs/mmrosso-ofertas-da-semana-2026-11-02.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "Vodka Intencion\n900ml\n16,99\nVodka Intencion\n473ml",
+      "confidenceScore": 0.96,
+      "status": "expired"
+    },
+    {
       "productId": "3ce3680221de5c6e",
       "productName": "GIN SEAGERS 980ML GIN TANQUERAY 750ML",
       "brand": "TANQUERAY",
@@ -3819,6 +4854,29 @@
       "rawText": "GIN TANQUERAY\n750ML\n165,00\nLICOR 43\nCHOCOLATE 700ML",
       "confidenceScore": 0.96,
       "status": "active"
+    },
+    {
+      "productId": "de4a26e93e11ac5b",
+      "productName": "GIN SEAGERS 980ML KEEP COOLER CLASSIC 275ML",
+      "brand": "CLASSIC",
+      "description": "GIN SEAGERS 980ML KEEP COOLER CLASSIC 275ML",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": null,
+      "price": 132.9,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-10-30",
+      "validUntil": "2026-11-01",
+      "sourceUrl": "manual://input_catalogs/mmrosso-ofertas-da-semana-2026-11-02.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "KEEP COOLER\nCLASSIC 275ML\n132,90\nLICOR 43\n700ML",
+      "confidenceScore": 0.96,
+      "status": "expired"
     },
     {
       "productId": "56fcd2ea6f729ca0",
@@ -4071,6 +5129,29 @@
       ],
       "rawText": "\u000f�>�ua�\u0017�C\u001c\u0006���v���=6E�\u0010;��\u0017\b�\u001d~�i�Cvm\b��O9�ڱ�r`i�~Gb�{�{\u0017F4�\u000fk�\u001b�<'�i�N(��\b�vAu��\u001a�_\u0001|���* ^9�[�jgf�.?\u001f_Ow�͛<�n����\u0013\u001c\u001c\u001c\u0019\u0019I\"�bm ��qqqP\u0013\b\u0004''���(*�J��RRR�W<\u001e�����b1\u0018 \u001aK?��y-�\n�ں��\u0015k�\u0001P`��Y |*��j?\b��\\�2��F��\u001dE�.���� ۗ�5.ܹ\u001a,r\u0004�\u0017`p��{\u0005K}�>'h\u00028*o�1��c�� ��&<�4>�;�s\u0003���N�\u001c�$�����%Ė�a{��t�`\u001f\\� ���+\u0007ްq��6��m���I�@?\u001fo�������f�\u0004�\u0010�Dggg�Ϙi�MX'���p����Z�|����I&���\u0012\u0013�b2�R،��,Vn6����ʤ�pY�|\u001e�9� \u001e���f��89Y�l.��AO�&''Pb�\"�\u0011\u0011�\u0011�Q�a�H1�q�I\u00142�N�s�y�lY�HU*\u0016�\u0004��l!�W\\���\u0014�Ujښ\u001b[\u001b�4riY�X-�h\u0014�\n���Z���no}uSuym������L��\u0016\u0015 �\u0002~V�0\u001fVg�Ӳ��|.�IOIO��9�Ran\u0001��gf��sd��\u0012\u0001/�ǐ� ��BY��D����(O#-,\u0013��� ^\u0006�����F�����J��Z]��T�\u0016��s�� �\u0002֡���-��\u0007�t��_�lo(k��ac��T���DNM� �ݎ��������-\u001b]�������D���@7�5kV��Z�&�\u0007O��\u0015��-�\u001fO�o��ߜ\u001c\u001dH� b$Df��y4�Z�",
       "confidenceScore": 0.73,
+      "status": "expired"
+    },
+    {
+      "productId": "b8f0194793f4690e",
+      "productName": "GRAN MESTRI CUNHA KG A 100g pague: ESPUMANTE ARGENTINO MUMM 750ML",
+      "brand": "MUMM",
+      "description": "GRAN MESTRI CUNHA KG A 100g pague: ESPUMANTE ARGENTINO MUMM 750ML",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": null,
+      "price": 11.99,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-10-30",
+      "validUntil": "2026-11-01",
+      "sourceUrl": "manual://input_catalogs/mmrosso-ofertas-da-semana-2026-11-02.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "ESPUMANTE ARGENTINO\nMUMM 750ML\n11,99\nVINHO CAMPO LARGO\n750ML",
+      "confidenceScore": 0.96,
       "status": "expired"
     },
     {
@@ -7018,6 +8099,29 @@
       "status": "expired"
     },
     {
+      "productId": "ad7edc75b72689f8",
+      "productName": "KEEP COOLER CLASSIC 275ML LICOR 700ML",
+      "brand": "LICOR",
+      "description": "KEEP COOLER CLASSIC 275ML LICOR 700ML",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": null,
+      "price": 42.9,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-10-30",
+      "validUntil": "2026-11-01",
+      "sourceUrl": "manual://input_catalogs/mmrosso-ofertas-da-semana-2026-11-02.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "LICOR 43\n700ML\n42,90\nRUM BACARDI CARTA\nBLANCA 980ML",
+      "confidenceScore": 0.96,
+      "status": "expired"
+    },
+    {
       "productId": "67881393b9aa0ab7",
       "productName": "KIT COCA-COLA + FANTA GUARANÁ 2L ÁGUA CRYSTAL SABORES 510ML",
       "brand": "SABORES",
@@ -7039,6 +8143,52 @@
       "rawText": "ÁGUA CRYSTAL\nSABORES 510ML\n2,99\nÁGUA TONICA\nSCHWEPPES LATA 350ML",
       "confidenceScore": 0.96,
       "status": "active"
+    },
+    {
+      "productId": "997cc7e0dd950a0e",
+      "productName": "KIT COCA-COLA + FANTA LARANJA 2L REFRIGERANTE COCA-COLA SEM AÇÚCAR 2L",
+      "brand": "AÇÚCAR",
+      "description": "KIT COCA-COLA + FANTA LARANJA 2L REFRIGERANTE COCA-COLA SEM AÇÚCAR 2L",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": null,
+      "price": 10.99,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-10-30",
+      "validUntil": "2026-11-01",
+      "sourceUrl": "manual://input_catalogs/mmrosso-ofertas-da-semana-2026-11-02.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "REFRIGERANTE COCA-COLA\nSEM AÇÚCAR 2L\n10,99\nREFRIGERANTE\nCOCA-COLA ORIGINAL 2L",
+      "confidenceScore": 0.96,
+      "status": "expired"
+    },
+    {
+      "productId": "7df1b2c2cd0d4ede",
+      "productName": "KOMBUCHA BENJAMIM 400ML CERVEJA HEINEKEN LONG NECK 330ML",
+      "brand": "NECK",
+      "description": "KOMBUCHA BENJAMIM 400ML CERVEJA HEINEKEN LONG NECK 330ML",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": null,
+      "price": 5.89,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-10-30",
+      "validUntil": "2026-11-01",
+      "sourceUrl": "manual://input_catalogs/mmrosso-ofertas-da-semana-2026-11-02.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "CERVEJA HEINEKEN\nLONG NECK 330ML\n5,89\nCERVEJA HEINEKEN ULTIMATE\nSEM GLÚTEN LATA 350ML",
+      "confidenceScore": 0.96,
+      "status": "expired"
     },
     {
       "productId": "531b1f4f7caa1fd5",
@@ -7110,6 +8260,29 @@
       "status": "active"
     },
     {
+      "productId": "7e4b792cc811b9a7",
+      "productName": "LICOR 700ML RUM BACARDI CARTA BLANCA 980ML",
+      "brand": "BLANCA",
+      "description": "LICOR 700ML RUM BACARDI CARTA BLANCA 980ML",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": null,
+      "price": 31.9,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-10-30",
+      "validUntil": "2026-11-01",
+      "sourceUrl": "manual://input_catalogs/mmrosso-ofertas-da-semana-2026-11-02.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "RUM BACARDI CARTA\nBLANCA 980ML\n31,90\nVODKA\nSMIRNOFF 998ML",
+      "confidenceScore": 0.96,
+      "status": "expired"
+    },
+    {
       "productId": "f9b853ad6d634d3b",
       "productName": "LICOR BALLENA 750ML LICOR JÄGERMEISTER 700ML",
       "brand": "LICOR",
@@ -7154,6 +8327,52 @@
       "rawText": "VODKA\nNATASHA 900ML\n59,99\nWHISKY\nWHITE HORSE 1L",
       "confidenceScore": 0.96,
       "status": "active"
+    },
+    {
+      "productId": "0374628d6d59c639",
+      "productName": "LICOR JÄGERMEISTER 700ML COQUETEL COROTE 500ML",
+      "brand": "COROTE",
+      "description": "LICOR JÄGERMEISTER 700ML COQUETEL COROTE 500ML",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": null,
+      "price": 3.99,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-10-30",
+      "validUntil": "2026-11-01",
+      "sourceUrl": "manual://input_catalogs/mmrosso-ofertas-da-semana-2026-11-02.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "COQUETEL\nCOROTE 500ML\n3,99\n14,99\nCOMBO MANSÃO",
+      "confidenceScore": 0.96,
+      "status": "expired"
+    },
+    {
+      "productId": "f53af63e1ec402d1",
+      "productName": "LICOR JÄGERMEISTER 700ML COQUETEL COROTE 500ML",
+      "brand": "COROTE",
+      "description": "LICOR JÄGERMEISTER 700ML COQUETEL COROTE 500ML",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": null,
+      "price": 14.99,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-10-30",
+      "validUntil": "2026-11-01",
+      "sourceUrl": "manual://input_catalogs/mmrosso-ofertas-da-semana-2026-11-02.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "COROTE 500ML\n3,99\n14,99\nCOMBO MANSÃO\nMAROMBA 1L",
+      "confidenceScore": 0.96,
+      "status": "expired"
     },
     {
       "productId": "f59b3dad26baac01",
@@ -7521,6 +8740,29 @@
       ],
       "rawText": "TGK��EJ\u001f�ҧH�K�{\u0017���\u001e�\u0011�{b��)�Y��4��8�g\u001c\u0003?�\u0003�Y �\n\u00043�'\u0018V� LDajN�ɓ!A�XlX\\\\\\RR\u0012\u001e�'\u0012���\u0001 ܀eb���1����څ���؆�躹����zED�@ �\u0016�A���\u000e�J���H�e&'d%�ʊ���ǵ��\nLq|�h�q4\u000f\u0019� \"a�;@h+8A\u0005���=��OQl*>9%<$4,44**\n�å���Z�7 \u0010\b�\u0015X,������\u0014� �\u0012�\u0016�mqr�?��OD��d\\lnfZaޙrraS-�\n��}���B粘��L\u0016��hn��\\I�()/!�^*�YYL�.%�S*\u001bk)U�%�d\u0012� ���39Y\u0019Y\u0019��i���D����I�x���L�(�*#�V��\u001akYLj\u000f���b",
       "confidenceScore": 0.73,
+      "status": "expired"
+    },
+    {
+      "productId": "008667a871fcf7fe",
+      "productName": "MAÇÃ E GOIABA 5 of 8 -- Baly Kids 220ml",
+      "brand": "Kids",
+      "description": "MAÇÃ E GOIABA 5 of 8 -- Baly Kids 220ml",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": null,
+      "price": 3.99,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-10-30",
+      "validUntil": "2026-11-01",
+      "sourceUrl": "manual://input_catalogs/mmrosso-ofertas-da-semana-2026-11-02.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "Baly\nKids 220ml\n3,99\nBaly Muscle\nProtein 250ml",
+      "confidenceScore": 0.96,
       "status": "expired"
     },
     {
@@ -8605,6 +9847,29 @@
       "status": "expired"
     },
     {
+      "productId": "a6e1293433c73eeb",
+      "productName": "Para acompanhar Proibido a venda de bebidas alcoólicas para menores de 18 anos. Beba com moderação. QUEIJO PARMESÃO GRAN MESTRI CUNHA KG",
+      "brand": "CUNHA",
+      "description": "Para acompanhar Proibido a venda de bebidas alcoólicas para menores de 18 anos. Beba com moderação. QUEIJO PARMESÃO GRAN MESTRI CUNHA KG",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": null,
+      "price": 89.98,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-10-30",
+      "validUntil": "2026-11-01",
+      "sourceUrl": "manual://input_catalogs/mmrosso-ofertas-da-semana-2026-11-02.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "QUEIJO PARMESÃO\nGRAN MESTRI CUNHA KG\n89,98\nkg\nA cada 100g pague:",
+      "confidenceScore": 0.88,
+      "status": "expired"
+    },
+    {
       "productId": "efb580f860f92a14",
       "productName": "Para acompanhar SALAME TIPO ITALIANO FATIADO SEARA 100G",
       "brand": "SEARA",
@@ -8743,6 +10008,29 @@
       "status": "active"
     },
     {
+      "productId": "c4c74dfba48bbb54",
+      "productName": "Proibido a venda de bebidas alcoólicas para menores de 18 anos. Beba com moderação.",
+      "brand": "Beba",
+      "description": "Proibido a venda de bebidas alcoólicas para menores de 18 anos. Beba com moderação.",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": null,
+      "price": 3.49,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-10-30",
+      "validUntil": "2026-11-01",
+      "sourceUrl": "manual://input_catalogs/mmrosso-ofertas-da-semana-2026-11-02.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "Proibido a venda de bebidas alcoólicas para menores de 18 anos. Beba com moderação.\nOFERTAS VÁLIDAS DE SEXTA A DOMINGO (30/10 A 01/11/2026)\n3,49\nCERVEJA PROIBIDA\nMALZBIER 355ML",
+      "confidenceScore": 0.88,
+      "status": "expired"
+    },
+    {
       "productId": "ce584a1a2aae4257",
       "productName": "Proibido a venda de bebidas alcoólicas para menores de 18 anos. Beba com moderação. BEBIDA MISTA FRUTA AKI 200ML",
       "brand": "AKI",
@@ -8764,6 +10052,29 @@
       "rawText": "BEBIDA MISTA\nFRUTA AKI 200ML\n7,99\nENERGÉTICO\nRED BULL 250ML",
       "confidenceScore": 0.96,
       "status": "active"
+    },
+    {
+      "productId": "2c819cc8194a4932",
+      "productName": "Proibido a venda de bebidas alcoólicas para menores de 18 anos. Beba com moderação. CERVEJA PROIBIDA MALZBIER 355ML",
+      "brand": "MALZBIER",
+      "description": "Proibido a venda de bebidas alcoólicas para menores de 18 anos. Beba com moderação. CERVEJA PROIBIDA MALZBIER 355ML",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": null,
+      "price": 3.69,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-10-30",
+      "validUntil": "2026-11-01",
+      "sourceUrl": "manual://input_catalogs/mmrosso-ofertas-da-semana-2026-11-02.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "CERVEJA PROIBIDA\nMALZBIER 355ML\n3,69\nCERVEJA VERANO\nULTRA 350ML",
+      "confidenceScore": 0.96,
+      "status": "expired"
     },
     {
       "productId": "eb58868ca8a694bd",
@@ -8833,6 +10144,52 @@
       "rawText": "R$\n8,99\n17,99\nESPUMANTE CAMPO\nLARGO BRUT 750ML",
       "confidenceScore": 0.96,
       "status": "active"
+    },
+    {
+      "productId": "82f4fe1bf4ea1aac",
+      "productName": "Proibido a venda de bebidas alcoólicas para menores de 18 anos. Beba com moderação. QUEIJO PARMESÃO GRAN MESTRI CUNHA KG A 100g pague:",
+      "brand": "CUNHA",
+      "description": "Proibido a venda de bebidas alcoólicas para menores de 18 anos. Beba com moderação. QUEIJO PARMESÃO GRAN MESTRI CUNHA KG A 100g pague:",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": null,
+      "price": 8.99,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-10-30",
+      "validUntil": "2026-11-01",
+      "sourceUrl": "manual://input_catalogs/mmrosso-ofertas-da-semana-2026-11-02.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "A cada 100g pague:\nR$\n8,99\n54,90\nESPUMANTE ARGENTINO",
+      "confidenceScore": 0.96,
+      "status": "expired"
+    },
+    {
+      "productId": "f73b7de14cd9d193",
+      "productName": "Proibido a venda de bebidas alcoólicas para menores de 18 anos. Beba com moderação. QUEIJO PARMESÃO GRAN MESTRI CUNHA KG A 100g pague:",
+      "brand": "CUNHA",
+      "description": "Proibido a venda de bebidas alcoólicas para menores de 18 anos. Beba com moderação. QUEIJO PARMESÃO GRAN MESTRI CUNHA KG A 100g pague:",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": null,
+      "price": 54.9,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-10-30",
+      "validUntil": "2026-11-01",
+      "sourceUrl": "manual://input_catalogs/mmrosso-ofertas-da-semana-2026-11-02.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "R$\n8,99\n54,90\nESPUMANTE ARGENTINO\nMUMM 750ML",
+      "confidenceScore": 0.96,
+      "status": "expired"
     },
     {
       "productId": "d195675fcd2c4af3",
@@ -9433,6 +10790,29 @@
       "status": "active"
     },
     {
+      "productId": "8578bf57458a058d",
+      "productName": "REFRIGERANTE FANTA / SPRITE 2L KIT COCA-COLA + FANTA LARANJA 2L",
+      "brand": "LARANJA",
+      "description": "REFRIGERANTE FANTA / SPRITE 2L KIT COCA-COLA + FANTA LARANJA 2L",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": null,
+      "price": 11.49,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-10-30",
+      "validUntil": "2026-11-01",
+      "sourceUrl": "manual://input_catalogs/mmrosso-ofertas-da-semana-2026-11-02.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "KIT COCA-COLA + FANTA\nLARANJA 2L\n11,49\nREFRIGERANTE COCA-COLA\nSEM AÇÚCAR 2L",
+      "confidenceScore": 0.96,
+      "status": "expired"
+    },
+    {
       "productId": "67bb5df84bd496d8",
       "productName": "REFRIGERANTE FANTA LARANJA / SPRITE 200ML COCA-COLA SEM AÇÚCAR 600ML",
       "brand": "AÇÚCAR",
@@ -9477,6 +10857,52 @@
       "rawText": "REFRIGERANTE FRUKI LAB\nGUARANÁ 350ML\n2,29\nENERGÉTICO\nRED HORSE 473ML",
       "confidenceScore": 0.96,
       "status": "active"
+    },
+    {
+      "productId": "cb7381b214fe6484",
+      "productName": "REFRIGERANTE FRUKI 2L REFRIGERANTE FRUKI 200ML",
+      "brand": "FRUKI",
+      "description": "REFRIGERANTE FRUKI 2L REFRIGERANTE FRUKI 200ML",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": null,
+      "price": 1.39,
+      "listPrice": 11.99,
+      "available": false,
+      "validFrom": "2026-10-30",
+      "validUntil": "2026-11-01",
+      "sourceUrl": "manual://input_catalogs/mmrosso-ofertas-da-semana-2026-11-02.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "REFRIGERANTE\nFRUKI 200ML\n1,39\n11,99\nSUCO DE MAÇÃ",
+      "confidenceScore": 0.96,
+      "status": "expired"
+    },
+    {
+      "productId": "eca52e3c11b5581b",
+      "productName": "REFRIGERANTE FRUKI 2L REFRIGERANTE FRUKI 200ML",
+      "brand": "FRUKI",
+      "description": "REFRIGERANTE FRUKI 2L REFRIGERANTE FRUKI 200ML",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": null,
+      "price": 11.99,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-10-30",
+      "validUntil": "2026-11-01",
+      "sourceUrl": "manual://input_catalogs/mmrosso-ofertas-da-semana-2026-11-02.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "FRUKI 200ML\n1,39\n11,99\nSUCO DE MAÇÃ\nINTEGRAL SANJO 1L",
+      "confidenceScore": 0.96,
+      "status": "expired"
     },
     {
       "productId": "f24f6f034ff7bc13",
@@ -9525,6 +10951,52 @@
       "status": "active"
     },
     {
+      "productId": "1458205a96b7d229",
+      "productName": "REFRIGERANTE GUARANÁ ANTARCTICA 1L REFRIGERANTE PEPSI 1L",
+      "brand": "PEPSI",
+      "description": "REFRIGERANTE GUARANÁ ANTARCTICA 1L REFRIGERANTE PEPSI 1L",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": null,
+      "price": 5.89,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-10-30",
+      "validUntil": "2026-11-01",
+      "sourceUrl": "manual://input_catalogs/mmrosso-ofertas-da-semana-2026-11-02.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "REFRIGERANTE\nPEPSI 1L\n5,89\nCERVEJA BUDWEISER\nLONG NECK 330ML",
+      "confidenceScore": 0.96,
+      "status": "expired"
+    },
+    {
+      "productId": "b28bcd9522ff88b0",
+      "productName": "REFRIGERANTE GUARANÁ ANTARCTICA 2L REFRIGERANTE GUARANÁ ANTARCTICA 1L",
+      "brand": "ANTARCTICA",
+      "description": "REFRIGERANTE GUARANÁ ANTARCTICA 2L REFRIGERANTE GUARANÁ ANTARCTICA 1L",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": null,
+      "price": 4.49,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-10-30",
+      "validUntil": "2026-11-01",
+      "sourceUrl": "manual://input_catalogs/mmrosso-ofertas-da-semana-2026-11-02.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "REFRIGERANTE GUARANÁ\nANTARCTICA 1L\n4,49\nREFRIGERANTE\nPEPSI 1L",
+      "confidenceScore": 0.96,
+      "status": "expired"
+    },
+    {
       "productId": "f3b508f6db0f7a29",
       "productName": "REFRIGERANTE GUARANÁ ANTARCTICA 2L REFRIGERANTE PEPSI 2L",
       "brand": "PEPSI",
@@ -9569,6 +11041,29 @@
       "rawText": "REFRIGERANTE\nFANTA LARANJA 2L\n1,79\nCOCA-COLA 200ML\nORIGINAL / SEM AÇÚCAR",
       "confidenceScore": 0.96,
       "status": "active"
+    },
+    {
+      "productId": "a6993e34005c62e5",
+      "productName": "REFRIGERANTE PEPSI 1L CERVEJA BUDWEISER LONG NECK 330ML",
+      "brand": "NECK",
+      "description": "REFRIGERANTE PEPSI 1L CERVEJA BUDWEISER LONG NECK 330ML",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": null,
+      "price": 3.49,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-10-30",
+      "validUntil": "2026-11-01",
+      "sourceUrl": "manual://input_catalogs/mmrosso-ofertas-da-semana-2026-11-02.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "CERVEJA BUDWEISER\nLONG NECK 330ML\n3,49\nCERVEJA BRAHMA ZERO\nÁLCOOL 350ML",
+      "confidenceScore": 0.96,
+      "status": "expired"
     },
     {
       "productId": "d72b123a2e97dfc6",
@@ -9617,6 +11112,29 @@
       "status": "active"
     },
     {
+      "productId": "47d074a9cbc77e85",
+      "productName": "REFRIGERANTE PEPSI 2L REFRIGERANTE GUARANÁ ANTARCTICA 2L",
+      "brand": "ANTARCTICA",
+      "description": "REFRIGERANTE PEPSI 2L REFRIGERANTE GUARANÁ ANTARCTICA 2L",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": null,
+      "price": 3.99,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-10-30",
+      "validUntil": "2026-11-01",
+      "sourceUrl": "manual://input_catalogs/mmrosso-ofertas-da-semana-2026-11-02.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "REFRIGERANTE GUARANÁ\nANTARCTICA 2L\n3,99\nREFRIGERANTE GUARANÁ\nANTARCTICA 1L",
+      "confidenceScore": 0.96,
+      "status": "expired"
+    },
+    {
       "productId": "dbe7c81d5635b738",
       "productName": "REFRIGERANTE PEPSI 2L REFRIGERANTE SUKITA 2L",
       "brand": "SUKITA",
@@ -9663,6 +11181,29 @@
       "status": "active"
     },
     {
+      "productId": "21f83a37bfa62e8c",
+      "productName": "REFRIGERANTE SODA LIMONADA 2L REFRIGERANTE PEPSI 2L",
+      "brand": "PEPSI",
+      "description": "REFRIGERANTE SODA LIMONADA 2L REFRIGERANTE PEPSI 2L",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": null,
+      "price": 9.39,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-10-30",
+      "validUntil": "2026-11-01",
+      "sourceUrl": "manual://input_catalogs/mmrosso-ofertas-da-semana-2026-11-02.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "REFRIGERANTE\nPEPSI 2L\n9,39\nREFRIGERANTE GUARANÁ\nANTARCTICA 2L",
+      "confidenceScore": 0.96,
+      "status": "expired"
+    },
+    {
       "productId": "fdde65b8d29b5ff2",
       "productName": "REFRIGERANTE SUKITA 2L CERVEJA BRAHMA 350ML FARDO 18UN",
       "brand": "BRAHMA",
@@ -9707,6 +11248,29 @@
       "rawText": "CERVEJA BUDWEISER\nLATA 350ML\n4,59\nCERVEJA FLYING FISH\nLATA 350ML",
       "confidenceScore": 0.96,
       "status": "active"
+    },
+    {
+      "productId": "7d323decc78b3686",
+      "productName": "REFRIGERANTE XBET 2L 1 of 8 -- Proibido a venda de bebidas alcoólicas para menores de 18 anos. Beba com moderação.",
+      "brand": "Beba",
+      "description": "REFRIGERANTE XBET 2L 1 of 8 -- Proibido a venda de bebidas alcoólicas para menores de 18 anos. Beba com moderação.",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": null,
+      "price": 6.99,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-10-30",
+      "validUntil": "2026-11-01",
+      "sourceUrl": "manual://input_catalogs/mmrosso-ofertas-da-semana-2026-11-02.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "Proibido a venda de bebidas alcoólicas para menores de 18 anos. Beba com moderação.\nOFERTAS VÁLIDAS DE SEXTA A DOMINGO (30/10 A 01/11/2026)\n6,99\nCHOPP LOHN BIER\nPREMIUM LAGER PET 1L",
+      "confidenceScore": 0.96,
+      "status": "expired"
     },
     {
       "productId": "c9e429bdd6ea3d33",
@@ -9893,6 +11457,29 @@
       "status": "active"
     },
     {
+      "productId": "3d810ce428b2c996",
+      "productName": "SUCO DE MAÇÃ INTEGRAL SANJO 1L SUCO INTEGRAL DE MAÇÃ SANJO 1,5L",
+      "brand": "SANJO",
+      "description": "SUCO DE MAÇÃ INTEGRAL SANJO 1L SUCO INTEGRAL DE MAÇÃ SANJO 1,5L",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": null,
+      "price": 12.99,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-10-30",
+      "validUntil": "2026-11-01",
+      "sourceUrl": "manual://input_catalogs/mmrosso-ofertas-da-semana-2026-11-02.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "SUCO INTEGRAL DE\nMAÇÃ SANJO 1,5L\n12,99\nSUCO MISTO MAÇÃ\nE UVA SANJO 1L",
+      "confidenceScore": 0.96,
+      "status": "expired"
+    },
+    {
       "productId": "0ad3ba05f8ad4bdc",
       "productName": "SUCO DE UVA INTEGRAL GARIBALDI 1,5L CERVEJA AMSTEL 473ML",
       "brand": "AMSTEL",
@@ -9939,6 +11526,52 @@
       "status": "active"
     },
     {
+      "productId": "5a9a296b615252c5",
+      "productName": "SUCO DE UVA INTEGRAL SABOR DO CAMPO PET 1,5L BEBIDA ADOÇADA MAC FRUIT LARANJA 1,5L",
+      "brand": "LARANJA",
+      "description": "SUCO DE UVA INTEGRAL SABOR DO CAMPO PET 1,5L BEBIDA ADOÇADA MAC FRUIT LARANJA 1,5L",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": null,
+      "price": 14.99,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-10-30",
+      "validUntil": "2026-11-01",
+      "sourceUrl": "manual://input_catalogs/mmrosso-ofertas-da-semana-2026-11-02.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "BEBIDA ADOÇADA MAC\nFRUIT LARANJA 1,5L\n14,99\nBEBIDA ADOÇADA MAC\nFRUIT LARANJA 2,8L",
+      "confidenceScore": 0.96,
+      "status": "expired"
+    },
+    {
+      "productId": "148c82e9cd1e929a",
+      "productName": "SUCO INTEGRAL DE MAÇÃ SANJO 1,5L SUCO MISTO MAÇÃ E UVA SANJO 1L",
+      "brand": "SANJO",
+      "description": "SUCO INTEGRAL DE MAÇÃ SANJO 1,5L SUCO MISTO MAÇÃ E UVA SANJO 1L",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": null,
+      "price": 9.99,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-10-30",
+      "validUntil": "2026-11-01",
+      "sourceUrl": "manual://input_catalogs/mmrosso-ofertas-da-semana-2026-11-02.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "SUCO MISTO MAÇÃ\nE UVA SANJO 1L\n9,99\nSUCO MISTO SANJO 1L\nMAÇÃ E GOIABA",
+      "confidenceScore": 0.96,
+      "status": "expired"
+    },
+    {
       "productId": "66df3b14899619b9",
       "productName": "SUCO INTEGRAL DE MAÇÃ SANJO 1,5L SUCO MISTO SANJO 1L MAÇÃ GOIABA / MAÇÃ MIRTILO",
       "brand": "MIRTILO",
@@ -9983,6 +11616,29 @@
       "rawText": "MAÇÃ SANJO 1,5L\nR$\n11,99\nSUCO MISTO SANJO 1L\nMAÇÃ GOIABA / MAÇÃ MIRTILO",
       "confidenceScore": 0.96,
       "status": "active"
+    },
+    {
+      "productId": "5458b12177e876b8",
+      "productName": "SUCO MISTO MAÇÃ E UVA SANJO 1L SUCO MISTO SANJO 1L MAÇÃ E GOIABA",
+      "brand": "GOIABA",
+      "description": "SUCO MISTO MAÇÃ E UVA SANJO 1L SUCO MISTO SANJO 1L MAÇÃ E GOIABA",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": null,
+      "price": 19.99,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-10-30",
+      "validUntil": "2026-11-01",
+      "sourceUrl": "manual://input_catalogs/mmrosso-ofertas-da-semana-2026-11-02.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "SUCO MISTO SANJO 1L\nMAÇÃ E GOIABA\n19,99\n-- 5 of 8 --\nBaly",
+      "confidenceScore": 0.96,
+      "status": "expired"
     },
     {
       "productId": "4fe2cc5310a6050d",
@@ -10698,6 +12354,29 @@
       "status": "active"
     },
     {
+      "productId": "1e9bfb5c23baf315",
+      "productName": "VINHO ALMA NEGRA TINTO M BLEND 750ML VINHO ARGENTINO LATITUD 33 750ML",
+      "brand": "LATITUD",
+      "description": "VINHO ALMA NEGRA TINTO M BLEND 750ML VINHO ARGENTINO LATITUD 33 750ML",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": null,
+      "price": 20.99,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-10-30",
+      "validUntil": "2026-11-01",
+      "sourceUrl": "manual://input_catalogs/mmrosso-ofertas-da-semana-2026-11-02.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "VINHO ARGENTINO\nLATITUD 33 750ML\n20,99\nVINHO CHILENO\nCANTOR 750ML",
+      "confidenceScore": 0.96,
+      "status": "expired"
+    },
+    {
       "productId": "8a6d97e2f465e47c",
       "productName": "VINHO ALTANERO VARIETAL 750ML VINHO CHILENO CABALLO 750ML",
       "brand": "CABALLO",
@@ -10767,6 +12446,29 @@
       "status": "active"
     },
     {
+      "productId": "f213079a8a379e9d",
+      "productName": "VINHO ARGENTINO LATITUD 33 750ML VINHO CHILENO CANTOR 750ML",
+      "brand": "CANTOR",
+      "description": "VINHO ARGENTINO LATITUD 33 750ML VINHO CHILENO CANTOR 750ML",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": null,
+      "price": 42.9,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-10-30",
+      "validUntil": "2026-11-01",
+      "sourceUrl": "manual://input_catalogs/mmrosso-ofertas-da-semana-2026-11-02.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "VINHO CHILENO\nCANTOR 750ML\n42,90\nVINHO ITALIANO ESPERANTO TINTO\nPRIMITIVO DI PUGLIA 750ML",
+      "confidenceScore": 0.96,
+      "status": "expired"
+    },
+    {
       "productId": "fff70d42f7f24a50",
       "productName": "VINHO CAMPO LARGO 750ML VINHO ARGENTINO FINCA LOS OLMOS 750ML",
       "brand": "OLMOS",
@@ -10790,6 +12492,29 @@
       "status": "active"
     },
     {
+      "productId": "6966e9204be04ed1",
+      "productName": "VINHO CAMPO LARGO 750ML VINHO MARCUS JAMES 750ML",
+      "brand": "JAMES",
+      "description": "VINHO CAMPO LARGO 750ML VINHO MARCUS JAMES 750ML",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": null,
+      "price": 160,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-10-30",
+      "validUntil": "2026-11-01",
+      "sourceUrl": "manual://input_catalogs/mmrosso-ofertas-da-semana-2026-11-02.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "VINHO MARCUS JAMES\n750ML\n160,00\nVINHO ALMA NEGRA\nTINTO M BLEND 750ML",
+      "confidenceScore": 0.96,
+      "status": "expired"
+    },
+    {
       "productId": "30163b6b6f67af16",
       "productName": "VINHO CHILENO CABALLO 750ML VINHO DV CATENA CABERNET MALBEC 750ML",
       "brand": "MALBEC",
@@ -10811,6 +12536,29 @@
       "rawText": "VINHO DV CATENA\nCABERNET MALBEC 750ML\n42,90\nVINHO ITALIANO\nTERRAFERMA 750ML",
       "confidenceScore": 0.96,
       "status": "active"
+    },
+    {
+      "productId": "f249632de9296a18",
+      "productName": "VINHO CHILENO CANTOR 750ML VINHO ITALIANO ESPERANTO TINTO PRIMITIVO DI PUGLIA 750ML",
+      "brand": "PUGLIA",
+      "description": "VINHO CHILENO CANTOR 750ML VINHO ITALIANO ESPERANTO TINTO PRIMITIVO DI PUGLIA 750ML",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": null,
+      "price": 42.9,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-10-30",
+      "validUntil": "2026-11-01",
+      "sourceUrl": "manual://input_catalogs/mmrosso-ofertas-da-semana-2026-11-02.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "VINHO ITALIANO ESPERANTO TINTO\nPRIMITIVO DI PUGLIA 750ML\n42,90\nVINHO FRANCÊS\nRONCIER 750ML",
+      "confidenceScore": 0.96,
+      "status": "expired"
     },
     {
       "productId": "7a725003f653dae6",
@@ -10905,6 +12653,29 @@
       "status": "active"
     },
     {
+      "productId": "eb31fb8011595366",
+      "productName": "VINHO FRANCÊS RONCIER 750ML VINHO PORTUGUÊS BUS 9 750ML",
+      "brand": "BUS",
+      "description": "VINHO FRANCÊS RONCIER 750ML VINHO PORTUGUÊS BUS 9 750ML",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": null,
+      "price": 35.9,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-10-30",
+      "validUntil": "2026-11-01",
+      "sourceUrl": "manual://input_catalogs/mmrosso-ofertas-da-semana-2026-11-02.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "VINHO PORTUGUÊS\nBUS 9 750ML\n35,90\nVINHO PORTUGUES\nQUINTA DA ESPIGA 750ML",
+      "confidenceScore": 0.96,
+      "status": "expired"
+    },
+    {
       "productId": "6b4198aa348c6348",
       "productName": "VINHO GATO NEGRO 750ML VINHO DIABLO 750ML",
       "brand": "DIABLO",
@@ -10928,6 +12699,29 @@
       "status": "active"
     },
     {
+      "productId": "8e9312c62b0e5b7b",
+      "productName": "VINHO ITALIANO ESPERANTO TINTO PRIMITIVO DI PUGLIA 750ML VINHO FRANCÊS RONCIER 750ML",
+      "brand": "RONCIER",
+      "description": "VINHO ITALIANO ESPERANTO TINTO PRIMITIVO DI PUGLIA 750ML VINHO FRANCÊS RONCIER 750ML",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": null,
+      "price": 39.99,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-10-30",
+      "validUntil": "2026-11-01",
+      "sourceUrl": "manual://input_catalogs/mmrosso-ofertas-da-semana-2026-11-02.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "VINHO FRANCÊS\nRONCIER 750ML\n39,99\nVINHO PORTUGUÊS\nBUS 9 750ML",
+      "confidenceScore": 0.96,
+      "status": "expired"
+    },
+    {
       "productId": "46be215af9bb22a5",
       "productName": "VINHO MARCUS JAMES 750ML VINHO ALMA NEGRA M BLEND TINTO 750ML",
       "brand": "TINTO",
@@ -10949,6 +12743,52 @@
       "rawText": "VINHO ALMA NEGRA M\nBLEND TINTO 750ML\n34,99\nVINHO GATO\nNEGRO 750ML",
       "confidenceScore": 0.96,
       "status": "active"
+    },
+    {
+      "productId": "9c04e212d606c025",
+      "productName": "VINHO MARCUS JAMES 750ML VINHO ALMA NEGRA TINTO M BLEND 750ML",
+      "brand": "BLEND",
+      "description": "VINHO MARCUS JAMES 750ML VINHO ALMA NEGRA TINTO M BLEND 750ML",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": null,
+      "price": 49.99,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-10-30",
+      "validUntil": "2026-11-01",
+      "sourceUrl": "manual://input_catalogs/mmrosso-ofertas-da-semana-2026-11-02.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "VINHO ALMA NEGRA\nTINTO M BLEND 750ML\n49,99\nVINHO ARGENTINO\nLATITUD 33 750ML",
+      "confidenceScore": 0.96,
+      "status": "expired"
+    },
+    {
+      "productId": "cbfc76bb189f3ada",
+      "productName": "VINHO PORTUGUES QUEIJO PROVOLONE EL MAESTRO ORIGENS KG A 100g pague:",
+      "brand": "ORIGENS",
+      "description": "VINHO PORTUGUES QUEIJO PROVOLONE EL MAESTRO ORIGENS KG A 100g pague:",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": null,
+      "price": 7.29,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-10-30",
+      "validUntil": "2026-11-01",
+      "sourceUrl": "manual://input_catalogs/mmrosso-ofertas-da-semana-2026-11-02.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "A cada 100g pague:\nR$\n7,29\n-- 7 of 8 --\nProibido a venda de bebidas alcoólicas para menores de 18 anos. Beba com moderação.",
+      "confidenceScore": 0.96,
+      "status": "expired"
     },
     {
       "productId": "e8e7ad75e73caa1d",
@@ -11204,6 +13044,29 @@
       "status": "active"
     },
     {
+      "productId": "2c43aae762350589",
+      "productName": "Vodka Intencion 900ml Vodka Intencion 473ml",
+      "brand": "Intencion",
+      "description": "Vodka Intencion 900ml Vodka Intencion 473ml",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": null,
+      "price": 5.99,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-10-30",
+      "validUntil": "2026-11-01",
+      "sourceUrl": "manual://input_catalogs/mmrosso-ofertas-da-semana-2026-11-02.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "Vodka Intencion\n473ml\n5,99\nProibido a venda de bebidas alcoólicas para menores de 18 anos. Beba com moderação.\nOFERTAS VÁLIDAS DE SEXTA A DOMINGO (30/10 A 01/11/2026)",
+      "confidenceScore": 0.96,
+      "status": "expired"
+    },
+    {
       "productId": "0e50f5070c6740d2",
       "productName": "VODKA KISLLA 900ML WHISKY BALLANTINES 1L",
       "brand": "BALLANTINES",
@@ -11294,6 +13157,29 @@
       "rawText": "WHISKY\nDRURYS 900ML\n9,90\nCATUABA\nFLOR DA SELVA 1L",
       "confidenceScore": 0.96,
       "status": "active"
+    },
+    {
+      "productId": "50c2ddc86c0fb688",
+      "productName": "WHISKY CHANCELER 1L WHISKY JACK DANIEL'S APPLE / FIRE / HONEY / TRADICIONAL 1L",
+      "brand": "TRADICIONAL",
+      "description": "WHISKY CHANCELER 1L WHISKY JACK DANIEL'S APPLE / FIRE / HONEY / TRADICIONAL 1L",
+      "supermarketName": "MM Rosso",
+      "seller": "MM Rosso",
+      "city": null,
+      "price": 115,
+      "listPrice": null,
+      "available": false,
+      "validFrom": "2026-10-30",
+      "validUntil": "2026-11-01",
+      "sourceUrl": "manual://input_catalogs/mmrosso-ofertas-da-semana-2026-11-02.pdf",
+      "imageUrl": null,
+      "categories": [
+        "Supermercado",
+        "Ofertas"
+      ],
+      "rawText": "WHISKY JACK DANIEL'S APPLE /\nFIRE / HONEY / TRADICIONAL 1L\n115,00\nLICOR JÄGERMEISTER\n700ML",
+      "confidenceScore": 0.96,
+      "status": "expired"
     },
     {
       "productId": "555f0067867a945d",
